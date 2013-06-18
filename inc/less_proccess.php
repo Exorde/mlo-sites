@@ -12,4 +12,4 @@
                             // entry less file
     };
 </script>
-<script type="text/javascript" src="../global_statics/js/less-1.3.3.min.js"></script>
+<script type="text/javascript" src="/global_statics/js/less-1.3.3.min.js"></script>

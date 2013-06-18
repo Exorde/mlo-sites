@@ -45,6 +45,31 @@
                 </replaceregexp>
             </filterchain>
         </reflexive>
+        <reflexive>
+          <fileset dir="${inc_folder}">
+                <!-- all included static files list must end by *statics.php -->
+                <include name="*statics.php" />
+            </fileset>
+            <filterchain>
+                <replaceregexp>
+                  <regexp pattern="//include the LESS JS processor here" replace='include "less_proccess.php";' />
+                  <regexp pattern='\.css"' replace='.less"'/>
+                  <regexp pattern='"stylesheet"' replace='"stylesheet/less"'/>
+                  <!-- removing the less processer  script -->
+                  <regexp pattern="${main_url}" replace="mlo.loc"/>
+                </replaceregexp>
+            </filterchain>
+        </reflexive>
+        <reflexive>
+          <fileset dir="${yii_folder}/protected/modules/user/controllers/">
+                <include name="*.php" />
+            </fileset>
+            <filterchain>
+              <replaceregexp>
+                <regexp pattern="${main_url}" replace="mlo.loc"/>
+              </replaceregexp>
+            </filterchain>
+        </reflexive>
       </then>
       <else>
         <reflexive>
@@ -67,7 +92,7 @@
             <filterchain>
                 <replaceregexp>
                   <regexp pattern='include "less_proccess.php";' replace="//include the LESS JS processor here"/>
-                  <regexp pattern="\.less" replace=".css"/>
+                  <regexp pattern='\.less"' replace='.css"'/>
                   <regexp pattern="stylesheet/less" replace="stylesheet"/>
                   <!-- removing the less processer  script -->
                   <regexp pattern="mlo\.loc" replace="${main_url}"/>
