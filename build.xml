@@ -85,7 +85,13 @@
               </replaceregexp>
             </filterchain>
         </reflexive>
-        <echo message= "git ftp init --user ${ftp_user} --passwd ${ftp_pass} ${ftp_host}${ftp_folder}"/>
+        <exec command="lessc global.less global.css" dir="./global_statics/css" />
+        <exec command="lessc global_wp.less global_wp.css" dir="./global_statics/css" />
+        <echo message="Commiting changes made by phing before pushing" />
+        <exec command="git add -A" dir="." />
+        <exec command="git commit -m 'commit before ftp push'" dir="." />
+        <echo message="pushing to ftp : git ftp push --user ${ftp_user} --passwd ${ftp_pass} ${ftp_host}${ftp_folder}"/>
+        <exec command="git ftp push --user ${ftp_user} --passwd ${ftp_pass} ${ftp_host}${ftp_folder}" dir="." />
       </else>
       </if>   
   </target>
