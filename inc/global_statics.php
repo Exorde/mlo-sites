@@ -1,8 +1,8 @@
 <script type="text/javascript" src="../global_statics/js/jquery-2.0.1.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="../global_statics/css/normalize.css">
-<link rel="stylesheet/less" type="text/css" href="../global_statics/css/global.less">
-<?php include "less_proccess.php" ; ?>
+<link rel="stylesheet.css" type="text/css" href="../global_statics/css/global.css">
+<?php include .css_proccess.php" ; ?>
 <script type="text/javascript">
   $(function(){
     //FLATTR
@@ -39,12 +39,12 @@
     var url = window.location;
     $('#connection_button').click(function(){
       toggleMenu($(this), true);
-      $('#login_container').html('<div style="text-align:center"><img alt="loading gif" src="../global_statics/images/ajax-loader.gif" /></div>').load('http://user.mlo.loc/index.php?r=user/login/remotelogin&url='+url);
+      $('#login_container').html('<div style="text-align:center"><img alt="loading gif" src="../global_statics/images/ajax-loader.gif" /></div>').load('http://user.musique-libre.org/index.php?r=user/login/remotelogin&url='+url);
     });
     $('#deconnection_button').click(function(){
       $.ajax({
               type: 'POST',
-              url:'http://user.mlo.loc/index.php?r=user/logout&url=1',
+              url:'http://user.musique-libre.org/index.php?r=user/logout&url=1',
               success: function(){document.location.reload()}
              });
     });

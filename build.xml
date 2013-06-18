@@ -22,10 +22,7 @@
         </replacetokens>
       </filterchain>
   </copy>
-  <copy tofile="./wp-content/plugins/mlo_sso_authent/mlo_sso_config.php" overwrite="true">
-      <fileset dir="./wp-content/plugins/mlo_sso_authent/">
-        <include name="mlo_sso_config-example.php" />
-      </fileset>
+  <copy tofile="./wp-content/plugins/mlo_sso_authent/mlo_sso_config.php" file="./wp-content/plugins/mlo_sso_authent/mlo_sso_config-example.php"  overwrite="true">
       <filterchain>
         <replacetokens begintoken="@@" endtoken="@@">
           <token key="yiiDBName" value="${yii_db}" />
@@ -72,7 +69,7 @@
                   <regexp pattern=".less" replace=".css"/>
                   <regexp pattern="stylesheet/less" replace="stylesheet"/>
                   <!-- removing the less processer  script -->
-                  <regexp pattern="<?php include "less_proccess.php" ; ?>" replace=""/>
+                  <regexp pattern='include "less_proccess.php" ;' replace=""/>
                   <regexp pattern="user.mlo.loc" replace="${user_manager_url}"/>
                 </replaceregexp>
             </filterchain>
@@ -82,10 +79,13 @@
           <fileset dir="${yii_folder}/protected/modules/user/controllers/">
                 <include name="*.php" />
             </fileset>
-            <replaceregexp>
-              <regexp pattern="mlo.loc" replace="${main_url}"/>
-            </replaceregexp>
+            <filterchain>
+              <replaceregexp>
+                <regexp pattern="mlo.loc" replace="${main_url}"/>
+              </replaceregexp>
+            </filterchain>
         </reflexive>
+        <echo message= "git ftp init --user ${ftp_user} --passwd ${ftp_pass} ${ftp_host}${ftp_folder}"/>
       </else>
       </if>   
   </target>
