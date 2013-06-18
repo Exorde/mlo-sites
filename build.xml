@@ -70,7 +70,7 @@
                   <regexp pattern="\.less" replace=".css"/>
                   <regexp pattern="stylesheet/less" replace="stylesheet"/>
                   <!-- removing the less processer  script -->
-                  <regexp pattern="user.mlo.loc" replace="${user_manager_url}"/>
+                  <regexp pattern="mlo\.loc" replace="${main_url}"/>
                 </replaceregexp>
             </filterchain>
         </reflexive>
@@ -81,7 +81,7 @@
             </fileset>
             <filterchain>
               <replaceregexp>
-                <regexp pattern="mlo.loc" replace="${main_url}"/>
+                <regexp pattern="mlo\.loc" replace="${main_url}"/>
               </replaceregexp>
             </filterchain>
         </reflexive>
