@@ -2,22 +2,7 @@
 
 <link rel="stylesheet" type="text/css" href="../global_statics/css/normalize.css">
 <link rel="stylesheet/less" type="text/css" href="../global_statics/css/global.less">
-<script type="text/javascript">
-    less = {
-        env: "development", // or "production"
-        async: false,       // load imports async
-        fileAsync: false,   // load imports async when in a page under
-                            // a file protocol
-        poll: 1000,         // when in watch mode, time in ms between polls
-        functions: {},      // user functions, keyed by name
-        dumpLineNumbers: "comments", // or "mediaQuery" or "all"
-        relativeUrls: false,// whether to adjust url's to be relative
-                            // if false, url's are already relative to the
-                            // entry less file
-        rootpath: "http://mlo.loc/global_statics/css/"
-    };
-</script>
-<script type="text/javascript" src="../global_statics/js/less-1.3.3.min.js"></script>
+<?php include "less_proccess.php" ; ?>
 <script type="text/javascript">
   $(function(){
     //FLATTR
@@ -51,16 +36,15 @@
       closeMenu();
     });
     //AJAX connection stuffs
-    //TODO DEPLOYMENT
     var url = window.location;
     $('#connection_button').click(function(){
       toggleMenu($(this), true);
-      $('#login_container').html('<div style="text-align:center"><img alt="loading gif" src="../global_statics/images/ajax-loader.gif" /></div>').load('http://mlo.loc/user.dogmazic.net/index.php?r=user/login/remotelogin&url='+url);
+      $('#login_container').html('<div style="text-align:center"><img alt="loading gif" src="../global_statics/images/ajax-loader.gif" /></div>').load('http://user.mlo.loc/index.php?r=user/login/remotelogin&url='+url);
     });
     $('#deconnection_button').click(function(){
       $.ajax({
               type: 'POST',
-              url:'http://mlo.loc/user.dogmazic.net/index.php?r=user/logout&url=1',
+              url:'http://user.mlo.loc/index.php?r=user/logout&url=1',
               success: function(){document.location.reload()}
              });
     });

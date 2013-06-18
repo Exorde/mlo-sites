@@ -2,10 +2,10 @@
 <project name="deployDogma" basedir="." default="main">
   <target name="main">
   <!--Get the proper config file for the building env with -Denv=local/prod-->
-  <property file="build.${env}.properties" />
+  <property file="../../phing_properties/build.${env}.properties" />
   <!-- Copy files and replace tokens with the proper value  -->
-    <copy todir="./user.dogmazic.net/protected/config/" overwrite="true">
-      <fileset dir="./user.dogmazic.net/protected/config_example">
+  <copy todir="${yii_folder}/protected/config/" overwrite="true">
+    <fileset dir="${yii_folder}/protected/config_example">
         <include name="*.php" />
       </fileset>
       <filterchain>
@@ -21,13 +21,25 @@
           <token key="blogDBPass" value="${blog_db_pass}" />
         </replacetokens>
       </filterchain>
+  </copy>
+  <copy tofile="./wp-content/plugins/mlo_sso_authent/mlo_sso_config.php" overwrite="true">
+      <fileset dir="./wp-content/plugins/mlo_sso_authent/">
+        <include name="mlo_sso_config-example.php" />
+      </fileset>
+      <filterchain>
+        <replacetokens begintoken="@@" endtoken="@@">
+          <token key="yiiDBName" value="${yii_db}" />
+          <token key="yiiDBUser" value="${yii_db_user}" />
+          <token key="yiiDBPass" value="${yii_db_pass}" />
+        </replacetokens>
+      </filterchain>
     </copy>
     <!--Remove Debug mode for prod-->
       <if>
         <equals arg1="${env}" arg2="local" />
       <then>
         <reflexive>
-            <fileset dir="./user.dogmazic.net">
+          <fileset dir="${yii_folder}">
                 <include name="index.php" />
             </fileset>
             <filterchain>
@@ -39,7 +51,7 @@
       </then>
       <else>
         <reflexive>
-            <fileset dir="./user.dogmazic.net">
+          <fileset dir="${yii_folder}">
                 <include name="index.php" />
             </fileset>
             <filterchain>
@@ -48,6 +60,31 @@
                   <regexp pattern="////" replace="//"/>
                 </replaceregexp>
             </filterchain>
+        </reflexive>
+        <!-- replacing less by proper css files -->
+        <reflexive>
+          <fileset dir="${inc_folder}">
+                <!-- all included static files list must end by *statics.php -->
+                <include name="*statics.php" />
+            </fileset>
+            <filterchain>
+                <replaceregexp>
+                  <regexp pattern=".less" replace=".css"/>
+                  <regexp pattern="stylesheet/less" replace="stylesheet"/>
+                  <!-- removing the less processer  script -->
+                  <regexp pattern="<?php include "less_proccess.php" ; ?>" replace=""/>
+                  <regexp pattern="user.mlo.loc" replace="${user_manager_url}"/>
+                </replaceregexp>
+            </filterchain>
+        </reflexive>
+        <!-- Replacing every occurence of mlo.loc and replacing it with the actual server name-->
+        <reflexive>
+          <fileset dir="${yii_folder}/protected/modules/user/controllers/">
+                <include name="*.php" />
+            </fileset>
+            <replaceregexp>
+              <regexp pattern="mlo.loc" replace="${main_url}"/>
+            </replaceregexp>
         </reflexive>
       </else>
       </if>   

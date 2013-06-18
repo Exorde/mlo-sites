@@ -12,6 +12,14 @@ this repo, you'll find only what's been modified. Therefore, if you want
 a local version of Dogmazic, you'll need to install those software and
 symlink what's been modified
 
+VHOST
+=====
+
+If you want to work in local you must set up two vhosts with the
+fallowing urls : 
+mlo.loc that redirects to /
+user.mlo.loc that redirects to /user.musique-libre.org
+
 WORDPRESS
 ========
 
@@ -28,13 +36,6 @@ Vanilla Forum
 2) Go into you're installation folder's themes
 3) Do ln -s /path/to/repo/forum/themes/dogma
 
-There's few other files that are hacked versions of the core files to
-allow php crypt's authentication. Unless you want to test that don't
-mind them
-
-TODO : Modifiying core files is BAD, and it's been done for we were in a
-hurry. Let's make a proper plugin out of that. To find the mods : grep
--r "FACTODO" .
 
 Yiiuser
 =======
@@ -53,8 +54,6 @@ you're not familiar with yii.
 6) Rename it config
 7) Do the same thing for protected/component/copyValues.php.example
 
-WARNING : You obviously need a proper vanilla installation since yiiuser
-wants to copy values into its database !
 
 PHING SYNC AND DEPLOY
 =====================
