@@ -91,7 +91,7 @@
         <exec command="git add -A" dir="." />
         <exec command="git commit -m 'commit before ftp push'" dir="." />
         <echo message="pushing to ftp : git ftp push --user ${ftp_user} --passwd ${ftp_pass} ${ftp_host}${ftp_folder}"/>
-        <exec command="git ftp catchup --user ${ftp_user} --passwd ${ftp_pass} ${ftp_host}${ftp_folder}" dir="." />
+        <exec command="git ftp push --user ${ftp_user} --passwd ${ftp_pass} ${ftp_host}${ftp_folder}" dir="." />
       </else>
       </if>   
   </target>
