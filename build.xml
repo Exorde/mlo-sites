@@ -67,7 +67,7 @@
             <filterchain>
                 <replaceregexp>
                   <regexp pattern='include "less_proccess.php";' replace="//include the LESS JS processor here"/>
-                  <regexp pattern=".less" replace=".css"/>
+                  <regexp pattern="\.less" replace=".css"/>
                   <regexp pattern="stylesheet/less" replace="stylesheet"/>
                   <!-- removing the less processer  script -->
                   <regexp pattern="user.mlo.loc" replace="${user_manager_url}"/>
