@@ -2,7 +2,7 @@
 
 <link rel="stylesheet" type="text/css" href="../global_statics/css/normalize.css">
 <link rel="stylesheet.css" type="text/css" href="../global_statics/css/global.css">
-<?php include .css_proccess.php" ; ?>
+<?php //include ths.css processor here ?>
 <script type="text/javascript">
   $(function(){
     //FLATTR
