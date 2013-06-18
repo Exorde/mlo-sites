@@ -117,6 +117,8 @@
         <exec command="git commit -m 'commit before ftp push'" dir="." />
         <echo message="pushing to ftp : git ftp push --user ${ftp_user} --passwd ${ftp_pass} ${ftp_host}${ftp_folder}"/>
         <exec command="git ftp push --user ${ftp_user} --passwd ${ftp_pass} ${ftp_host}${ftp_folder}" dir="." />
+        <echo message="Reverting to local settings" />
+        <exec command="phing -Denv=local" dir="." />
       </else>
       </if>   
   </target>
