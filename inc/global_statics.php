@@ -39,7 +39,7 @@
     var url = window.location;
     $('#connection_button').click(function(){
       toggleMenu($(this), true);
-      $('#login_container').html('<div style="text-align:center"><img alt="loading gif" src="../global_statics/images/ajax-loader.gif" /></div>').load('http://musique-libre.org/index.php?r=user/login/remotelogin&url='+url);
+      $('#login_container').html('<div style="text-align:center"><img alt="loading gif" src="../global_statics/images/ajax-loader.gif" /></div>').load('http://musique-libre.org/user/index.php?r=user/login/remotelogin&url='+url);
     });
     $('#deconnection_button').click(function(){
       $.ajax({
