@@ -14,8 +14,7 @@ class LogoutController extends Controller
     setcookie("sso_authent_mlo[token]",'', time()-3600,"/", 'musique-libre.org');
     //don't redirect if it's a remote log out
     if(isset($_GET['url'])){
-      //"refresh" the page"
-      header('Location: '.$_SERVER['REQUEST_URI']); 
+      return;
     }else{
       $this->redirect(Yii::app()->controller->module->returnLogoutUrl);
     }
