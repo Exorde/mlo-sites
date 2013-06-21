@@ -24,6 +24,7 @@ function logOnIfSso(){
     $session_id = mysql_query($query);
     $result = mysql_result($session_id, 0);
 
+    echo "TEST !!";
     //IF there is a user, and the token in the cookie matches the one in the DB : logon !
     if($_COOKIE['sso_authent_mlo']['token'] == $result){
       wp_set_auth_cookie($user_id);
