@@ -8,13 +8,13 @@ class copyValues extends CApplicationComponent{
     }
 
 
-    public function copy($username,$password,$email,$salt){
+    public function copy($username,$password,$email){
       //Insert user data in the forum. I use 'Deleted' because of the activation
       $connection= $this->database();
 
       //###########  FORUM  ##############
-      $sqlForum="INSERT INTO GDN_User (Name, Password, HashMethod,  Email,PasswordSalt,Deleted) 
-            VALUES ('$username','$password', 'dogma','$email','$salt','1');";
+      $sqlForum="INSERT INTO GDN_User (Name, Password, HashMethod,  Email,Deleted) 
+            VALUES ('$username','$password', 'dogma','$email','1');";
       $command=$connection['forum']->createCommand($sqlForum);
       $command->execute();
       //Get the ID of the newly created user
@@ -32,20 +32,20 @@ class copyValues extends CApplicationComponent{
 
       //############  BLOG ##########
       $nice_name = strtolower($username);
-      $sqlBlog="INSERT INTO wp_users (user_login, user_pass, user_email, user_nicename, salt) 
-        VALUES ('$username','$password', '$email', '$nice_name','$salt');";
+      $sqlBlog="INSERT INTO wp_users (user_login, user_pass, user_email, user_nicename) 
+        VALUES ('$username','$password', '$email', '$nice_name');";
       $command=$connection['blog']->createCommand($sqlBlog);
       $command->execute();
     }
 
-    public function updatePassword($username,$password,$salt){
+    public function updatePassword($username,$password){
       $connection= $this->database();
       ####### FORUM #####
-      $sql="UPDATE GDN_User SET Password = '$password', PasswordSalt = '$salt' WHERE Name = '$username'";
+      $sql="UPDATE GDN_User SET Password = '$password' WHERE Name = '$username'";
       $command=$connection['forum']->createCommand($sql);
       $command->execute();
       ####### BLOG  #######
-      $sql="UPDATE wp_users SET user_pass = '$password', salt = '$salt' WHERE user_login = '$username'";
+      $sql="UPDATE wp_users SET user_pass = '$password' WHERE user_login = '$username'";
       $command=$connection['blog']->createCommand($sql);
       $command->execute();
     }
