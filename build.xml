@@ -112,6 +112,7 @@
         </reflexive>
         <exec command="lessc global.less global.css" dir="./global_statics/css" />
         <exec command="lessc global_wp.less global_wp.css" dir="./global_statics/css" />
+        <exec command="lessc normalize.less normalize.css" dir="./global_statics/css" />
         <echo message="Commiting changes made by phing before pushing" />
         <exec command="git add -A" dir="." passthru="true"/>
         <exec command="git commit -m 'commit before ftp push'" dir="." passthru="true"/>
