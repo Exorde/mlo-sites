@@ -45,7 +45,7 @@
       $.ajax({
               type: 'POST',
               url:'http://musique-libre.org/user/index.php?r=user/logout&url=1',
-              success: function(){document.alert("COBRA");document.location.reload()}
+              success: function(){console.debug("COBRA");document.location.reload()}
              });
     });
     
