@@ -28,7 +28,7 @@ function logOnIfSso(){
     if($_COOKIE['sso_authent_mlo']['token'] == $result){
       wp_set_auth_cookie($user_id);
     }
-  }elseif(is_user_logged_in()){
+  }elseif(is_user_logged_in() && !$user_id){
     //logout user without cookie
     wp_clear_auth_cookie();
   }
