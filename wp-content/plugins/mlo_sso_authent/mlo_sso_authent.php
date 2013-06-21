@@ -27,9 +27,11 @@ function logOnIfSso(){
     //IF there is a user, and the token in the cookie matches the one in the DB : logon !
     if($_COOKIE['sso_authent_mlo']['token'] == $result){
       wp_set_auth_cookie($user_id);
+    echo "START !!";
     }
   }elseif(is_user_logged_in() && !$user_id){
     //logout user without cookie
+    echo "STOP !!";
     wp_clear_auth_cookie();
   }
 }
