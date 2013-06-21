@@ -68,7 +68,7 @@ class copyValues extends CApplicationComponent{
       //wp_ is the blog, they are contributors (can write but can't publish)
       //wp_2_ is doc, it's a wiki-like, therefore, they are editors (can publish and edit, including others' posts)
       $sqlBlogRole =  "INSERT INTO wp_usermeta SET user_id = '$ID', meta_key ='wp_capabilities', meta_value='a:1:{s:11:\"contributor\";b:1;}';
-                       INSERT INTO wp_usermeta SET user_id = '$ID', meta_key ='wp_2_capabilities', meta_value='a:1:{s:11:\"editor\";b:1;}';
+                       INSERT INTO wp_usermeta SET user_id = '$ID', meta_key ='wp_2_capabilities', meta_value='a:1:{s:6:\"editor\";b:1;}';
                        INSERT INTO wp_usermeta SET user_id = '$ID', meta_key ='nickname', meta_value='$username';";
       $command=$connection['blog']->createCommand($sqlBlogRole);
       $command->execute();

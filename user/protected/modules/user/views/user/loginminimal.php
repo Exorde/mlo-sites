@@ -2,7 +2,7 @@
 
 
 <div class="form" id="login_form">
-<?php echo CHtml::beginForm(array('login&url='.$url)); ?>
+<?php echo CHtml::beginForm(array('login/remotelogin&url='.$url)); ?>
 
 	<?php echo CHtml::errorSummary($model); ?>
 	
