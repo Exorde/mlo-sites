@@ -113,10 +113,10 @@
         <exec command="lessc global.less global.css" dir="./global_statics/css" />
         <exec command="lessc global_wp.less global_wp.css" dir="./global_statics/css" />
         <echo message="Commiting changes made by phing before pushing" />
-        <exec command="git add -A" dir="." />
-        <exec command="git commit -m 'commit before ftp push'" dir="." />
+        <exec command="git add -A" dir="." passthru="true"/>
+        <exec command="git commit -m 'commit before ftp push'" dir="." passthru="true"/>
         <echo message="pushing to ftp : git ftp push --user ${ftp_user} --passwd ${ftp_pass} ${ftp_host}${ftp_folder}"/>
-        <exec command="git ftp push --user ${ftp_user} --passwd ${ftp_pass} ${ftp_host}${ftp_folder}" dir="." />
+        <exec command="git ftp push --user ${ftp_user} --passwd ${ftp_pass} ${ftp_host}${ftp_folder}" dir="." passthru="true" />
         <echo message="Reverting to local settings" />
         <exec command="phing -Denv=local" dir="." />
       </else>
