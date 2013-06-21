@@ -57,7 +57,10 @@
         $('.sub_menu_container').slideUp(200);
 
   }
-function toggleMenu(thisButton, connection = false){
+function toggleMenu(thisButton,connection){
+        if (connection === undefined){
+          connection = false
+        }
         $('.lower_button + .sub_menu_container').slideUp(100);
         $(".enlighted").removeClass('enlighted');
         $(".menu_more_button.lower_button").html("+");
