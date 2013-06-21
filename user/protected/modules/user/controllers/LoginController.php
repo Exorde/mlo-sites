@@ -43,11 +43,11 @@ class LoginController extends Controller
 	private function createSession() {
 		$user = User::model()->notsafe()->findByPk(Yii::app()->user->id);
     //create the session token
-    $user->session = uniqid(crypt(rand()).'_', 'true');
+    $user_session = uniqid(crypt(rand()).'_', 'true');
 
     //create the cookie with the user ID and the token
     setcookie("sso_authent_mlo[id]", $user->id, time()+3600,"/", 'musique-libre.org');
-    setcookie("sso_authent_mlo[token]", $user->session, time()+3600,"/", 'musique-libre.org');
+    setcookie("sso_authent_mlo[token]", $user_session, time()+3600,"/", 'musique-libre.org');
     //strore the time of last visit
     $user->lastvisit = time();
     $user->save();
