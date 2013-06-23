@@ -11,7 +11,6 @@ class LoginController extends Controller
 	{
 		if (Yii::app()->user->isGuest) {
 			$model=new UserLogin;
-      $this->render('/user/login',array('model'=>$model));
 			// collect user input data
 			if(isset($_POST['UserLogin'])){
 				$model->attributes=$_POST['UserLogin'];
@@ -27,14 +26,10 @@ class LoginController extends Controller
 						$this->redirect(Yii::app()->user->returnUrl);
 				}
 			}
+      $this->render('/user/login',array('model'=>$model));
 			// display the login form
 		}else{
-        //redirect to the previous url if its a remote login
-        if (isset($_GET['url'])){
-              header( 'Location:'.$_GET['url']);
-              die;
-        }
-        //if it's the standard yii login redirect to the profile page
+        //Heads toward the profile page if connected
         $this->redirect(Yii::app()->controller->module->returnUrl);
     }
 	}

@@ -3739,3 +3739,23 @@ Stack trace:
 REQUEST_URI=/user/index.php?r=user/login
 in /var/www/mlo/Dogmazic-SRC/user/protected/modules/user/controllers/LoginController.php (33)
 in /var/www/mlo/user/index.php (9)
+2013/06/23 21:28:53 [error] [php] session_regenerate_id(): Cannot regenerate session id - headers already sent (/var/www/mlo/framework/web/CHttpSession.php:185)
+Stack trace:
+#0 /var/www/mlo/framework/web/auth/CWebUser.php(227): RWebUser->changeIdentity()
+#1 /var/www/mlo/Dogmazic-SRC/user/protected/modules/user/models/UserLogin.php(57): RWebUser->login()
+#2 /var/www/mlo/framework/validators/CInlineValidator.php(42): UserLogin->authenticate()
+#3 /var/www/mlo/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute()
+#4 /var/www/mlo/framework/base/CModel.php(159): CInlineValidator->validate()
+#5 /var/www/mlo/Dogmazic-SRC/user/protected/modules/user/controllers/LoginController.php(19): UserLogin->validate()
+#6 /var/www/mlo/framework/web/actions/CInlineAction.php(49): LoginController->actionLogin()
+#7 /var/www/mlo/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/mlo/framework/web/CController.php(286): LoginController->runAction()
+#9 /var/www/mlo/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#10 /var/www/mlo/framework/web/CWebApplication.php(282): LoginController->run()
+#11 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /var/www/mlo/user/index.php(9): CWebApplication->run()
+REQUEST_URI=/user/index.php?r=user/login&url=http://mlo.loc/user/index.php?r=user/login
+in /var/www/mlo/Dogmazic-SRC/user/protected/modules/user/models/UserLogin.php (57)
+in /var/www/mlo/Dogmazic-SRC/user/protected/modules/user/controllers/LoginController.php (19)
+in /var/www/mlo/user/index.php (9)
