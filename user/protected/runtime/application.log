@@ -3647,3 +3647,95 @@ Stack trace:
 #30 {main}
 REQUEST_URI=/user/
 ---
+2013/06/23 21:15:02 [error] [php] Cannot modify header information - headers already sent by (output started at /var/www/mlo/framework/web/CController.php:793) (/var/www/mlo/framework/web/CHttpRequest.php:789)
+Stack trace:
+#0 /var/www/mlo/Dogmazic-SRC/user/protected/modules/user/controllers/LoginController.php(38): LoginController->redirect()
+#1 /var/www/mlo/framework/web/actions/CInlineAction.php(49): LoginController->actionLogin()
+#2 /var/www/mlo/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/mlo/framework/web/CController.php(286): LoginController->runAction()
+#4 /var/www/mlo/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#5 /var/www/mlo/framework/web/CWebApplication.php(282): LoginController->run()
+#6 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/mlo/user/index.php(9): CWebApplication->run()
+REQUEST_URI=/user/index.php?r=user/login
+in /var/www/mlo/Dogmazic-SRC/user/protected/modules/user/controllers/LoginController.php (38)
+in /var/www/mlo/user/index.php (9)
+2013/06/23 21:16:16 [error] [php] Cannot modify header information - headers already sent by (output started at /var/www/mlo/framework/web/CController.php:793) (/var/www/mlo/framework/web/CHttpRequest.php:789)
+Stack trace:
+#0 /var/www/mlo/Dogmazic-SRC/user/protected/modules/user/controllers/LoginController.php(38): LoginController->redirect()
+#1 /var/www/mlo/framework/web/actions/CInlineAction.php(49): LoginController->actionLogin()
+#2 /var/www/mlo/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/mlo/framework/web/CController.php(286): LoginController->runAction()
+#4 /var/www/mlo/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#5 /var/www/mlo/framework/web/CWebApplication.php(282): LoginController->run()
+#6 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/mlo/user/index.php(9): CWebApplication->run()
+REQUEST_URI=/user/index.php?r=user/login
+in /var/www/mlo/Dogmazic-SRC/user/protected/modules/user/controllers/LoginController.php (38)
+in /var/www/mlo/user/index.php (9)
+2013/06/23 21:18:02 [error] [php] Cannot modify header information - headers already sent by (output started at /var/www/mlo/framework/web/CController.php:793) (/var/www/mlo/framework/web/CHttpRequest.php:789)
+Stack trace:
+#0 /var/www/mlo/Dogmazic-SRC/user/protected/modules/user/controllers/LoginController.php(38): LoginController->redirect()
+#1 /var/www/mlo/framework/web/actions/CInlineAction.php(49): LoginController->actionLogin()
+#2 /var/www/mlo/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/mlo/framework/web/CController.php(286): LoginController->runAction()
+#4 /var/www/mlo/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#5 /var/www/mlo/framework/web/CWebApplication.php(282): LoginController->run()
+#6 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/mlo/user/index.php(9): CWebApplication->run()
+REQUEST_URI=/user/index.php?r=user/login
+in /var/www/mlo/Dogmazic-SRC/user/protected/modules/user/controllers/LoginController.php (38)
+in /var/www/mlo/user/index.php (9)
+2013/06/23 21:18:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /var/www/mlo/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/mlo/framework/web/CController.php(270): CController->missingAction('')
+#1 /var/www/mlo/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('user/login')
+#3 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/mlo/user/index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/user/index.php?r=user/login
+HTTP_REFERER=http://mlo.loc/user/
+---
+2013/06/23 19:20:13 [error] [php] Undefined variable: model (/var/www/mlo/Dogmazic-SRC/user/protected/modules/user/controllers/LoginController.php:13)
+Stack trace:
+#0 /var/www/mlo/framework/web/CController.php(286): LoginController->runAction()
+#1 /var/www/mlo/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#2 /var/www/mlo/framework/web/CWebApplication.php(282): LoginController->run()
+#3 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#5 /var/www/mlo/user/index.php(9): CWebApplication->run()
+REQUEST_URI=/user/index.php?r=user/login
+in /var/www/mlo/Dogmazic-SRC/user/protected/modules/user/controllers/LoginController.php (13)
+in /var/www/mlo/user/index.php (9)
+2013/06/23 21:22:02 [error] [php] Cannot modify header information - headers already sent by (output started at /var/www/mlo/framework/web/CController.php:793) (/var/www/mlo/framework/web/CHttpRequest.php:789)
+Stack trace:
+#0 /var/www/mlo/Dogmazic-SRC/user/protected/modules/user/controllers/LoginController.php(38): LoginController->redirect()
+#1 /var/www/mlo/framework/web/actions/CInlineAction.php(49): LoginController->actionLogin()
+#2 /var/www/mlo/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/mlo/framework/web/CController.php(286): LoginController->runAction()
+#4 /var/www/mlo/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#5 /var/www/mlo/framework/web/CWebApplication.php(282): LoginController->run()
+#6 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/mlo/user/index.php(9): CWebApplication->run()
+REQUEST_URI=/user/index.php?r=user/login
+in /var/www/mlo/Dogmazic-SRC/user/protected/modules/user/controllers/LoginController.php (38)
+in /var/www/mlo/user/index.php (9)
+2013/06/23 21:22:44 [error] [php] Cannot modify header information - headers already sent by (output started at /var/www/mlo/framework/web/CController.php:793) (/var/www/mlo/framework/web/CHttpRequest.php:789)
+Stack trace:
+#0 /var/www/mlo/Dogmazic-SRC/user/protected/modules/user/controllers/LoginController.php(33): LoginController->redirect()
+#1 /var/www/mlo/framework/web/actions/CInlineAction.php(49): LoginController->actionLogin()
+#2 /var/www/mlo/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/mlo/framework/web/CController.php(286): LoginController->runAction()
+#4 /var/www/mlo/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#5 /var/www/mlo/framework/web/CWebApplication.php(282): LoginController->run()
+#6 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/mlo/user/index.php(9): CWebApplication->run()
+REQUEST_URI=/user/index.php?r=user/login
+in /var/www/mlo/Dogmazic-SRC/user/protected/modules/user/controllers/LoginController.php (33)
+in /var/www/mlo/user/index.php (9)

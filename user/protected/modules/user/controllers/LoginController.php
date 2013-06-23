@@ -11,12 +11,12 @@ class LoginController extends Controller
 	{
 		if (Yii::app()->user->isGuest) {
 			$model=new UserLogin;
+      $this->render('/user/login',array('model'=>$model));
 			// collect user input data
-			if(isset($_POST['UserLogin']))
-		 {
+			if(isset($_POST['UserLogin'])){
 				$model->attributes=$_POST['UserLogin'];
 				// validate user input and redirect to previous page if valid
-				if($model->validate()) {
+				if($model->validate()){
           //check if the action contains a URL, meaning it's a remote login
           if (isset($_GET['url'])){
             $this->createSession();
@@ -28,14 +28,15 @@ class LoginController extends Controller
 				}
 			}
 			// display the login form
-        $this->render('/user/login',array('model'=>$model));
-		} else
-      //redirect to the remote page
-      if (isset($_GET['url'])){
-            header( 'Location:'.$_GET['url']);
-            die;
-      }
-			$this->redirect(Yii::app()->controller->module->returnUrl);
+		}else{
+        //redirect to the previous url if its a remote login
+        if (isset($_GET['url'])){
+              header( 'Location:'.$_GET['url']);
+              die;
+        }
+        //if it's the standard yii login redirect to the profile page
+        $this->redirect(Yii::app()->controller->module->returnUrl);
+    }
 	}
 	
 	private function createSession() {
