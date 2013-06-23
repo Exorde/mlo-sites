@@ -30,6 +30,15 @@
           <token key="yiiDBPass" value="${yii_db_pass}" />
         </replacetokens>
       </filterchain>
+  </copy>
+  <copy tofile="./forum/plugins/MloSsoAuthent/config-example.php" file="./forum/plugins/MloSsoAuthent/config.php"  overwrite="true">
+      <filterchain>
+        <replacetokens begintoken="@@" endtoken="@@">
+          <token key="yiiDBName" value="${yii_db}" />
+          <token key="yiiDBUser" value="${yii_db_user}" />
+          <token key="yiiDBPass" value="${yii_db_pass}" />
+        </replacetokens>
+      </filterchain>
     </copy>
     <!--Remove Debug mode for prod-->
       <if>
