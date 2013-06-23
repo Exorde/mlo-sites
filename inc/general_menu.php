@@ -6,22 +6,22 @@
             <a href="http://dogmazic.net" class="global_menu_link">dogmazic.net</a>
         </li>
         <li class="global_menu_list">
-            <a href="http://blog.dogmazic.net" class="menu_more global_menu_link">Blog</a><button class="menu_more_button button_thick" type="button">+</button>
+            <a href="http://musique-libre.org" class="menu_more global_menu_link">Blog</a><button class="menu_more_button button_thick" type="button">+</button>
             <nav class="sub_menu_container">
                 <h1>Derniers articles :</h1>
                 <?php
                   require_once('rsslib.php');
-                  echo  rss_reader('http://blog.dogmazic.net/?feed=rss2', 4);
+                  echo  rss_reader('http://musique-libre.org/?feed=rss2', 4);
                  ?>
             </nav>
         </li>
         <li class="global_menu_list">
-            <a href="http://forum.dogmazic.net" class="global_menu_link menu_more">Forum</a><button class="menu_more_button button_thick" type="button">+</button>
+            <a href="http://musique-libre.org/forum" class="global_menu_link menu_more">Forum</a><button class="menu_more_button button_thick" type="button">+</button>
             <nav class="sub_menu_container" id="menu_forum">
                 <h1>Derniers messages :</h1>
                 <?php
                   require_once('rsslib.php');
-                  echo  rss_reader('http://forum.dogmazic.net/index.php?p=/discussions/feed.rss', 5);
+                  echo  rss_reader('http://musique-libre.org/forum/index.php?p=/discussions/feed.rss', 5);
                  ?>
             </nav>
         </li>
@@ -29,7 +29,7 @@
               <a href="https://github.com/MusiqueLibre/Dogmazic" target="_blank" class="global_menu_link">Github <img alt="lien externe" src="../global_statics/images/ex_link.png" /></a>
         </li>
         <li class="global_menu_list">
-            <a href="http://blog.dogmazic.net" class="menu_more global_menu_link">Soutenir</a><button class="menu_more_button button_thick" type="button">+</button>
+            <a href="http://musique-libre.org" class="menu_more global_menu_link">Soutenir</a><button class="menu_more_button button_thick" type="button">+</button>
 
             <section class="sub_menu_container">
                 <h1>Faire un don</h1>
@@ -63,14 +63,14 @@
             </section>
         </li>
         <li class="global_menu_list">
-            <a href="http://blog.dogmazic.net/?page_id=285" class="global_menu_link" id="global_menu_contact">Contact</a>
+            <a href="http://musique-libre.org/?page_id=285" class="global_menu_link" id="global_menu_contact">Contact</a>
         </li>
         <li class="global_menu_list" id="connection_menu">
             <?php
             if(array_key_exists('sso_authent_mlo',$_COOKIE)){
               echo '<button id="deconnection_button"  >deconnexion</button>';
             }else{
-              echo '<a  href="http://user.dogmazic.net" class="buttonified">inscription</a>
+              echo '<a  href="http://musique-libre.org/user" class="buttonified">inscription</a>
                <button id="connection_button" >connexion</button>';
 
             }
