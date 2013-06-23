@@ -31,7 +31,7 @@
         </replacetokens>
       </filterchain>
   </copy>
-  <copy tofile="./forum/plugins/MloSsoAuthent/config-example.php" file="./forum/plugins/MloSsoAuthent/config.php"  overwrite="true">
+  <copy tofile="./forum/plugins/MloSsoAuthent/config.php" file="./forum/plugins/MloSsoAuthent/config-example.php"  overwrite="true">
       <filterchain>
         <replacetokens begintoken="@@" endtoken="@@">
           <token key="yiiDBName" value="${yii_db}" />

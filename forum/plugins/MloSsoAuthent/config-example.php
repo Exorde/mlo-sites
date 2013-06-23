@@ -3,9 +3,9 @@
 // a no-brainer
 $db_conf = array(
             'host' => 'localhost',
-            'user' => '4836_user',
-            'pass' => 'axpdPUU2',
-            'db' => '4836_yii',
+            'user' => '@@yiiDBUser@@',
+            'pass' => '@@yiiDBPass@@',
+            'db' => '@@yiiDBName@@',
             'table' => 'users',
             'row' => 'session'
           );
