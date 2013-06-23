@@ -63,7 +63,7 @@
         <reflexive>
           <fileset dir="./global_statics/js">
                 <!-- all included static files list must end by *statics.php -->
-                <include name="*.js">
+                <include name="*.js" />
             </fileset>
             <filterchain>
                 <replaceregexp>
@@ -114,7 +114,7 @@
         <reflexive>
           <fileset dir="./global_statics/js">
                 <!-- all included static files list must end by *statics.php -->
-                <include name="*.js">
+                <include name="*.js" />
             </fileset>
             <filterchain>
                 <replaceregexp>
