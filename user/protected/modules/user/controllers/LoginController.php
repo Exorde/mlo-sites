@@ -17,13 +17,11 @@ class LoginController extends Controller
 				$model->attributes=$_POST['UserLogin'];
 				// validate user input and redirect to previous page if valid
 				if($model->validate()) {
-					$this->createSession();
-      //redirect to the remote page
+          //check if the action contains a URL, meaning it's a remote login
           if (isset($_GET['url'])){
-            header( 'Location:'.$_GET['url']);
-            die;
+            $this->createSession();
           }
-					if (strpos(Yii::app()->user->returnUrl,'/index.php')!==false)
+          elseif (strpos(Yii::app()->user->returnUrl,'/index.php')!==false)
 						$this->redirect(Yii::app()->controller->module->returnUrl);
 					else
 						$this->redirect(Yii::app()->user->returnUrl);
@@ -51,6 +49,8 @@ class LoginController extends Controller
     //strore the time of last visit
     $user->lastvisit = time();
     $user->save();
+    header( 'Location:'.$_GET['url']);
+    die;
 	}
 
   public function actionRemoteLogin(){
