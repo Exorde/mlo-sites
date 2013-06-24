@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-ca">
 <head>
    <?php include '../inc/global_statics.php'; ?>
+   <?php $this->RenderAsset('Head'); ?>
 </head>
 <body id="<?php echo $BodyIdentifier; ?>" class="<?php echo $this->CssClass; ?>">
    <?php include '../inc/general_menu.php'; ?>
