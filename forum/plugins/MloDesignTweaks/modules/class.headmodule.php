@@ -314,12 +314,12 @@ if (!class_exists('HeadModule', FALSE)) {
          // Start with the title.
          $Head = '<title>'.Gdn_Format::Text($this->Title())."</title>\n";
          //MLO STUFFS START
-         //process the file to become a string
-         ob_start();
-          include '../inc/global_statics.php';
-         $global_statics = ob_get_clean();
-         //concatenate the data to the rest
-         $Head.= $global_statics;
+           //process the file to become a string
+           //ob_start();
+           // include '../inc/global_statics.php';
+           //$global_statics = ob_get_clean();
+           //concatenate the data to the rest
+           //$Head.= $global_statics;
          //MLO STUFFS STOP
 
          $TagStrings = array();
