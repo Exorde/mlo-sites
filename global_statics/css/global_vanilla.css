@@ -7,6 +7,9 @@
 	margin:0 auto;
 }
 
+.Discussions li{
+  list-style:none;
+}
 .logo {
 	float:left;
 	height:80px;
@@ -107,94 +110,6 @@ body.Profile #Panel
 .nowrap
 {
 	white-space:nowrap;
-}
-
-h1,h2,h3,h4,h5,h6
-{
-	color:#000;
-	font-family:Helvetica,Arial,"Lucida Grande","Liberation Sans",sans-serif;
-	font-weight:400;
-	margin:0;
-}
-
-p
-{
-	line-height:1.6em;
-	margin:.5em 0 0;
-}
-
-.P
-{
-	margin:.5em 0;
-}
-
-h1
-{
-	display:inline;
-	font-weight:700;
-}
-
-h2
-{
-	font-size:130%;
-	font-weight:700;
-	margin-bottom:10px;
-}
-
-a
-{
-	color:#10529A;
-	moz-transition:color .1s linear 0 background .1s linear 0;
-	text-decoration:none;
-}
-
-a:hover
-{
-	color:#E43715;
-	text-decoration:none;
-}
-
-img.Thumbnail
-{
-	float:left;
-	max-height:300px;
-	max-width:100px;
-	margin:0 16px 0 0;
-}
-
-input.DateBox,input.InputBox,input.SmallInput,textarea
-{
-	color:#333;
-	font-family:HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande","Liberation Sans",sans-serif;
-	font-size:15px;
-	width:250px;
-	margin:0;
-	padding:3px;
-}
-
-input.SmallInput,input.InputBox
-{
-	padding:6px 3px;
-}
-
-input.SmallInput:focus,input.InputBox:focus,textarea:focus
-{
-	background:none repeat scroll 0 0 #FFE;
-}
-
-textarea
-{
-	line-height:1.2;
-	padding:10px;
-}
-
-select
-{
-	color:#222;
-	font-family:arial;
-	font-size:14px;
-	margin:0;
-	padding:3px;
 }
 
 input.Button,a.Button,.Button,.Button.CommentButton,.TabLink.SignInPopup,a.BigButton

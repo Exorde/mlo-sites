@@ -74,13 +74,15 @@ if (!class_exists('HeadModule', FALSE)) {
             'media' => $Media);
          
          // Use same underscore convention as AddScript  
+         /*
          if (is_array($Options)) {
             foreach ($Options as $Key => $Value) {
                $Properties['_'.strtolower($Key)] = $Value;
             }
          }
+          */
          
-         $this->AddTag('link', $Properties);
+         //$this->AddTag('link', $Properties);
       }
 
       public function AddRss($HRef, $Title) {
@@ -126,6 +128,7 @@ if (!class_exists('HeadModule', FALSE)) {
        *
        */
       public function AddScript($Src, $Type = 'text/javascript', $Options = array()) {
+        /*
          if (is_numeric($Options)) {
             $Options = array('sort' => $Options);
          } elseif (is_string($Options)) {
@@ -141,6 +144,7 @@ if (!class_exists('HeadModule', FALSE)) {
          }
          
          $this->AddTag('script', $Attributes);
+         */
       }
       
       /**

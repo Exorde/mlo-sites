@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-ca">
 <head>
    <?php include '../inc/global_statics.php'; ?>
+   <?php include '../inc/vanilla_statics.php'; ?>
    <?php include '../inc/general_menu.php'; ?>
    <?php $this->RenderAsset('Head'); ?>
     
