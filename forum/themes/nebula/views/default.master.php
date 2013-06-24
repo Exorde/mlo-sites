@@ -3,11 +3,11 @@
 <head>
    <?php include '../inc/global_statics.php'; ?>
    <?php include '../inc/vanilla_statics.php'; ?>
-   <?php include '../inc/general_menu.php'; ?>
    <?php $this->RenderAsset('Head'); ?>
     
 </head>
 <body id="<?php echo $BodyIdentifier; ?>" class="<?php echo $this->CssClass; ?>">
+   <?php include '../inc/general_menu.php'; ?>
   <div id="Frame" >
 		<!--div class="Banner" id="header">
        HEADER
