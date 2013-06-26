@@ -32,6 +32,5 @@ $this->breadcrumbs=array(
 	<?php echo CHtml::submitButton(UserModule::t("Save")); ?>
 	</div>
 
-mu
 <?php echo CHtml::endForm(); ?>
 </div><!-- form -->
