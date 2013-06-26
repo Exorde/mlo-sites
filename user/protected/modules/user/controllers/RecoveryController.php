@@ -38,8 +38,8 @@ class RecoveryController extends Controller
                 //copy the changes in other database
                 Yii::app()->copyvalues->updatePassword($find->username, $encryptedPW, $salt);
                 echo "I'm here";
-								$this->redirect(Yii::app()->controller->module->recoveryUrl);
                 die;
+								$this->redirect(Yii::app()->controller->module->recoveryUrl);
 							}
 						} 
 						$this->render('changepassword',array('form'=>$form2));
