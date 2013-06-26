@@ -7,7 +7,7 @@ $this->breadcrumbs=array(
 ?>
 
 <h1><?php echo UserModule::t("Change Password"); ?></h1>
-
+mu
 
 <div class="form">
 <?php echo CHtml::beginForm(); ?>
