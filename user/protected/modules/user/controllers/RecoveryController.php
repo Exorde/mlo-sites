@@ -16,7 +16,6 @@ class RecoveryController extends Controller
 				$activkey = ((isset($_GET['activkey']))?$_GET['activkey']:'');
 				if ($email&&$activkey) {
 					  $form2 = new UserChangePassword;
-            var_dump($form2);
 		    		$find = User::model()->notsafe()->findByAttributes(array('email'=>$email));
 		    		if(isset($find)&&$find->activkey==$activkey) {
 			    		if(isset($_POST['UserChangePassword'])) {
@@ -42,8 +41,8 @@ class RecoveryController extends Controller
 						} 
             echo "been there";
 						$this->render('changepassword',array('form'=>$form2));
-            die;
             echo "done that";
+            die;
 		    		} else {
 		    			Yii::app()->user->setFlash('recoveryMessage',UserModule::t("Incorrect recovery link."));
 						$this->redirect(Yii::app()->controller->module->recoveryUrl);
