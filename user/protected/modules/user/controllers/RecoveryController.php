@@ -37,12 +37,12 @@ class RecoveryController extends Controller
 								$find->save();
                 //copy the changes in other database
                 Yii::app()->copyvalues->updatePassword($find->username, $encryptedPW, $salt);
-                echo "I'm here";
-                die;
 								$this->redirect(Yii::app()->controller->module->recoveryUrl);
 							}
 						} 
+            echo "been there";
 						$this->render('changepassword',array('form'=>$form2));
+            echo "done that";
 		    		} else {
 		    			Yii::app()->user->setFlash('recoveryMessage',UserModule::t("Incorrect recovery link."));
 						$this->redirect(Yii::app()->controller->module->recoveryUrl);
