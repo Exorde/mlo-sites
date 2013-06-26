@@ -39,9 +39,6 @@ class RecoveryController extends Controller
 								$this->redirect(Yii::app()->controller->module->recoveryUrl);
 							}
 						} 
-            echo "been there";
-            echo "done that";
-            die;
 						$this->render('changepassword',array('form'=>$form2));
 		    		} else {
 		    			Yii::app()->user->setFlash('recoveryMessage',UserModule::t("Incorrect recovery link."));
