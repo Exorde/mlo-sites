@@ -1,4 +1,3 @@
-YOUHOUHOU !
 
 <?php $this->pageTitle=Yii::app()->name . ' - '.UserModule::t("Change Password");
 $this->breadcrumbs=array(
