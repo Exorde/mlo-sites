@@ -1,3 +1,4 @@
+
 <?php if (!defined('APPLICATION')) exit();
 /*
 Copyright 2008, 2009 Vanilla Forums Inc.
@@ -67,6 +68,7 @@ if (!class_exists('HeadModule', FALSE)) {
        * @param array $Options Additional properties to pass to AddTag, e.g. 'ie' => 'lt IE 7';
        */
       public function AddCss($HRef, $Media = '', $AddVersion = TRUE, $Options = NULL) {
+        if(strstr($_SERVER[REQUEST_URI],'index.php?p=/dashboard/')){
          $Properties = array(
             'rel' => 'stylesheet',
             'type' => 'text/css',
@@ -74,15 +76,14 @@ if (!class_exists('HeadModule', FALSE)) {
             'media' => $Media);
          
          // Use same underscore convention as AddScript  
-         /*
          if (is_array($Options)) {
             foreach ($Options as $Key => $Value) {
                $Properties['_'.strtolower($Key)] = $Value;
             }
          }
-          */
          
-         //$this->AddTag('link', $Properties);
+         $this->AddTag('link', $Properties);
+       }
       }
 
       public function AddRss($HRef, $Title) {
@@ -128,7 +129,7 @@ if (!class_exists('HeadModule', FALSE)) {
        *
        */
       public function AddScript($Src, $Type = 'text/javascript', $Options = array()) {
-        /*
+        if(strstr($_SERVER[REQUEST_URI],'index.php?p=/dashboard/')){
          if (is_numeric($Options)) {
             $Options = array('sort' => $Options);
          } elseif (is_string($Options)) {
@@ -144,7 +145,7 @@ if (!class_exists('HeadModule', FALSE)) {
          }
          
          $this->AddTag('script', $Attributes);
-         */
+        }
       }
       
       /**
@@ -317,14 +318,6 @@ if (!class_exists('HeadModule', FALSE)) {
 
          // Start with the title.
          $Head = '<title>'.Gdn_Format::Text($this->Title())."</title>\n";
-         //MLO STUFFS START
-           //process the file to become a string
-           //ob_start();
-           // include '../inc/global_statics.php';
-           //$global_statics = ob_get_clean();
-           //concatenate the data to the rest
-           //$Head.= $global_statics;
-         //MLO STUFFS STOP
 
          $TagStrings = array();
          // Loop through each tag.

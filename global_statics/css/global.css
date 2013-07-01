@@ -149,16 +149,12 @@ blockquote small:before {
   -o-border-radius: 5px;
   -ms-border-radius: 5px;
   border-radius: 5px;
-  height: 33px;
   font-size: 1.3em;
   padding-right: 1px;
   border: 2px solid #ff7f2a;
   vertical-align: middle;
-  -webkit-box-shadow: 2px 2px 2px #c34e00;
-  -moz-box-shadow: 2px 2px 2px #c34e00;
-  -o-box-shadow: 2px 2px 2px #c34e00;
-  -ms-box-shadow: 2px 2px 2px #c34e00;
-  box-shadow: 2px 2px 2px #c34e00;
+  /*.shadowyBox(@main_color_dark);*/
+
   background: #fffaf6;
   color: #e48445;
   margin: 0 4px;
@@ -236,6 +232,7 @@ button:hover,
   color: #ff7f2a;
   display: inline-block;
   width: 150px;
+  margin-bottom: 20px;
 }
 #site-title {
   font-size: 120px;
@@ -243,17 +240,18 @@ button:hover,
   text-transform: uppercase;
   font-weight: bold;
   font-family: Liberation Mono, Liberation Sans;
-  -webkit-transform: skew(-20deg, 0deg);
-  -moz-transform: skew(-20deg, 0deg);
-  -ms-transform: skew(-20deg, 0deg);
-  -o-transform: skew(-20deg, 0deg);
-  transform: skew(-20deg, 0deg);
+  color: #ff7f2a;
   -webkit-text-shadow: 3px 3px 0 #ffffff, 6px 6px 0 #ff7f2a;
   -moz-text-shadow: 3px 3px 0 #ffffff, 6px 6px 0 #ff7f2a;
   -o-text-shadow: 3px 3px 0 #ffffff, 6px 6px 0 #ff7f2a;
   -ms-text-shadow: 3px 3px 0 #ffffff, 6px 6px 0 #ff7f2a;
   text-shadow: 3px 3px 0 #ffffff, 6px 6px 0 #ff7f2a;
   display: inline-block;
+  -webkit-transform: skew(-20deg, 0deg);
+  -moz-transform: skew(-20deg, 0deg);
+  -ms-transform: skew(-20deg, 0deg);
+  -o-transform: skew(-20deg, 0deg);
+  transform: skew(-20deg, 0deg);
   margin: 0 20px;
   vertical-align: text-bottom;
   border-left: 1px solid #f4ceb4;
@@ -271,6 +269,7 @@ button:hover,
 #site-description {
   display: inline-block;
   width: 320px;
+  margin: 0;
 }
 /* ###1 FORMS */
 form {
@@ -326,7 +325,7 @@ input[type="search"],
 input[type="tel"],
 input[type="color"] {
   display: inline-block;
-  font-size: 1.1em;
+  font-size: 1em;
   color: #555;
   width: 300px;
 }
@@ -519,6 +518,9 @@ input[type="submit"][disabled] {
   z-index: 9000;
 }
 /*###3 : GLOBAL MENU*/
+#global_menu_container {
+  border-bottom: 5px solid #ff7f2a;
+}
 .global_menu_list.selected {
   background: #ff7f2a;
   color: #fff;
@@ -565,22 +567,16 @@ input[type="submit"][disabled] {
   margin: 0;
   background: #f7f8f9;
   padding: 5px 5px;
-  border-bottom: 5px solid #ff7f2a;
 }
 .global_menu_list {
   padding-top: 2px;
   display: inline-block;
 }
 .global_menu_list h1 {
-  color: #ff7f2a;
   text-transform: uppercase;
   font-weight: bold;
   font-family: Liberation Mono, Liberation Sans;
-  -webkit-transform: skew(-20deg, 0deg);
-  -moz-transform: skew(-20deg, 0deg);
-  -ms-transform: skew(-20deg, 0deg);
-  -o-transform: skew(-20deg, 0deg);
-  transform: skew(-20deg, 0deg);
+  color: #ff7f2a;
   -webkit-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
   -moz-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
   -o-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
@@ -591,7 +587,6 @@ input[type="submit"][disabled] {
 .global_menu_link:visited {
   z-index: 9900;
   background: #fff;
-  color: #555555;
   text-decoration: none;
   width: 90px;
   padding: 2px 10px;
@@ -637,8 +632,14 @@ input[type="submit"][disabled] {
   padding: 3px 12px;
   margin-right: 5px;
 }
+#global_nav {
+  width: 75%;
+  display: inline-block;
+}
 #connection_menu {
-  float: right;
+  width: 24%;
+  display: inline-block;
+  margin-bottom: 5px;
 }
 /*###3 MAIN NAV*/
 #access {
@@ -655,8 +656,9 @@ input[type="submit"][disabled] {
   box-shadow: 2px 2px 2px #c34e00;
 }
 #access .menu {
-  padding: 10px 0;
+  padding: 10px;
   margin: 0;
+  display: inline-block;
 }
 #access .menu-item {
   display: inline-block;

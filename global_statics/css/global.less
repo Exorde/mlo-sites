@@ -135,12 +135,11 @@ blockquote small:before {
 /*###2 BUTTONS AND VISUAL ELEMENTS*/ 
 button, .buttonified{/*buttonified exists to make a link looks like a button, when <button> is not semantic*/
   .rounded;
-  height:33px;
   font-size: 1.3em;
   padding-right:1px;
   border:2px solid @main_color;
   vertical-align: middle;
-  .shadowyBox(@main_color_dark);
+  /*.shadowyBox(@main_color_dark);*/
   background: @main_color_light;
   color: @main_color_desat;
   margin:0 4px;
@@ -190,6 +189,7 @@ button:hover, .buttonified:hover, .lower_button, .selected_button{
   color:@main_color;
   display: inline-block;
   width: 150px;
+  margin-bottom: 20px;
 }
 
 
@@ -198,6 +198,7 @@ button:hover, .buttonified:hover, .lower_button, .selected_button{
   position:relative;
   .titlization;
   display:inline-block;
+  .skew(-20deg);
   margin: 0 20px;
   vertical-align: text-bottom;
   border-left: 1px solid @main_color_desat_light;
@@ -213,6 +214,7 @@ button:hover, .buttonified:hover, .lower_button, .selected_button{
 #site-description{
   display: inline-block;
   width: 320px;
+  margin: 0;
 }
 /* ###1 FORMS */
 form {
@@ -274,7 +276,7 @@ input[type="search"],
 input[type="tel"],
 input[type="color"] {
   display: inline-block;
-  font-size: 1.1em;
+  font-size: 1em;
   color: #555;
   width: 300px;
 }
@@ -482,7 +484,9 @@ input[type="submit"][disabled] {
   z-index:9000;
 }
 /*###3 : GLOBAL MENU*/
-
+#global_menu_container{
+  border-bottom:5px solid @main_color;
+}
 .global_menu_list.selected{
   background:@main_color;
   color:#fff;
@@ -530,7 +534,6 @@ input[type="submit"][disabled] {
   margin:0;
   background: @main_bg_color;
   padding: 5px 5px;
-  border-bottom:5px solid @main_color;
 }
 
 .global_menu_list{
@@ -544,7 +547,6 @@ input[type="submit"][disabled] {
 .global_menu_link,.global_menu_link:visited{
   z-index: 9900;
   background: #fff;
-  color: @text_color_main;
   text-decoration: none;
   width: 90px;
   padding: 2px 10px;
@@ -564,10 +566,16 @@ input[type="submit"][disabled] {
 #global_menu_irc:before{
   .sprite(-144px, -72px);
 }
-
-#connection_menu{
-  float: right;
+#global_nav{
+  width: 75%;
+  display: inline-block;
 }
+#connection_menu{
+  width: 24%;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
 /*###3 MAIN NAV*/
 #access{
   border-top: 1px solid @main_color_desat_light;
@@ -579,8 +587,9 @@ input[type="submit"][disabled] {
   .shadowyBox();
 }
 #access .menu{
-  padding: 10px 0;
+  padding: 10px;
   margin: 0;
+  display: inline-block;
 }
 #access .menu-item{
   display: inline-block;

@@ -46,7 +46,6 @@ $Definition['Announcement'] = 'Message d\'information';
 $Definition['Apply for Membership'] = 'S\'inscrire';
 $Definition['Are you sure you want to do that?'] = 'Êtes-vous sûr de vouloir faire cela ?';
 $Definition['at'] = 'at';
-$Definition['Attach a file'] = 'Attacher un fichier';
 $Definition['Autoriser les autres membres à voir votre adresse email ?'] = 'Autoriser les autres membres à voir votre adresse email ?';
 
 $Definition['Back to Discussions'] = 'Retour aux Discussions';
@@ -146,7 +145,6 @@ $Definition['M\'avertir quand quelqu\'un me mentionne dans le titre d\'une discu
 $Definition['M\'avertir quand quelqu\'un répond aux commentaires sur mon mur.'] = 'M\'avertir quand quelqu\'un répond aux commentaires sur mon mur.';
 $Definition['M\'avertir quand quelqu\'un écrit sur mon mur.'] = 'M\'avertir quand quelqu\'un écrit sur mon mur.';
 $Definition['Male'] = 'Homme';
-$Definition['Mark All Viewed'] = 'Tout marquer comme lu';
 $Definition['Most recent by %1$s'] = 'Dernier message par %1$s';
 $Definition['My Bookmarks'] = 'Mes favoris';
 $Definition['My Discussions'] = 'Mes discussions';
@@ -214,7 +212,6 @@ $Definition['Started by %1$s'] = 'Commencée par %1$s';
 
 $Definition['Thumbnail'] = 'Thumbnail';
 $Definition['This discussion has been closed.'] = 'Cette discussion a été fermée.';
-$Definition['This discussion was created from comments split from: %s.'] = 'Cette discussion a été créée à partir d\'un message du fil : %s.';
 $Definition['This image has been resized to fit in the page. Click to enlarge.'] = 'Cette image a été redimensionnée pour tenir dans la page. Cliquez pour agrandir.';
 $Definition['This page requires Javascript.'] = 'Cette page nécessite que le Javascript soit activé pour pouvoir fonctionner correctement.';
 $Definition['Transport error: %s'] = 'Une erreur fatale est survenue lors de l\'exécution de la requête.<br />Le serveur a renvoyé la réponse suivante: %s';
