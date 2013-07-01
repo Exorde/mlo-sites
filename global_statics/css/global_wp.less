@@ -90,7 +90,7 @@ article.post,
 article.attachment {
   .shadowyBox(@main_color_gray);
   background-color: #fff;
-  /*border: 1px solid @main_color_dark;*/
+  border-top: 1px solid @main_color_dark;
   .rounded(5px);
 }
 
@@ -121,6 +121,9 @@ footer.entry-meta {
 .entry-title{
   .titlization(1px, @main_color);
   margin: 15px 0 5px 0;
+}
+.entry-title a{
+  color: @main_color;
 }
 .entry-content,
 .entry-title,
@@ -540,15 +543,6 @@ ol.commentlist li.comment, ol.commentlist li.trackback, ol.commentlist li.pingba
   #page {
     width: 650px;
     margin: 0px auto;
-  }
-
-  #sidebar {
-    float: right;
-    overflow: hidden;
-    width: 100%;
-    padding-top: 50px;
-    margin-top: 50px;
-    border: 1px solid @main_color_dark;
   }
 
   #main .widget-area {

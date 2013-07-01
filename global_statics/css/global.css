@@ -721,7 +721,7 @@ input[type="submit"][disabled] {
 }
 #sidebar {
   float: right;
-  width: 25%;
+  width: 24%;
   border: 1px solid #959595;
   background: url("../images/subtle_dots.png");
   padding: 10px 20px;
@@ -735,4 +735,14 @@ input[type="submit"][disabled] {
   -o-box-shadow: 2px 2px 2px #959595;
   -ms-box-shadow: 2px 2px 2px #959595;
   box-shadow: 2px 2px 2px #959595;
+  border: 1px solid #c34e00;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  margin-right: 1%;
+}
+#sidebar input {
+  width: auto;
 }

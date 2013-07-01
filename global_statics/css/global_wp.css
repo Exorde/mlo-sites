@@ -85,8 +85,7 @@ article.attachment {
   -ms-box-shadow: 2px 2px 2px #959595;
   box-shadow: 2px 2px 2px #959595;
   background-color: #fff;
-  /*border: 1px solid @main_color_dark;*/
-
+  border-top: 1px solid #c34e00;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -o-border-radius: 5px;
@@ -129,6 +128,9 @@ footer.entry-meta {
   -ms-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
   text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
   margin: 15px 0 5px 0;
+}
+.entry-title a {
+  color: #ff7f2a;
 }
 .entry-content,
 .entry-title,
@@ -533,14 +535,6 @@ ol.commentlist li.pingback {
   #page {
     width: 650px;
     margin: 0px auto;
-  }
-  #sidebar {
-    float: right;
-    overflow: hidden;
-    width: 100%;
-    padding-top: 50px;
-    margin-top: 50px;
-    border: 1px solid #c34e00;
   }
   #main .widget-area {
     float: left;

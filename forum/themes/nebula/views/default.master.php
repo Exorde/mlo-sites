@@ -64,12 +64,14 @@
 	 </header>
 	 <div id="Body">
 		 
-	 <div id="Panel">
-      <?php $this->RenderAsset('Panel'); ?>
-	  </div>
-	  <div id="Content">
-      <?php $this->RenderAsset('Content'); ?>
-	  </div>
+	  <main id="main">
+      <section id="primary">
+        <?php $this->RenderAsset('Content'); ?>
+      </section>
+      <aside id="sidebar">
+        <?php $this->RenderAsset('Panel'); ?>
+      </aside>
+	  </main>
 	  
 	 </div>
 	 <div id="Foot">

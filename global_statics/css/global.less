@@ -654,10 +654,16 @@ input[type="submit"][disabled] {
 }
 #sidebar {
   float: right;
-  width: 25%;
+  width: 24%;
   border: 1px solid @main_color_gray;
   background: @pattern_menus;
   padding: 10px 20px;
   .boxSizing;
   .shadowyBox(@main_color_gray);
+  border: 1px solid @main_color_dark;
+  .rounded(5px);
+  margin-right: 1%;
+}
+#sidebar input{
+  width: auto;
 }
