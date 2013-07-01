@@ -1,0 +1,3577 @@
+@import url('less/variables.less');
+#Body{
+	max-width:1280px;
+	min-width:850px;
+	text-align:left;
+	width:auto;
+	min-height:700px;
+	margin:0 auto;
+}
+
+.Discussions li{
+  list-style:none;
+}
+.opinionBox
+{
+	margin-left:102px;
+	min-height:110px;
+}
+
+#Content
+{
+	background:#DDD;
+	border-radius:3px;
+	float:none;
+	width:auto;
+	border:1px solid #d8d8d8;
+	margin:23px 23px 40px 280px;
+	padding:5px 15px 15px 10px;
+}
+
+body.Profile #Content
+{
+	float:left;
+	margin-bottom:20px;
+	margin-top:20px;
+	width:900px;
+}
+
+body.Profile #Panel
+{
+	margin-top:20px;
+}
+
+.DiscussionsTabs li a
+{
+	background:none repeat scroll 0 0 transparent;
+	color:#888;
+	display:inline-block;
+	padding:4px 6px;
+}
+
+.MessageForm,.Tabs,.Headings
+{
+	border-bottom:none;
+}
+
+.nowrap
+{
+	white-space:nowrap;
+}
+
+input.Button,a.Button,.Button,.Button.CommentButton,.TabLink.SignInPopup,a.BigButton
+{
+	background:#F8F8F8;
+	background-image:0;
+	border:1px solid #999;
+	border-radius:2px;
+	box-shadow:inset 0 1px 0 white, inset 0 -1px 2px #BBB;
+	color:#333;
+	cursor:pointer;
+	display:inline-block;
+	font-size:12px;
+	font-weight:700;
+	line-height:1;
+	moz-border-radius:2px;
+	moz-box-shadow:inset 0 1px 0 #fff, inset 0 -1px 2px #bbb;
+	moz-transition:all .2s linear 0;
+	text-shadow:0 1px 0 #FFF;
+	webkit-border-radius:2px;
+	webkit-box-shadow:inset 0 1px 0 white, inset 0 -1px 2px #BBB;
+	white-space:nowrap;
+	border-color:#999;
+	margin:0;
+	padding:6px 10px;
+}
+
+a.button:hover
+{
+	color:#000;
+	border-color:#555;
+}
+
+
+.Button:focus
+{
+	color:#111;
+	border-color:#666;
+}
+
+.Popup .Button
+{
+	padding:5px 8px;
+}
+
+.Popup .Button:focus
+{
+	color:#222;
+}
+
+.Loading
+{
+	background:url(images/progress.gif) no-repeat scroll center center transparent;
+	height:100px;
+	padding:0 20px;
+}
+
+.Progress
+{
+	background:url(images/progress.gif) no-repeat scroll center center transparent;
+	padding:10px 40px 10px 0;
+}
+
+.TinyProgress
+{
+	background:url(images/progress_sm.gif) no-repeat scroll center center transparent;
+	padding:10px 40px 10px 0;
+}
+
+.Conversations .Deleted
+{
+	text-decoration:line-through;
+}
+
+.Deleted
+{
+	background:none repeat scroll 0 0 #F5F5F5;
+	border:1px solid #DDD;
+	border-radius:3px 3px 3px 3px;
+	margin:10px 0 0;
+	padding:6px 10px;
+}
+
+.Warning
+{
+	background:none repeat scroll 0 0 #FFC;
+	border:1px solid #FF9;
+	border-radius:3px 3px 3px 3px;
+	color:#000;
+	padding:6px 8px;
+}
+
+.Alert
+{
+	background:none repeat scroll 0 0 #D00;
+	border-radius:2px 2px 2px 2px;
+	color:#FFF;
+	text-shadow:0 1px 1px rgba(0,0,0,0.5);
+	padding:1px 4px;
+}
+
+.Info
+{
+	background:none repeat scroll 0 0 #FAFAFA;
+	border:1px solid #EEE;
+	border-radius:4px 4px 4px 4px;
+	color:#888;
+	font-size:13px;
+	margin:0 0 10px;
+	padding:6px;
+}
+
+#PagerLess
+{
+	border-top-left-radius:2px;
+	border-top-right-radius:2px;
+	margin-bottom:1px;
+	text-align:left;
+}
+
+.MorePager a.Loading
+{
+	background:url(images/progress.gif) no-repeat scroll center center transparent!important;
+	border:0 none!important;
+	padding:0 20px!important;
+}
+
+#PagerMore
+{
+	margin-bottom:1px;
+}
+
+.NumberedPager,.PrevNextPager
+{
+	font-size:16px;
+	font-weight:700;
+	text-align:right;
+	margin:1px 0 0;
+}
+
+#PagerBefore
+{
+	margin:1px 0;
+}
+
+.NumberedPager span,.NumberedPager a.Highlight
+{
+	color:#777;
+}
+
+.NumberedPager a.Next,.NumberedPager span.Next,.NumberedPager a.Previous,.NumberedPager span.Previous
+{
+	font-size:16px;
+	line-height:10px;
+}
+
+.NumberedPager a.Next,.NumberedPager span.Next
+{
+	margin-left:6px;
+}
+
+.NumberedPager a.Previous,.NumberedPager span.Previous
+{
+	margin-right:6px;
+}
+
+a.Small img
+{
+	background:none repeat scroll 0 0 #DDD;
+	display:inline-block;
+	height:24px;
+	overflow:hidden;
+	text-indent:-100px;
+	width:24px;
+}
+
+@font-face
+{
+	font-family:icons;
+	src:url(fonts/fico.eot?#iefix) format(embedded-opentype), url(fonts/fico.ttf) format(truetype), url(fonts/fico.svg#Fico) format(svg);
+}
+
+.icon,.icon_generated:before
+{
+	font-family:icons;
+	font-style:normal!important;
+	font-weight:400;
+	text-transform:none!important;
+}
+
+.icon_generated
+{
+	color:#999;
+}
+
+.icon_generated:before
+{
+	content:attr(data-icon);
+	padding-right:7px;
+}
+
+.DismissMessage a.Dismiss
+{
+	color:#999;
+	font-size:22px;
+	font-weight:700;
+	line-height:1;
+	position:absolute;
+	right:5px;
+	top:3px;
+}
+
+.DismissMessage a.Dismiss,.DismissMessage a.Dismiss:hover
+{
+	border-radius:0 0 0 0;
+	color:#777;
+	display:block;
+	font-weight:700;
+	height:14px;
+	right:-1px;
+	top:-1px;
+	width:auto;
+	margin:0;
+	padding:1px 3px 2px 4px;
+}
+
+.DismissMessage
+{
+	border:medium none;
+	border-radius:2px 2px 2px 2px;
+	color:#000;
+	position:relative;
+	text-align:left;
+	margin:0 0 15px;
+	padding:10px;
+}
+
+.DismissMessage p
+{
+	margin:2px 0;
+}
+
+.DismissMessage.Info
+{
+	background:none repeat scroll 0 0 #DDD;
+	border:1px solid #DDD;
+}
+
+.DismissMessage.Warning
+{
+	background:none repeat scroll 0 0 #FFCCC9;
+	border:1px solid #FFCCC9;
+}
+
+.DismissMessage.Box
+{
+	background:none repeat scroll 0 0 #C5BEA4;
+	border:1px solid #C5BEA4;
+	box-shadow:none;
+}
+
+#Head
+{
+	background:0 repeat scroll 0 0 transparent;
+	box-shadow:0 1px 8px 0 rgba(0,0,0,0.2);
+	height:40px;
+	padding:0;
+}
+
+p.NoResults
+{
+	background:#ddd;
+	margin:50px 0 0;
+	padding:5px 10px;
+}
+
+body #Head h1
+{
+	border:0 none;
+	display:inline-block;
+	float:left;
+	font-weight:700;
+	margin:0 0 0 15px;
+	padding:10px;
+}
+
+#Head h1 a span
+{
+	color:#555;
+	font-size:24px;
+	text-shadow:1px 1px 0 #FFF;
+}
+
+#Head form
+{
+	float:right;
+	width:250px;
+	padding:0;
+}
+
+div.Search
+{
+	margin-right:242px;
+	position:relative;
+	width:auto;
+}
+
+div.Search.guest
+{
+	margin-right:13px;
+}
+
+div.Search form input.InputBox,.SearchTabs input.InputBox
+{
+	background:none repeat scroll 0 0 #F9F9F9;
+	border:0 none;
+	border-radius:1px 0 0 1px;
+	color:#888;
+	font-size:16px;
+	height:35px;
+	vertical-align:bottom;
+	width:100%;
+	margin:0!important;
+	padding:0 6px;
+}
+
+#SearchBox {
+	display:inline;
+	float:right;
+	height:33px;
+	padding-right:15px;
+	padding-top:5px;
+}
+
+.SearchBox #Form_Go
+{
+	height:24px;
+	vertical-align:top;
+}
+
+
+.header_bottom
+{
+	background:none repeat scroll 0 0 #E9E9E9;
+	border-bottom:1px solid #AFAFAF;
+	border-top:1px solid #FFF;
+	width:100%;
+	padding:10px 0;
+}
+
+
+.MenuTitle
+{
+	border-radius:1px 0 0 0;
+	color:#666;
+	font-size:120%;
+	moz-user-select:none;
+	padding:5px 18px 5px 8px;
+}
+
+.Open .MenuTitle
+{
+	background:none repeat scroll 0 0 #282828;
+	box-shadow:2px 2px 3px rgba(0,0,0,0.5);
+	color:#FFF;
+}
+
+.MenuItems
+{
+	background:none repeat scroll 0 0 #444;
+	border:1px solid #282828;
+	border-radius:1px 0 0 1px;
+	box-shadow:2px 2px 3px rgba(0,0,0,0.5);
+	color:#FFF;
+	font-size:10px;
+	line-height:100%;
+	min-width:125px;
+  position: absolute;
+  top:-9999px;
+}
+.ToggleFlyout:hover .MenuItems{
+  top:auto;
+  z-index:9999;
+}
+
+.MenuItems li
+{
+	padding:6px!important;
+}
+
+.MenuItems a,.MenuItems a:link,.MenuItems a:visited,.MenuItems a:active
+{
+	color:#FFF;
+	display:block;
+	text-decoration:none;
+}
+
+.MenuItems li:hover
+{
+	background:none repeat scroll 0 0 #282828;
+}
+
+#Panel
+{
+	float:left;
+	width:250px;
+	margin:2px 0 0 15px;
+}
+
+a.BigButton
+{
+	display:block;
+	font-size:15px;
+	font-weight:700;
+	moz-border-radius:3px;
+	moz-box-shadow:0 0 2px #999;
+	text-align:center;
+	margin:0 10px 10px;
+	padding:8px 0;
+}
+
+a.BigButton:hover
+{
+	border:1px solid #666;
+	box-shadow:none;
+	moz-box-shadow:none;
+	webkit-box-shadow:none;
+}
+
+a.BigButton:focus
+{
+	background:#ffffff;
+	box-shadow:0 0 2px #999;
+	color:#222;
+	moz-box-shadow:0 0 2px #999;
+	pie-background:linear-gradient(top,#ffffff,#cccccc);
+	text-shadow:0 1px 0 #ddd;
+	webkit-box-shadow:0 0 2px #999;
+}
+
+.Icons a
+{
+	display:block;
+	float:left;
+	margin:0 2px 2px 0;
+}
+
+.Icons img
+{
+	background:none repeat scroll 0 0 #C4CDE0;
+	color:#C4CDE0;
+	display:block;
+	height:44px;
+	overflow:hidden;
+	text-indent:50px;
+	width:44px;
+}
+
+.Empty
+{
+	background:#ddd;
+	border-radius:3px 3px 0 0;
+	box-shadow:none;
+	clear:right;
+	padding:10px;
+}
+
+.DataList
+{
+	background:#DDD;
+	padding:0;
+}
+
+.Empty,p.NoResults
+{
+	border-radius:3px 3px 3px 3px;
+	color:#555;
+	font-size:200%;
+	font-weight:700;
+	text-shadow:0 1px 0 #FFF;
+	padding:12px;
+}
+
+.CategoryList
+{
+	clear:right;
+	margin:0;
+}
+
+.DataList.Activities
+{
+	border-top-left-radius:0;
+	border-top-right-radius:0;
+}
+
+.Categories.discussions .DataList
+{
+	border-bottom-left-radius:0;
+	border-bottom-right-radius:0;
+	padding-bottom:0;
+}
+
+.DataList .Item,.Conversation .Item
+{
+	background:none repeat scroll 0 0 #FFF;
+	moz-transition:background .1s linear 0;
+	position:relative;
+	border:1px solid #ddd;
+	border-bottom:none;
+	margin:0 6px 0 12px;
+	padding:10px 0;
+}
+
+.DataList .Item.Comment
+{
+	background:#DDD!important;
+	border:none;
+}
+
+.DataList .Item:first-child
+{
+	border-top-left-radius:3px;
+	border-top-right-radius:3px;
+}
+
+.DataList .Item:last-child
+{
+	border-bottom-left-radius:3px;
+	border-bottom-right-radius:3px;
+}
+
+.Categories.all .DataList .Item
+{
+	min-height:65px;
+}
+
+.Categories.all .DataList .CategoryHeading
+{
+	background:0 repeat scroll 0 0 transparent;
+	border-radius:1px 1px 1px 1px;
+	box-shadow:0 8px 8px -8px rgba(0,0,0,0.4);
+	margin-left:-27px;
+	min-height:0;
+	padding-left:5px;
+	z-index:100;
+}
+
+.Categories.all .DataList .CategoryDescription
+{
+	color:#555;
+	width:50%;
+}
+
+.Conversation .Item.Alt,.Profile .DataList .Item:nth-child(2n)
+{
+	background:none repeat scroll 0 0 #F5F5F5;
+}
+
+.DataList .Item:hover
+{
+	background:#f5f5f5;
+}
+
+.DataList .Item .Item
+{
+	border-bottom:medium none;
+}
+
+.Categories.all .Options
+{
+	right:290px;
+	top:14px;
+	z-index:200;
+}
+
+#vanilla_categories_all .DataList .Options
+{
+	margin:6px 10px 0 0!important;
+}
+
+.Categories.all .CategoryHeading .Options
+{
+	top:10px;
+}
+
+.DataList .OptionButton
+{
+	position:absolute;
+	right:0;
+	top:0;
+}
+
+.DataList a.Title
+{
+	color:#19487B;
+	display:block;
+	font-size:16px;
+	font-weight:700;
+	width:auto;
+	margin:0 370px 0 0;
+	padding:8px 0 4px;
+}
+
+.DataList a.Title:hover
+{
+	color:#E43715;
+}
+
+.Categories.all .DataList a.Title
+{
+	font-size:18px;
+	width:45%;
+	padding:11px 0 0;
+}
+
+.DataList .Title
+{
+	display:block;
+	font-size:14px;
+	margin:0;
+}
+
+.DataList .Meta
+{
+	color:#70727C;
+	font-size:11px;
+	height:38px;
+	padding-right:25px;
+	position:absolute;
+	right:0;
+	text-align:right;
+	top:0;
+	width:345px;
+}
+
+.Discussion .DataList .Meta,.Activities .Meta,.Profile.comments .Meta,.Conversations .Meta,.Categories.all .Meta,.SearchResults .Meta
+{
+	float:none;
+	height:auto;
+}
+
+.MessageList .Meta
+{
+	min-height:0;
+}
+
+.Profile.comments .Meta
+{
+	height:auto;
+	position:relative;
+}
+
+.Profile.comments .DataList a.Title
+{
+	padding-bottom:0;
+	width:auto;
+}
+
+.Activities .Meta,.Conversations.Messages.all .Meta,.Categories.all .Meta
+{
+	margin-right:10px;
+	padding-right:5px;
+	right:5px;
+	top:5px;
+}
+
+.Categories.all .Meta
+{
+	height:auto;
+	right:27px;
+	top:20px;
+}
+
+.Categories.all .Meta .DiscussionCount,.Categories.all .Meta .CommentCount
+{
+	color:#C9C9C9;
+	font-size:20px;
+	margin-left:5px;
+}
+
+.Categories.all .Item .RSS
+{
+	font-size:16px;
+	position:absolute;
+	right:-20px;
+	top:0;
+}
+
+.DataList .Excerpt
+{
+	font-size:12px;
+	line-height:1.4;
+}
+
+.DataList .Excerpt a
+{
+	color:#333;
+	display:block;
+}
+
+.DataList.Discussions .Meta span
+{
+	margin-right:12px;
+}
+
+.DataList.Discussions .Meta span.CommentCount
+{
+	color:#C9C9C9;
+	font-size:22px;
+	position:absolute;
+	right:160px;
+	top:22px;
+}
+
+.DataList.Discussions .Meta span.ViewsCount
+{
+	color:#C9C9C9!important;
+	margin-right:0;
+}
+
+.newComments
+{
+	background:none repeat scroll 0 0 #FF0;
+	border-radius:2px 2px 2px 2px;
+	color:#888;
+	font-size:12px;
+	font-weight:700;
+	line-height:1;
+	padding:1px 4px;
+}
+
+.DataList a.Delete,.DataList a.Delete:hover
+{
+	border-radius:0 0 0 0;
+	color:#333;
+	display:block;
+	font-weight:700;
+	height:14px;
+	line-height:1;
+	width:auto;
+	margin:0;
+	padding:2px 4px;
+}
+
+.DataList .Unfollow
+{
+	background:none repeat scroll 0 0 #EEE;
+}
+
+.DataList .Unfollow a
+{
+	color:#888;
+}
+
+.Item .Inset
+{
+	border-top:1px solid #BEC8CC;
+	padding:5px 0;
+}
+
+.Condensed,.Condensed li
+{
+	clear:both;
+}
+
+.Conversations .Item
+{
+	height:auto;
+	min-height:60px;
+}
+
+.Condensed .Excerpt a
+{
+	display:block;
+	padding:3px 0;
+}
+
+.Activities .Item
+{
+	min-height:60px;
+	padding-left:5px;
+}
+
+.Activities .Excerpt
+{
+	color:#80828C;
+}
+
+.Activities li.Condensed .Excerpt
+{
+	color:#000;
+	font-size:13px;
+}
+
+.Activities .Excerpt a,.Activities .Meta a
+{
+	color:#1E79A7;
+}
+
+.Activities .Excerpt a:hover,.Activities .Meta a:hover
+{
+	color:#FF0084;
+}
+
+.Activities .Excerpt img
+{
+	border:1px solid #999;
+	padding:2px;
+}
+
+.Activities ul.DataList
+{
+	background:none repeat scroll 0 0 transparent;
+	box-shadow:0 0 0 0 transparent;
+	margin-left:75px;
+	margin-right:15px;
+	width:auto;
+	padding:0;
+}
+
+.Activities .ItemContent
+{
+	width:631px;
+}
+
+.Activities .HasPhoto .ItemContent
+{
+	margin-left:43px;
+	width:578px;
+}
+
+.Activities .Item .HasPhoto .ItemContent
+{
+	margin-left:42px;
+	width:auto;
+}
+
+.Activities .DataList li
+{
+	background:#ddd;
+	border:1px solid #BEC8CC;
+	margin-bottom:2px;
+	padding:6px;
+}
+
+.DataList.ActivityComments li
+{
+	border-bottom:1px solid #BEC8CC!important;
+	margin-left:12px;
+	margin-right:6px;
+}
+
+.Activities .DataList a.Title,.Activities .DataList .Title,.Activities .DataList .Title a,.Activities .DataList .Excerpt p
+{
+	font-size:13px;
+	line-height:1;
+}
+
+.Activities .DataList .HasPhoto .Meta
+{
+	line-height:1;
+	padding:2px 0 0;
+}
+
+.Activities .DataList .Photo img
+{
+	height:32px;
+	width:32px;
+}
+
+.Activities .CommentForm textarea.TextBox
+{
+	width:97%;
+	padding:9px;
+}
+
+.MessageList,.MessageList li
+{
+	list-style:none outside none;
+	margin:0;
+	padding:0;
+}
+
+.MessageList .Item:last-child
+{
+	border-bottom-left-radius:0;
+	border-bottom-right-radius:0;
+}
+
+.Item .Author img
+{
+	background:none repeat scroll 0 0 #EEE;
+	border:0 none;
+	float:left;
+	height:60px;
+	overflow:hidden;
+	width:60px;
+	margin:0 10px;
+}
+
+.Conversation .MetaItem
+{
+	padding:5px 10px;
+}
+
+.Preview
+{
+	background:none repeat scroll 0 0 #d2d2d2;
+	text-align:left;
+	margin:4px 0 8px;
+	padding:1px 8px;
+}
+
+.Popup .Preview
+{
+	margin:0;
+	padding:8px;
+}
+
+a.Close:hover
+{
+	color:#000;
+}
+
+.SiteTitle
+{
+	font-size:275%;
+	float:left;
+	padding:40px 10px 10px 20px;
+}
+
+.Preview .Message,.MessageList .Message
+{
+	font-size:100%;
+	line-height:140%;
+	word-wrap:break-word;
+}
+
+.Preview .Message,.Preview .Message p,.MessageList .Message,.MessageList .Message p
+{
+	margin:8px 0;
+}
+
+.Preview .Message blockquote,.MessageList .Message blockquote
+{
+	margin:4px 0;
+	padding:4px 16px;
+}
+
+.MessageList .Message
+{
+	clear:none;
+	vertical-align:top;
+	min-height:50px;
+	margin:0 0 8px;
+	padding:15px;
+}
+
+code,pre
+{
+	background:none repeat scroll 0 0 #FF9;
+	border:1px solid #EEC;
+	border-radius:2px 2px 2px 2px;
+	font-family:monospace;
+	overflow:auto;
+	white-space:pre;
+	padding:4px 8px;
+}
+
+.Preview .Message em,.MessageList .Message em
+{
+	font-style:oblique;
+}
+
+.Preview .Message ul,.Preview .Message ol,.MessageList .Message ul,.MessageList .Message ol
+{
+	margin-left:3em!important;
+}
+
+.Preview .Message ol li,.MessageList .Message ol li
+{
+	list-style:decimal outside none!important;
+}
+
+.Preview .Message ul li,.MessageList .Message ul li
+{
+	list-style:disc outside none!important;
+}
+
+.Message h1,.Message h2,.Message h3,.Message h4,.Message h5
+{
+	border:medium none;
+	color:#000;
+	font-weight:700;
+}
+
+.Message h1
+{
+	font-size:22px;
+}
+
+.Message h2
+{
+	font-size:20px;
+}
+
+.Message h3
+{
+	font-size:18px;
+}
+
+.Message h4
+{
+	font-size:16px;
+}
+
+.Message .ImageResized
+{
+	cursor:pointer;
+	font-size:11px;
+	font-weight:400;
+	margin-bottom:10px;
+}
+
+.Foot
+{
+	background:#ddd;
+	border-bottom:none;
+	text-align:right;
+	padding:4px;
+}
+
+.Foot .Note
+{
+	float:left;
+	font-weight:700;
+	line-height:2.6;
+	padding:0 0 0 100px;
+}
+
+.DataList .Meta .RSS
+{
+	margin-right:0;
+}
+
+.DataList.Discussions .Meta .RSS
+{
+	bottom:0;
+	position:absolute;
+	right:0;
+}
+
+.Meta .RSS img
+{
+	vertical-align:text-bottom;
+}
+
+.DataList .CategoryHeading .ItemContent
+{
+	font-size:16px;
+	font-weight:700;
+	margin:0;
+	padding:3px 0;
+}
+
+.User
+{
+	line-height:150%;
+	padding:15px 15px 0;
+}
+
+.User h1
+{
+	border:0 none;
+	color:#333;
+	font-size:200%;
+	margin:0 0 15px;
+	padding:0 0 8px;
+}
+
+#Status
+{
+	background:none repeat scroll 0 0 #f4f4f4;
+	border-radius:2px;
+	color:#444;
+	width:99%;
+	margin:10px 0;
+	padding:8px;
+}
+
+#Status p
+{
+	color:#6C6C6C;
+	display:inline;
+	font-size:120%;
+	line-height:1;
+	margin:0;
+	padding:0;
+}
+
+#Status a.Change
+{
+	font-size:11px;
+	text-decoration:none;
+	text-transform:lowercase;
+}
+
+.User form
+{
+	background:none repeat scroll 0 0 #CFECFF;
+	border-top-left-radius:2px;
+	border-top-right-radius:2px;
+	padding:8px 8px 0;
+}
+
+.User form input.InputBox
+{
+	margin-right:2px;
+	width:618px;
+}
+
+form.Activity
+{
+	background:#ddd;
+	border-radius:3px 3px 0 0;
+	display:block;
+	text-align:right;
+	padding:10px;
+}
+
+form.Activity textarea
+{
+	height:60px;
+	margin-bottom:2px;
+	min-height:60px;
+	width:98%;
+	padding:9px;
+}
+
+#Form_Invitation table
+{
+	background:none repeat scroll 0 0 #F2FBFF;
+	border:1px solid #C0E7F5;
+	border-collapse:collapse;
+	width:100%;
+	margin:10px 0;
+}
+
+#Form_Invitation table label
+{
+	font-size:12px;
+	padding:0;
+}
+
+#Form_Invitation table th,#Form_Invitation table td
+{
+	color:#555;
+	font-weight:400;
+	padding:6px;
+}
+
+#Form_Invitation table thead th,#Form_Invitation table thead td
+{
+	border-bottom:1px solid #C0E7F5;
+}
+
+#Form_Invitation table tbody th
+{
+	color:#000;
+	font-weight:700;
+}
+
+#Form_Invitation table tbody th,#Form_Invitation table tbody td
+{
+	border-bottom:1px solid #C0E7F5;
+	line-height:150%;
+}
+
+#Form_Invitation table thead th
+{
+	color:#000;
+	font-size:13px;
+	font-weight:700;
+}
+
+#Form_Invitation table.AltRows tr.Alt th,#Form_Invitation table.AltRows tr.Alt td,#Form_Invitation table.AltColumns th.Alt,#Form_Invitation table.AltColumns td.Alt
+{
+	background:none repeat scroll 0 0 #CFECFF;
+}
+
+.ProfileTabs ul
+{
+	padding:10px 11px;
+}
+
+.Profile .TabLink
+{
+	background:0 repeat scroll 0 0 transparent;
+	color:#143359;
+	display:inline-block;
+	font-size:16px;
+	padding:6px 10px;
+}
+
+#Form_Invitation table.AltColumns tr.Alt
+{
+	background:none repeat scroll 0 0 transparent;
+}
+
+body.Profile ul.Notifications
+{
+	border-top:0 none;
+	margin-top:0;
+}
+
+.Preferences h3
+{
+	margin:0;
+	padding:10px 0 4px!important;
+}
+
+table.PreferenceGroup thead td
+{
+	border-bottom:1px solid #AAA;
+	border-top:1px solid #AAA;
+	font-weight:700;
+	padding:2px 6px;
+}
+
+table.PreferenceGroup tbody td
+{
+	border-bottom:1px solid #cdcdcd;
+	padding:2px 6px;
+}
+
+.SearchTabs
+{
+	background:none repeat scroll 0 0 transparent;
+	margin-bottom:15px;
+	margin-right:77px;
+	padding:0;
+}
+
+.ActivityTabs li a
+{
+	color:#333;
+	font-size:200%;
+	font-weight:700;
+}
+
+body.Activity #Content
+{
+	width:900px;
+	margin:20px auto;
+}
+
+.PreviewButton.TabLink,.DraftButton.TabLink,.WriteButton.TabLink
+{
+	background:#999!important;
+	margin-right:6px!important;
+	color:#222!important;
+	padding:4px 10px!important;
+}
+
+.PreviewButton.TabLink:hover,.DraftButton.TabLink:hover,.WriteButton.TabLink:hover
+{
+	background:#444!important;
+	color:#ddd!important;
+}
+
+.Button.CommentButton:active
+{
+	background:#ddd;
+}
+
+.MessageForm .Tabs li.Active a
+{
+	background:#eee;
+}
+
+.Tabs li
+{
+	display:inline;
+	margin:0;
+}
+
+.TabLink,.TabLink:link,.TabLink:active,.TabLink:visited
+{
+	background:#ddd;
+	border:none;
+	color:#444;
+	display:inline;
+	line-height:1.8;
+	position:relative;
+	text-decoration:none;
+	white-space:nowrap;
+	border-radius:2px;
+	margin:0;
+	padding:4px;
+}
+
+.TabLink:hover
+{
+	background:#444;
+	color:#eee;
+	moz-transition:all .4s ease-in-out 0;
+	webkit-transition:all .4s ease-in-out 0;
+}
+
+.Active .TabLink
+{
+	background:#bbb;
+	color:#474747;
+}
+
+.PanelInfo li
+{
+	background-color:transparent;
+	border-bottom:1px solid #c4c4c4;
+	position:relative;
+	padding:2px 4px;
+}
+
+.PanelInfo li.Heading
+{
+	color:#000;
+	font-weight:700;
+	text-align:left;
+}
+
+.PanelInfo
+{
+	background:transparent;
+	border-bottom:0 none;
+	border-radius:4px 4px 4px 4px;
+	border-top:0 none;
+}
+
+body.Profile .PanelInfo li
+{
+	border-bottom:0 none;
+	text-align:left;
+}
+
+.PanelInfo .Active .PanelActivity .ShowAll,.PanelInfo .ShowAll
+{
+	background:none repeat scroll 0 0 transparent;
+	border:0 none;
+	font-weight:700;
+	text-align:right;
+}
+
+.PanelInfo .Meta span,.PanelInfo .Meta strong
+{
+	margin-right:8px;
+}
+
+.PanelInfo .Meta span a
+{
+	margin-left:8px;
+}
+
+.PanelInfo .Meta strong
+{
+	background:none repeat scroll 0 0 #91CBFA;
+	border-radius:2px 2px 2px 2px;
+	color:#000;
+	display:inline;
+	font-size:9px;
+	font-weight:700;
+	line-height:1;
+	padding:3px;
+}
+
+.PanelInfo .Parent
+{
+	background:none repeat scroll 0 0 transparent;
+	color:#999;
+	font-weight:700;
+	text-align:left;
+	padding:2px 0;
+}
+
+.Button.CommentButton
+{
+	padding:8px 12px;
+}
+
+.TabLink.SignInPopup
+{
+	border:2px soild #000;
+	background:#666;
+	color:#ddd;
+	text-shadow:none;
+	padding:8px 12px;
+}
+
+.PanelProfile ul li.UserPhoto
+{
+	left:5px;
+	position:absolute;
+}
+
+.PanelProfile ul li a,.PanelProfile ul li
+{
+	line-height:20px;
+}
+
+.Moderators ul.PanelInfo li a
+{
+	float:none;
+	font-weight:700;
+}
+
+.Moderators ul.PanelInfo li a img
+{
+	vertical-align:middle;
+}
+
+.Box
+{
+	background:transparent;
+	border:none;
+	box-shadow:none;
+	margin:20px 0;
+	padding:5px 10px;
+}
+
+.BoxProfile
+{
+	background:none repeat scroll 0 0 rgba(0,0,0,0.25);
+	border-radius:0 0 2px 2px;
+}
+
+.Box h4
+{
+	color:#333;
+	font-weight:700;
+	margin:0;
+	padding:0 0 1px;
+}
+
+.Box dl dt
+{
+	color:#555;
+	float:left;
+	font-size:12px;
+	overflow:hidden;
+	white-space:nowrap;
+	width:80px;
+}
+
+.Box dl dd
+{
+	color:#333;
+	font-size:12px;
+	margin-left:80px;
+}
+
+.Box p
+{
+	color:#222;
+	font-size:100%;
+	padding:0 0 4px;
+}
+
+.PanelActivity
+{
+	border-bottom:0 none;
+	border-top:1px solid #ABDAFB;
+}
+
+.PanelActivity li
+{
+	background:none repeat scroll 0 0 #d2d2d2;
+	border-bottom:1px solid #ABDAFB;
+	color:#999;
+	font-size:11px;
+	line-height:1.6;
+	padding:2px 4px;
+}
+
+.PanelActivity li a
+{
+	font-size:13px;
+}
+
+.PanelActivity p
+{
+	display:inline;
+	font-size:90%;
+	padding:0 4px;
+}
+
+.PanelActivity li em
+{
+	color:#999;
+	font-size:80%;
+	padding-left:5px;
+}
+
+.PanelActivity li .Story
+{
+	font-size:85%;
+}
+
+.PanelProfile ul
+{
+	background:0 repeat scroll 0 0 transparent;
+	position:relative;
+	margin:0 -10px 5px;
+	padding:5px 5px 5px 50px;
+}
+
+.ProfileTabs li a span
+{
+	background:none repeat scroll 0 0 transparent;
+	color:#143359;
+	font-size:18px;
+	font-weight:700;
+	position:static;
+	margin:0;
+}
+
+.DiscussionsTabs li a span
+{
+	background:none repeat scroll 0 0 transparent;
+	color:#999;
+	font-size:12px;
+	font-weight:700;
+	moz-transition:all .1s linear 0;
+	padding-right:0;
+	position:static;
+	margin:0;
+}
+
+.Tabs .SubTab
+{
+	background:#bcbcbc;
+	border-radius:0;
+	margin:0 7px 0 13px;
+	padding:4px 8px;
+}
+
+.ConversationsTabs .TabLink
+{
+	background:none repeat scroll 0 0 transparent;
+	color:#333;
+	font-size:150%;
+	font-weight:700;
+	text-shadow:0 1px 0 rgba(0,0,0,0.15);
+	padding:0;
+}
+
+.ProfileTabs
+{
+	background:none repeat scroll 0 0 transparent;
+	margin:5px 0 0;
+	padding:0;
+}
+
+.DiscussionsTabs .TabLink
+{
+	background:none repeat scroll 0 0 transparent;
+	color:#888;
+	display:inline-block;
+	padding:3px 10px 8px 15px;
+}
+
+.Profile .Active .TabLink
+{
+	border:none;
+	box-shadow:none;
+}
+
+.DiscussionsTabs .TabLink:hover
+{
+	background:#ddd;
+	color:#111;
+}
+
+.DiscussionsTabs .Active .TabLink
+{
+	background:transparent;
+	color:#111;
+}
+
+.DiscussionsTabs .Active
+{
+	margin-top:-5px;
+}
+
+.Count
+{
+	background:#ddd;
+	border-radius:2px;
+	color:#666;
+	font-size:100%;
+	font-weight:400;
+	right:5px;
+	padding:0 6px;
+}
+
+.Tabs li a span
+{
+	background:#888;
+	border-radius:2px;
+	color:#ddd;
+	font-size:80%;
+	font-weight:400;
+	line-height:1;
+	margin:0 0 0 4px;
+	padding:0 3px;
+}
+
+.PanelInfo .Active
+{
+	background:#ddd;
+	border-bottom:1px solid #c2c2c2;
+}
+
+.MessageMeta
+{
+	font-size:11px;
+	text-align:right;
+	padding-right:20px;
+}
+
+.MessageMeta a
+{
+	margin:5px;
+}
+
+.DiscussionHeading
+{
+	font-size:22px;
+	height:auto;
+	line-height:1.2;
+	max-width:880px;
+	text-shadow:0 1px 0 #dedede;
+	padding-left:12px;
+	padding-top:10px;
+	margin:0 0 8px;
+}
+
+.HeadingTabs
+{
+	padding:8px 8px 8px 12px;
+}
+
+.HeadingTabs ul
+{
+	display:inline;
+	float:right;
+}
+
+.HeadingTabs .SubTab
+{
+	background:none repeat scroll 0 0 transparent;
+	display:inline;
+	font-size:14px;
+	font-weight:700;
+	line-height:2.4;
+	padding:0;
+}
+
+.DiscussionTabs
+{
+	background:none repeat scroll 0 0 transparent;
+	clear:none;
+	margin-right:20px;
+	padding:0 8px 5px 0;
+}
+
+.DiscussionTabs .SubTab
+{
+	color:#F1F1F1;
+	display:block;
+	font-size:22px;
+	height:auto;
+	line-height:1;
+	min-height:36px;
+	text-shadow:0 1px 0 rgba(0,0,0,0.5);
+	margin:0;
+}
+
+.Headings
+{
+	position:relative;
+	text-align:left;
+}
+
+.Headings div
+{
+	display:inline-block;
+	padding-right:10px;
+}
+
+.Headings .ItemHeading
+{
+	font-size:18px;
+	font-weight:700;
+	line-height:2;
+	padding:0 6px;
+}
+
+.Tabs.CategoryTabs
+{
+	font-size:18px;
+	font-weight:700;
+	padding-left:14px;
+}
+
+.Tabs .AdminCheck
+{
+	bottom:0;
+	position:absolute;
+	right:3px;
+	z-index:201;
+}
+
+.AdminCheck
+{
+	display:inline-block;
+	height:22px;
+	vertical-align:top;
+}
+
+form.Thumbnail table td
+{
+	width:50%;
+	font-weight:400;
+}
+
+form.Thumbnail table tr td
+{
+	vertical-align:top;
+}
+
+form.Thumbnail table tr th
+{
+	padding-right:10px;
+}
+
+.jcropper-holder
+{
+	border:1px solid #000;
+}
+
+.jcrop-vline,.jcrop-hline
+{
+	background:url(images/jcrop.gif) repeat scroll left top #FFF;
+	font-size:0;
+	position:absolute;
+}
+
+.jcrop-vline
+{
+	height:100%;
+	width:1px!important;
+}
+
+.jcrop-hline
+{
+	height:1px!important;
+	width:100%;
+}
+
+.jcrop-handle
+{
+	background-color:#333;
+	border:1px solid #EEE;
+	font-size:1px;
+	height:7px!important;
+	width:7px!important;
+}
+
+.jcrop-tracker
+{
+	height:100%;
+	width:100%;
+}
+
+.custom .jcrop-vline,.custom .jcrop-hline
+{
+	background:none repeat scroll 0 0 #FF0;
+}
+
+.custom .jcrop-handle
+{
+	background-color:#C7BB00;
+	border-radius:3px 3px 3px 3px;
+	border-color:#000;
+}
+
+.Popup .Loading
+{
+	display:block;
+	width:200px;
+}
+
+.Overlay
+{
+	height:100%;
+	left:0;
+	position:absolute;
+	top:0;
+	width:100%;
+}
+
+.MSIE .Overlay
+{
+	background:none repeat scroll 0 0 gray;
+}
+
+div.Popup .Legal,div.Popup .Content form
+{
+	background:none repeat scroll 0 0 #E9E9E9;
+	max-height:440px;
+	overflow:auto;
+	padding:0 10px 10px;
+}
+
+div.Popup .Footer
+{
+	background:none repeat scroll 0 0 transparent;
+	border:medium none;
+	text-align:center;
+	margin:0 0 5px;
+	padding:0;
+}
+
+div.Popup .Footer input.Button
+{
+	font-size:11px;
+	margin-right:2px;
+}
+
+div.Popup h3
+{
+	font-size:120%;
+	font-weight:700;
+	padding:20px 0 10px;
+}
+
+div.Popup p
+{
+	padding:6px 10px 10px;
+}
+
+div.Popup .Legal p
+{
+	padding:6px 0 10px;
+}
+
+body.Profile #Form_Invitation ul li label,body.Profile #Form_User ul li label,div.Popup form ul li label
+{
+	color:#000;
+	display:block;
+	font-size:14px;
+	font-weight:700;
+	margin:10px 0 0;
+}
+
+body.Entry form ul li.Gender label.RadioLabel,body.Profile #Form_User ul li.Gender label.RadioLabel,div.Popup form ul li.Gender label.RadioLabel
+{
+	display:inline;
+	padding-right:20px;
+}
+
+div.Profile #Form_User input.Button,div.Popup input.Button
+{
+	margin:4px 0 2px;
+}
+
+div.Popup #Form_User .Warning,#dashboard_profile_picture #Form_User .Warning
+{
+	margin:6px 0;
+}
+
+.AjaxError
+{
+	overflow:auto;
+	white-space:pre;
+	padding:10px;
+}
+
+.Legal h3
+{
+	font-size:120%;
+	font-weight:700;
+	margin:20px 0 0;
+	padding:0;
+}
+
+.Legal ol
+{
+	list-style-position:outside;
+	list-style-type:decimal;
+	margin:0 30px 10px;
+}
+
+.Legal ul
+{
+	list-style-position:outside;
+	list-style-type:disc;
+	margin:0 30px 10px;
+}
+
+.Legal li
+{
+	padding:5px 0;
+}
+
+#Panel ul.Discussions
+{
+	border:0 none;
+}
+
+.PanelDiscussions li
+{
+	background:transparent;
+	text-align:left;
+}
+
+.PanelDiscussions li strong
+{
+	display:block;
+	line-height:1.5;
+}
+
+.DataList .Meta a.Category
+{
+	background:none repeat scroll 0 0 #FAFAFA;
+	border-radius:2px 2px 2px 2px;
+	padding:2px 4px;
+}
+
+.DataList li.Mine .Meta a.Category
+{
+	background:none repeat scroll 0 0 #EFF7FF;
+}
+
+.Tag
+{
+	background:none repeat scroll 0 0 #999;
+	border-radius:2px 2px 2px 2px;
+	color:#FFF;
+	font-weight:700;
+	padding:1px 4px;
+}
+
+.DataList span.Announcement,.DataList span.Closed
+{
+	background:#aaa;
+	border-radius:2px 2px 2px 2px;
+	color:#FFF;
+	font-size:12px;
+	font-weight:700;
+	padding:1px 4px;
+}
+
+body.Discussion #Content
+{
+	margin-bottom:20px;
+	min-height:700px;
+}
+
+a.Bookmark,a.Bookmarked,a.Bookmarking
+{
+	color:#C9C9C9;
+	display:inline-block;
+	font-size:25px;
+	position:absolute;
+	right:-3px;
+	top:-24px;
+}
+
+a.Bookmarked,a.Bookmarked span
+{
+	color:#91CBFA!important;
+}
+
+a.Bookmarking
+{
+	background-position:center bottom;
+}
+
+body.Discussion a.Bookmark
+{
+	font-size:36px!important;
+	right:0;
+	top:6px;
+	z-index:100;
+}
+
+body.Discussion a.Bookmark span
+{
+	font-size:36px!important;
+}
+
+body.Discussion .Back
+{
+	text-align:left;
+	padding:5px 6px;
+}
+
+.DataList .ItemContent
+{
+	margin:0 0 0 10px;
+  display:inline-block;
+}
+
+.Editing
+{
+	background:none repeat scroll 0 0 #d2d2d2;
+}
+
+.Share
+{
+	height:31px;
+	padding:10px 0 0 108px;
+}
+
+#DiscussionForm label
+{
+	color:#444;
+	font-size:14px;
+	font-weight:700;
+}
+
+body.Post #Content
+{
+	width:800px;
+	margin:20px auto;
+}
+
+#DiscussionForm h1
+{
+	color:#333;
+	font-size:200%;
+	margin-bottom:15px;
+	text-shadow:none;
+}
+
+#DiscussionForm textarea
+{
+	width:98%;
+}
+
+#DiscussionForm h2
+{
+	border:medium none;
+	color:#02475A;
+	font-size:140%;
+	font-weight:700;
+	margin:0;
+	padding:6px;
+}
+
+#DiscussionForm form
+{
+	background:#ddd;
+	border:none;
+	margin:px 0;
+	padding:0;
+}
+
+#DiscussionForm .Category,#DiscussionForm input.InputBox
+{
+	margin-bottom:10px;
+	width:95%;
+}
+
+#DiscussionForm .Category label
+{
+	padding:0 8px 0 0;
+}
+
+.CommentForm .Buttons
+{
+	margin-bottom:5px;
+	text-align:right;
+}
+
+.Comment .CommentForm .Buttons
+{
+	padding-left:0;
+}
+
+.MessageForm .reply,#MessageForm .reply
+{
+	color:#91CBFA;
+	font-size:42px;
+	moz-transform:matrix(1,0,0,-1,0px,0px);
+	position:absolute;
+	right:-29px;
+	text-shadow:0 3px 15px rgba(0,0,0,0.4);
+}
+
+#DiscussionForm a.Cancel
+{
+	margin-left:18px;
+}
+
+#DiscussionForm .PostOptions li
+{
+	display:inline;
+	padding:0 8px 0 0;
+}
+
+#DiscussionForm .PostOptions label
+{
+	color:#555;
+	display:inline;
+	font-size:95%;
+	font-weight:400;
+}
+
+.Conversations #Content h1
+{
+	color:#333;
+	display:block;
+	font-size:200%;
+	height:36px;
+	line-height:1;
+	margin-bottom:5px;
+	margin-right:273px;
+	text-shadow:0 1px 0 rgba(0,0,0,0.15);
+}
+
+textarea.MultiComplete
+{
+	height:20px;
+	text-align:left;
+	width:100%;
+}
+
+.ac_results
+{
+	background-color:#FFF;
+	border-right:1px solid #BBB;
+	moz-border-bottom-colors:none;
+	moz-border-image:none;
+	moz-border-left-colors:none;
+	moz-border-right-colors:none;
+	moz-border-top-colors:none;
+	overflow:hidden;
+	z-index:99999;
+	width:479px!important;
+	border-color:0 #BBB #BBB;
+	border-style:none solid solid;
+	border-width:0 1px 1px;
+	padding:0;
+}
+
+.ac_results ul
+{
+	list-style:none outside none;
+	width:100%;
+	margin:0;
+	padding:0;
+}
+
+.ac_results li
+{
+	border-bottom:1px solid #BBB;
+	cursor:default;
+	display:block;
+	font-size:12px;
+	line-height:16px;
+	overflow:hidden;
+	text-align:left;
+	margin:0;
+	padding:5px;
+}
+
+.ac_lastitem
+{
+	border-bottom:0 none!important;
+}
+
+.ac_results strong
+{
+	background:none repeat scroll 0 0 #DAF4FD;
+	font-weight:700;
+}
+
+.ac_over strong
+{
+	background:#999;
+	font-weight:700;
+	padding:2px;
+}
+
+.ac_over
+{
+	background:#ddd;
+	color:#FFF;
+}
+
+#Panel input.InputBox,.AddPeople textarea.MultiComplete
+{
+	border-radius:2px;
+	margin-bottom:2px;
+	width:91%;
+	padding:9px;
+}
+
+#MessageForm
+{
+	background:none repeat scroll 0 0 #ddd;
+	border-radius:0 0 3px 3px;
+	position:relative;
+	margin:0;
+	padding:20px 10px 10px;
+}
+
+#MessageForm h2
+{
+	border:0 none;
+	color:#2786C2;
+	font-size:115%;
+	font-weight:700;
+}
+
+#MessageForm textarea
+{
+	height:100px;
+	margin-bottom:2px;
+	min-height:100px;
+	width:98%;
+	padding:9px;
+}
+
+body.add #Content
+{
+	width:auto;
+}
+
+.UploadProgress
+{
+	background:url(images/upload-progress-back.gif) repeat scroll 0 0 transparent;
+	border:1px solid #0C3C7E;
+	border-radius:2px 2px 2px 2px;
+	color:#FFF;
+	text-shadow:0 1px 1px #333;
+	width:200px;
+	z-index:0;
+	margin:10px 0;
+}
+
+.UploadProgress div
+{
+	padding:2px 0;
+}
+
+.Popup #ConversationForm textarea.MultiComplete,.Popup #ConversationForm .TextBox
+{
+	width:96%;
+}
+
+.UploadProgress .Background
+{
+	background:url(images/upload-bg.gif) repeat scroll 0 0 transparent;
+	width:0;
+	z-index:1;
+}
+
+.UploadProgress .Foreground
+{
+	overflow:visible;
+	text-indent:6px;
+	white-space:nowrap;
+	z-index:2;
+}
+
+div.Popup h1,div.Popup h2
+{
+	background:url(images/bg.png) repeat scroll 0 0 transparent;
+	color:#333;
+	display:block;
+	font-size:140%;
+	border-bottom:1px solid #888;
+}
+
+ul.Tabs
+{
+	border-bottom:1px solid #AAA;
+	padding-left:4px;
+	text-align:left;
+}
+
+ul.Tabs li
+{
+	display:inline-block;
+}
+
+ul.Tabs li a
+{
+	background:none repeat scroll 0 0 #EEE;
+	border-radius:3px 3px 0 0;
+	color:#888;
+	display:inline-block;
+	margin-left:4px;
+	moz-border-bottom-colors:none;
+	moz-border-image:none;
+	moz-border-left-colors:none;
+	moz-border-right-colors:none;
+	moz-border-top-colors:none;
+	position:relative;
+	top:1px;
+	border-color:#AAA;
+	border-style:solid;
+	border-width:1px 1px 0;
+	padding:2px 8px 1px;
+}
+
+ul.Tabs li a:hover
+{
+	background:none repeat scroll 0 0 #F5F5F5;
+	color:#444;
+}
+
+ul.Tabs li a.Active
+{
+	background:none repeat scroll 0 0 #FFF;
+	color:#000;
+	padding:2px 8px;
+}
+
+ul.Tabs li a.EntryTabFor_password
+{
+	background-image:url(images/icon.png);
+	background-position:3px 4px;
+	background-repeat:no-repeat;
+	padding-left:22px;
+}
+
+body.Entry #Content
+{
+	color:#333;
+	float:none;
+	text-align:center;
+	width:360px;
+	margin:20px auto 0;
+}
+
+body.Entry #Content h1
+{
+	border:medium none;
+	color:#444;
+	font-size:200%;
+	font-weight:700;
+	text-align:left;
+	text-shadow:none;
+	margin:0 0 15px;
+	padding:6px;
+}
+
+body.Entry #Content .MainForm
+{
+	padding-top:5px;
+}
+
+body.Entry #Content form
+{
+	background:none repeat scroll 0 0 #E9E9E9;
+	border-radius:3px 3px 3px 3px;
+	box-shadow:0 0 15px 0 rgba(0,0,0,0.15);
+	text-align:left;
+	padding:10px;
+}
+
+body.Entry form ul li label
+{
+	color:#474747;
+	display:block;
+	font-size:14px;
+	font-weight:700;
+	padding:6px 0 0;
+}
+
+body.Entry form ul li label.CheckBoxLabel,body.Entry form ul li label.RadioLabel
+{
+	font-size:12px;
+	font-weight:400;
+	width:auto;
+}
+
+body.Entry input.DateBox,body.Entry input.InputBox,body.Entry textarea
+{
+	width:310px;
+}
+
+span.Incorrect
+{
+	color:red;
+	display:block;
+}
+
+body#dashboard_entry_password #Content,body#dashboard_entry_signin #Content,body#dashboard_entry_index #Content
+{
+	background:transparent;
+	border:none;
+	width:350px;
+}
+
+body#dashboard_entry_password #Content form,body#dashboard_entry_signin #Content form,body#dashboard_entry_index #Content form,.SignInPopup form
+{
+	width:270px;
+}
+
+.SingleEntryMethod
+{
+	width:290px;
+	margin:0 auto;
+}
+
+.MultipleEntryMethods
+{
+	width:500px;
+	margin:0 auto;
+}
+
+body#dashboard_entry_handshake #Content input.InputBox,body#dashboard_entry_signin #Content input.InputBox,body#dashboard_entry_index #Content input.InputBox,body#dashboard_entry_password #Content input.InputBox,.SignInPopup input.DateBox,.SignInPopup input.InputBox,.SignInPopup textarea
+{
+	width:260px;
+	padding:3px;
+}
+
+body#dashboard_entry_password #Content form ul li input#Form_Email,body#dashboard_entry_signin #Content form ul li input#Form_Email,body#dashboard_entry_index #Content form ul li input#Form_Email
+{
+	margin-bottom:6px;
+}
+
+body#dashboard_entry_password #Content input.Password,body#dashboard_entry_signin #Content input.Password,body#dashboard_entry_index #Content input.Password,.SignInPopup input.Password
+{
+	width:180px;
+}
+
+body#dashboard_entry_password ul li label.CheckBoxLabel,body#dashboard_entry_signin ul li label.CheckBoxLabel,body#dashboard_entry_index ul li label.CheckBoxLabel,.SignInPopup ul li label.CheckBoxLabel
+{
+	color:#777;
+	display:inline;
+	font-size:12px;
+	font-weight:400;
+	margin:10px 0 0 10px;
+}
+
+body.Entry li.Buttons input.Button,.SignInPopup li.Buttons input.Button
+{
+	margin:10px 0;
+}
+
+.signin .Entry
+{
+	background:none repeat scroll 0 0 rgba(0,0,0,0.25);
+	border-radius:3px 3px 3px 3px;
+	padding:15px;
+}
+
+.Methods
+{
+	bottom:0;
+	color:#F9F9F9;
+	line-height:1;
+	position:absolute;
+	right:0;
+	text-align:left;
+	top:33px;
+	width:170px;
+	padding:12px 20px 6px;
+}
+
+body#dashboard_entry_password .Methods,body#dashboard_entry_signin .Methods,body#dashboard_entry_index .Methods
+{
+	background:none repeat scroll 0 0 transparent;
+	padding:10px 6px 6px;
+}
+
+.Methods .Method
+{
+	text-align:left;
+	padding:10px 0 0;
+}
+
+body#dashboard_entry_handshake #Content
+{
+	width:720px;
+}
+
+body#dashboard_entry_handshake #Content form
+{
+	padding:20px 30px 26px;
+}
+
+body#dashboard_entry_handshake ul.NewAccount
+{
+	border-right:1px solid #A5D0E7;
+	float:left;
+	margin-right:44px;
+	width:315px;
+}
+
+body#dashboard_entry_handshake ul.LinkAccount
+{
+	margin-left:315px;
+}
+
+ul.NewAccount h2,ul.LinkAccount h2
+{
+	background:url(images/dashboard-sprites.png) no-repeat scroll 0 -542px transparent;
+	padding-left:36px!important;
+}
+
+ul.LinkAccount h2
+{
+	background-position:45px -296px;
+	padding-left:84px!important;
+}
+
+body#dashboard_entry_handshake .Info
+{
+	background:none repeat scroll 0 0 #D3F0FF;
+	border:1px solid #A5D0E7;
+	color:#02475A;
+}
+
+body#dashboard_entry_handshake #Content h2
+{
+	border:medium none;
+	color:#02475A;
+	font-size:140%;
+	font-weight:700;
+	text-align:left;
+	margin:0;
+	padding:6px 0;
+}
+
+body#dashboard_entry_leave p
+{
+	margin:0;
+	padding:20px 10px;
+}
+
+body#dashboard_entry_leave p.Leaving
+{
+	background:url(images/progress.gif) no-repeat scroll left center transparent;
+	margin:0 0 0 14px;
+	padding:20px 0 20px 50px;
+}
+
+.ConnectInfo
+{
+	position:relative;
+	margin:10px 0 0;
+}
+
+.ConnectInfo img
+{
+	height:36px;
+	left:0;
+	position:absolute;
+	top:0;
+	width:36px;
+}
+
+.ConnectInfo span.Name
+{
+	color:#444;
+	display:block;
+	font-size:13px;
+	font-weight:700;
+	line-height:1;
+	padding-left:46px;
+}
+
+.ConnectInfo h3
+{
+	border:medium none;
+	color:#333;
+	font-size:15px;
+	font-weight:700;
+	line-height:1.6;
+	padding:0 0 10px 46px;
+}
+
+.Connect form ul li#ConnectPassword label,.SignInPopup form ul li#ConnectPassword label
+{
+	padding:10px 0 0;
+}
+
+body#dashboard_entry_password input.InputBox,body#dashboard_entry_signin input.InputBox,body#dashboard_entry_index input.InputBox,.Connect input.InputBox,.SignInPopup input.InputBox
+{
+	padding:3px;
+}
+
+body#dashboard_entry_signin .SearchBox input.InputBox
+{
+	padding-top:0;
+}
+
+.Connect .ExistingUsername,.SignInPopup .ExistingUsername
+{
+	color:#000;
+	display:block;
+	font-size:13px;
+	font-weight:700;
+	line-height:1;
+}
+
+.Errors
+{
+	left:auto;
+	position:inherit;
+	text-align:left;
+	top:auto;
+	z-index:auto;
+	margin:0 0 10px!important;
+}
+
+.Errors ul
+{
+	background:none repeat scroll 0 0 #D50A0A!important;
+	border:1px solid #A00!important;
+	border-radius:2px 2px 2px 2px;
+	box-shadow:none;
+	display:block;
+	padding:6px 10px;
+}
+
+.Errors ul li
+{
+	background:none repeat scroll 0 0 #D50A0A!important;
+	color:#FFF!important;
+	text-align:left;
+}
+
+div.Popup .Errors ul
+{
+	border:1px solid #A00!important;
+	border-radius:2px 2px 2px 2px;
+	box-shadow:none;
+	display:block;
+}
+
+div.Popup .Errors
+{
+	left:auto;
+	position:inherit;
+	text-align:left;
+	top:auto;
+	z-index:auto;
+	margin:10px 0!important;
+}
+
+.Errors pre
+{
+	border-radius:2px 2px 2px 2px;
+	box-shadow:0 0 2px #333;
+	display:block;
+	overflow:auto;
+	white-space:pre;
+	margin:10px 0 5px;
+	padding:4px 8px;
+}
+
+body.embed div.Popup h1,body.embed div.Popup h2,body.embed .Connect h1,body.embed .Connect h2
+{
+	background:none repeat scroll 0 0 #3B5998;
+	border-bottom:1px solid #2E4778;
+}
+
+.Embed a
+{
+	color:#3B5998!important;
+}
+
+.Embed a:hover
+{
+	text-decoration:underline!important;
+}
+
+.Embed a.Button,.Embed a.Button:hover
+{
+	color:#333!important;
+	font-weight:700;
+	text-decoration:none!important;
+}
+
+.Embed h3
+{
+	border-bottom:1px solid #BEC8CC;
+	font-size:15px;
+	font-weight:700;
+}
+
+.Embed .MessageForm
+{
+	background:none repeat scroll 0 0 #F2F2F2;
+	border-bottom:1px solid #BEC8CC;
+	border-top:1px solid #FFF;
+	padding:7px 8px;
+}
+
+.Embed .TextBox
+{
+	border-radius:0 0 0 0;
+	font-size:12px;
+	height:50px;
+	min-height:50px;
+	width:100%;
+	padding:3px;
+}
+
+.Embed .Author
+{
+	color:#777;
+	display:inline-block;
+	font-size:11px;
+	padding:0 8px 0 0;
+}
+
+.Embed .Foot
+{
+	background:none repeat scroll 0 0 transparent;
+	border:medium none;
+	text-align:right;
+}
+
+.Embed .MorePager a,.Embed .MorePager a:link,.Embed .MorePager a:hover,.Embed .MorePager a:active,.Embed .MorePager a:visited
+{
+	background:none repeat scroll 0 0 transparent;
+	border:medium none;
+	padding:0;
+}
+
+.Embed .MorePager a.Loading,.Embed .MorePager a.Loading:hover
+{
+	text-decoration:none!important;
+}
+
+.Embed .MorePager
+{
+	background:none repeat scroll 0 0 #F2F2F2;
+	border-bottom:1px solid #BEC8CC;
+	padding:2px 8px 4px;
+}
+
+.RegardingEvent
+{
+	background:none repeat scroll 0 0 rgba(0,0,0,0.7)!important;
+	border-radius:4px 4px 4px 4px;
+	color:#FFF!important;
+	position:relative;
+	text-align:left!important;
+	text-shadow:0 1px 1px #000;
+	padding:10px 10px 10px 38px;
+}
+
+.RegardingEvent span.InformSprite
+{
+	left:5px;
+	top:5px;
+}
+
+.RegardingEvent a.ReportedUser,.RegardingEvent a.ReportingUser
+{
+	color:#CFECFF;
+}
+
+.RegardingEvent .ReportedReason
+{
+	font-style:italic;
+	padding:5px;
+}
+
+.RegardingEvent .RegardingTime
+{
+	color:#B1B1B1;
+	font-size:9px;
+	text-transform:uppercase;
+}
+
+.RegardingActions
+{
+	height:100%;
+	margin-bottom:10px;
+	overflow:hidden;
+	position:relative;
+	padding:0 10px;
+}
+
+.RegardingActions .ActionButton
+{
+	background:none repeat scroll 0 0 rgba(0,0,0,0.7)!important;
+	border-bottom-left-radius:4px;
+	border-bottom-right-radius:4px;
+	color:#FFF!important;
+	display:inline-block;
+	margin-right:4px;
+	text-align:left!important;
+	text-shadow:0 1px 1px #000;
+	padding:0 5px 2px;
+}
+
+.RegardingActions .ActionButton a
+{
+	color:#CFECFF;
+	font-size:10px;
+	text-transform:uppercase;
+}
+
+.ProfilePhotoSmall
+{
+	height:24px;
+	width:24px;
+}
+
+.ProfilePhotoMedium
+{
+	height:60px;
+	width:60px;
+	border:1px solid #CCC;
+}
+
+.DiscussionsMeta
+{
+	display:inline-block;
+	height:38px;
+	overflow:hidden;
+	position:absolute;
+	right:30px;
+	text-align:left;
+	top:15px;
+	width:120px;
+}
+
+.DiscussionsMeta a
+{
+	line-height:1;
+	white-space:nowrap;
+	word-wrap:normal;
+}
+
+.DiscussionsMeta .ProfilePhotoMedium
+{
+	float:left;
+	height:38px;
+	margin-right:10px;
+	width:38px;
+}
+
+.PhotoGrid
+{
+	line-height:1;
+	margin:2px -2px;
+}
+
+.PhotoGrid img
+{
+	height:32px;
+	vertical-align:text-bottom;
+	width:32px;
+	margin:2px;
+}
+
+.PhotoGridSmall
+{
+	line-height:1;
+	margin:1px -1px;
+}
+
+.PhotoGridSmall img
+{
+	height:24px;
+	vertical-align:text-bottom;
+	width:24px;
+	margin:1px;
+}
+
+.date
+{
+	color:#999;
+	display:block;
+	position:absolute;
+	right:-44px;
+	top:0;
+	width:43px;
+	margin:0 auto;
+}
+
+.day
+{
+	font-size:24px;
+	top:20px;
+}
+
+.month
+{
+	font-size:14px;
+	left:0;
+	top:0;
+}
+
+.year
+{
+	font-size:16px;
+	moz-transform:rotate(-90deg);
+	right:-9px;
+	top:12px;
+}
+
+.time
+{
+	font-size:11px;
+	top:40px;
+}
+
+body.Discussion div.AttachFileWrapper
+{
+	margin-left:-135px;
+}
+
+#DiscussionForm .Tabs
+{
+	margin:0 -10px;
+}
+
+.QnAButton.TabLink
+{
+	background:none repeat scroll 0 0 #F9F9F9;
+	font-size:14px;
+	font-weight:700;
+	margin-right:-4px;
+	padding:8px 12px;
+}
+
+.Active .QnAButton.TabLink
+{
+	background:none repeat scroll 0 0 #91CBFA;
+	box-shadow:0 6px 8px -8px rgba(0,0,0,0.4);
+	color:#222;
+}
+
+.Tabs #QnA_Question
+{
+	border-radius:2px 0 0 2px;
+}
+
+.Tabs #QnA_Discussion
+{
+	border-radius:0 2px 2px 0;
+}
+
+.QnA-Tag-Question,.QnA-Tag-Answered,.QnA-Tag-Accepted
+{
+	background:none repeat scroll 0 0 transparent;
+	font-size:16px!important;
+	padding:0;
+}
+
+.QnA-Tag-Answered
+{
+	color:#BFBFBF;
+}
+
+.QnA-Tag-Accepted
+{
+	color:#72D382;
+}
+
+.MessageList .Meta .CommentInfo span.QnA-Box span
+{
+	color:#F9F9F9;
+	margin:0;
+}
+
+body ul.token-input-list
+{
+	border:1px solid #FFF;
+	border-radius:0 0 0 0;
+	width:99.099998%;
+}
+
+body .StatBox
+{
+	background:none repeat scroll 0 0 transparent;
+	color:#C9C9C9;
+	display:inline-block;
+	font-size:22px;
+	font-weight:400;
+	height:22px;
+	padding:7px 0 0;
+}
+
+body .StatBox a
+{
+	color:#C9C9C9;
+	display:inline;
+}
+
+body .AnswersBox
+{
+	margin-right:150px;
+}
+
+body div.AnswerTabs
+{
+	background:none repeat scroll 0 0 transparent;
+	margin-right:0;
+	border-color:#CCC;
+}
+
+body div.AnswerTabs li.Active a
+{
+	border-color:#CCC;
+	margin:0 10px;
+}
+
+body ul.MessageList div.Meta span.Votes
+{
+	left:auto;
+	right:-78px;
+}
+
+body span.Votes a
+{
+	background:none repeat scroll 0 0 #F8F8F8;
+}
+
+body span.Votes a:hover
+{
+	background:none repeat scroll 0 0 #333;
+}
+
+body span.Votes a.VoteUp
+{
+	border-radius:0 3px 0 0;
+}
+
+body span.Votes a.VoteDown
+{
+	border-radius:0 0 3px 0;
+}
+
+body span.Votes span
+{
+	background:none repeat scroll 0 0 #F8F8F8;
+	color:#333!important;
+	min-width:20px;
+}
+
+body .StatBox:after
+{
+	color:#C9C9C9;
+	font-family:icons;
+	font-size:22px;
+	font-style:normal!important;
+	font-weight:400;
+	height:5px;
+	line-height:5px;
+	margin-right:12px;
+	padding-left:4px;
+	text-transform:none!important;
+}
+
+body .ViewsBox:after
+{
+	content:"E";
+}
+
+body .AnswersBox:after
+{
+	content:"B";
+}
+
+body .UserSignature
+{
+	border-top:1px solid #C9C9C9;
+	color:#666;
+	padding-left:5px;
+}
+
+.DataList .NillaBlog a.Title
+{
+	font-size:20px;
+	padding:12px 0 12px 4px;
+}
+
+.DataList .NillaBlog a.Title.withplusone
+{
+	margin-right:460px;
+}
+
+.DataList .NillaBlog a.Title span
+{
+	font-size:20px!important;
+}
+
+.NillaBlog .DiscussionsMeta
+{
+	width:100px;
+}
+
+.DataList.Discussions .NillaBlog .Meta span.CommentCount
+{
+	right:120px;
+}
+
+.FirstComment.NillaBlog
+{
+	margin-bottom:20px;
+}
+
+body.Discussion .FirstComment.NillaBlog .Meta .ProfilePhotoMedium
+{
+	height:60px;
+	left:-60px;
+	width:60px;
+}
+
+body.Discussion .NillaBlog .Meta .ProfilePhotoMedium
+{
+	height:40px;
+	left:-40px;
+	width:40px;
+}
+
+.Discussions .DataList .Item.NillaBlog
+{
+	border-radius:2px 2px 2px 2px;
+	margin:10px 0;
+}
+
+.plusone
+{
+	bottom:0;
+	margin-right:0!important;
+	position:absolute;
+	right:0;
+}
+
+.Nillaplusone
+{
+	margin-right:0!important;
+}
+
+.ItemContent.Discussion .DataList .Meta
+{
+	height:auto;
+	width:auto;
+}
+
+.DataList.Discussions .Meta span.LastCommentDate
+{
+	display:block;
+	line-height:1;
+}
+
+.DataList .Options
+{
+  display:inline-block;
+}
+
+.LastDiscussionTitle
+{
+	display:block;
+	margin:-5px;
+}
+
+.LastCommentDate
+{
+	display:inline;
+	right:-50px;
+	top:22px;
+}
+
+#DiscussionForm
+{
+	margin:10px auto;
+}
+
+.Activities .Meta
+{
+	height:22px;
+	position:relative;
+	text-align:left;
+	right:0;
+	top:0;
+}
+
+.Tabs.CommentTabs
+{
+	margin:0 0 5px;
+}
+
+#Foot a
+{
+	color:#DDD;
+}
+
+#Foot a :hover
+{
+	color:#78070C!important;
+}
+
+#footer
+{
+	color:#ddd;
+	font-size:13px;
+	width:960px!important;
+	margin:0 auto;
+}
+
+#footer1
+{
+	float:left;
+	margin:0;
+	padding:0;
+}
+
+#footer1 p
+{
+	line-height:1.2;
+	margin-top:23px;
+	text-align:center;
+	text-shadow:0 0 1px #000;
+}
+
+#Foot
+{
+	background:url(images/footer.png);
+	width:100%;
+	height:60px;
+	overflow:hidden;
+	padding:0;
+}
+
+#Foot div
+{
+	margin:0 auto;
+	padding:0;
+}
+
+#Form_User_SignIn
+{
+	padding:10px!important;
+}
+
+.arrow_box
+{
+	background:#fff;
+	border:1px solid #ccc;
+	position:relative;
+}
+
+.arrow_box:after,.arrow_box:before
+{
+	border:solid transparent;
+	content:" ";
+	height:0;
+	pointer-events:none;
+	position:absolute;
+	right:100%;
+	width:0;
+}
+
+.arrow_box:after
+{
+	border-right-color:#fff;
+	margin-top:-14px;
+	top:35px;
+	border-width:14px;
+}
+
+.arrow_box:before
+{
+	border-right-color:#ccc;
+	margin-top:-15px;
+	top:35px;
+	border-width:15px;
+}
+
+blockquote.Quote,div.QuoteText
+{
+	background:#EEE;
+	border-left:6px solid #CCC;
+	padding:10px 10px 10px 15px;
+}
+
+.DiscussionsTabs li a :hover,.DiscussionsTabs li a :active,.PanelInfo .Meta span,.DiscussionsTabs li a:hover span,.DiscussionsTabs li.Active a span
+{
+	color:#444;
+}
+
+.Center,table.PreferenceGroup tbody td.PrefCheckBox,div.Popup .Loading,body.Entry
+{
+	text-align:center;
+}
+
+.Right,.Activities .CommentForm form div,.AddPeople form div,#MessageForm form div
+{
+	text-align:right;
+}
+
+h3,.DataList .Title a
+{
+	font-size:120%;
+	font-weight:700;
+}
+
+h4,h5
+{
+	color:#6C6C6C;
+	font-size:120%;
+}
+
+#Popup textarea.TextBox,input.BigInput,form.Thumbnail table
+{
+	width:100%;
+}
+
+.Buttons,.Popup .Info
+{
+	margin-top:10px;
+}
+
+.Alert a,.DataList .Meta .Tag a,.Tag a
+{
+	color:#FFF;
+}
+
+.Alert a:hover,#Status a:hover
+{
+	text-decoration:underline;
+}
+
+.Info strong,.DismissMessage strong,.Preview .Message strong,.MessageList .Message strong,.Legal strong,.UploadProgress div strong
+{
+	font-weight:700;
+}
+
+.NumberedPager a,.NumberedPager span,.PanelActivity span
+{
+	padding:0 4px;
+}
+
+a.Small:hover,.User,.User a
+{
+	text-decoration:none;
+}
+
+.DismissMessage a.Dismiss:hover,.DataList a.Delete:hover
+{
+	background:none repeat scroll 0 0 #333;
+	border:medium none;
+	color:#FFF;
+	text-decoration:none;
+}
+
+#Head h1 a:hover span,.ProfileMenu li a.Unread,body.Post .Popup a.Close,a.Close,.SiteTitle a,.SiteTitle a:hover,#Panel .PanelInfo .Active a,body div.AnswerTabs strong
+{
+	color:#333;
+}
+
+#UserOptions,li.Gender
+{
+	margin-bottom:10px;
+}
+
+.Box.RecentUsers,.CommentForm a.Back,.CommentForm a.Cancel
+{
+	float:left;
+}
+
+a.Category,.Activities .CommentForm input.Button,table.PreferenceGroup td.Description,div.Popup form ul li label.RadioLabel,.Title .Tag,.Embed input.Button
+{
+	font-size:12px;
+}
+
+.SearchResults .Meta,.Moderators ul.PanelInfo li,.jcrop-holder,.Connect h1,.Connect h2
+{
+	text-align:left;
+}
+
+.Categories.all .Item .RSS a,.NillaRSS a
+{
+	color:#C9C9C9;
+}
+
+.Categories.all .Item .RSS a:hover,.QnA-Tag-Question,body .StatBox a:hover,body .Bookmarked .FollowsBox a,body .New .AnswersBox,body .New .AnswersBox:after,body .Bookmarked .FollowsBox:after,.NillaRSS a:hover
+{
+	color:#91CBFA;
+}
+
+.Conversations.Messages.all .Meta span,.Foot a.TabLink,a.ForgotPassword
+{
+	margin-left:10px;
+}
+
+.DataList .Excerpt p,.Condensed .Title,.Condensed a.Title
+{
+	display:inline;
+	padding:0;
+}
+
+.Profile .DataList,.DataList.Activities,.DiscussionsTabs
+{
+	margin:0;
+	padding:0;
+}
+
+.Activity .DataList,body.Activity h1,li.Buttons div a.ForgotPassword
+{
+	margin:0;
+}
+
+.DataList .Meta .MetaLabel,.PanelActivity li a.Name
+{
+	margin-right:2px;
+}
+
+.Activities a.Title,.Activities .Title,.Activities .Title a,.Message h5
+{
+	font-size:14px;
+}
+
+.HasPhoto .Excerpt,.HasPhoto .Meta,pre,#Content .DataList .DiscussionsTabs
+{
+	display:block;
+}
+
+.MessageList .Message small,.Connect .FinePrint,.SignInPopup .FinePrint
+{
+	color:#777;
+	font-size:11px;
+}
+
+#Form_Invitation table tr.Last td,#Form_Invitation table tr.Last th,.AddPeople h4
+{
+	border-bottom:0 none;
+}
+
+.MessageForm,.Headings,body .Alt span.Votes a,body .Alt span.Votes span
+{
+	background:none repeat scroll 0 0 #DDD;
+}
+
+.Tabs,.Comment
+{
+	background:#DDD;
+}
+
+.Permalink
+{
+	color:#303030;
+}
+
+.Permalink,.PanelInfo .Meta,.Headings .MetaHeading,div.Popup small
+{
+	font-size:11px;
+}
+
+.ActivityTabs,.Tabs.ConversationsTabs
+{
+	background:none repeat scroll 0 0 transparent;
+	padding:10px;
+}
+
+body.Profile .PanelInfo li a,.PanelDiscussions li a,.MessageList .Meta span.MItem,.MessageList .Meta span.CommentQuote
+{
+	float:none;
+}
+
+.PanelProfile,.SignInPopup .Content form
+{
+	padding:0 10px 10px;
+}
+
+.MessageList .Item,body.Discussion #Content,.DiscussionsTabs,.Entry,#Form_Comment
+{
+	position:relative;
+}
+
+.UploadProgress .Foreground,.UploadProgress .Background,.day,.month,.year,.time
+{
+	position:absolute;
+}
+
+.SignInPopup form ul li label,body#dashboard_entry_signin form ul li label,body#dashboard_entry_index form ul li label,body#dashboard_entry_password form ul li label,body#dashboard_entry_handshake form ul li label,.Connect form ul li label,.SignInPopup form ul li label,body#dashboard_entry_password form ul li label,body#dashboard_entry_signin form ul li label,body#dashboard_entry_index form ul li label
+{
+	font-size:13px;
+	line-height:1.5;
+	padding:0;
+}
+
+body .FollowsBox:after,body .VotesBox:after
+{
+	content:"?";
+}
+
+.Conversations .DataList .Meta strong,.DiscussionTabs .TabLink
+{
+	margin-left:12px;
+}
+
+.TextBoxWrapper,.Activities li.HasPhoto .Title,div.Popup form p
+{
+	padding:0;
+}
+
+.CommentForm textarea.TextBox,.TextBoxWrapper textarea
+{
+	width:98%;
+	padding:9px;
+}
