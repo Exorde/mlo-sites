@@ -71,6 +71,9 @@ h1,
 h2 {
   color: #e48445;
 }
+nav {
+  background: url("../images/subtle_dots.png");
+}
 /*Reseting the list styles when they are a list of links in a navigation element*/
 nav ul {
   padding: 0;
@@ -139,9 +142,19 @@ blockquote small:before {
 .lower_button {
   top: 10px;
 }
+.highlight,
+.Active,
+.Highlight {
+  /*Vanilla classes are camel case which sucks*/
+
+  border-bottom: 2px solid #ff7f2a;
+  border-right: 2px solid #ff7f2a;
+}
 /*###1 SPECIFIC STYLING*/
 /*###2 BUTTONS AND VISUAL ELEMENTS*/button,
-.buttonified {
+.buttonified,
+.BigButton,
+input[type="button"] {
   /*buttonified exists to make a link looks like a button, when <button> is not semantic*/
 
   -webkit-border-radius: 5px;
@@ -158,6 +171,7 @@ blockquote small:before {
   background: #fffaf6;
   color: #e48445;
   margin: 0 4px;
+  height: 33px;
 }
 .main_menu_more {
   -webkit-box-shadow: 0 0 2px #c34e00;
@@ -192,6 +206,8 @@ blockquote small:before {
 }
 button:hover,
 .buttonified:hover,
+.BigButton:hover,
+input[type="button"]:hover,
 .lower_button,
 .selected_button {
   color: #ff7f2a;
@@ -211,16 +227,24 @@ button:hover,
 .darker_button {
   background: #ff7f2a;
   color: #c34e00;
+  font-weight: 500;
+  border: 2px solid #c34e00;
 }
 #connection_button:hover,
 .darker_button:hover {
   color: #fffaf6;
   background: #e48445;
-  -webkit-text-shadow: 0 0 2px #fffaf6;
-  -moz-text-shadow: 0 0 2px #fffaf6;
-  -o-text-shadow: 0 0 2px #fffaf6;
-  -ms-text-shadow: 0 0 2px #fffaf6;
-  text-shadow: 0 0 2px #fffaf6;
+  -webkit-text-shadow: 2px 2px 2px #fffaf6;
+  -moz-text-shadow: 2px 2px 2px #fffaf6;
+  -o-text-shadow: 2px 2px 2px #fffaf6;
+  -ms-text-shadow: 2px 2px 2px #fffaf6;
+  text-shadow: 2px 2px 2px #fffaf6;
+  -webkit-box-shadow: 3px 3px 5px #ff7f2a;
+  -moz-box-shadow: 3px 3px 5px #ff7f2a;
+  -o-box-shadow: 3px 3px 5px #ff7f2a;
+  -ms-box-shadow: 3px 3px 5px #ff7f2a;
+  box-shadow: 3px 3px 5px #ff7f2a;
+  border: 2px solid #fffaf6;
 }
 /*###2 : LOGO*/
 #branding {
@@ -499,9 +523,6 @@ input[type="submit"][disabled] {
   text-align: right;
 }
 /*###1 GENERIC STYLES (styles applied to several elements) */
-#access {
-  background: url("../images/subtle_dots.png");
-}
 /*###2 : MENUS */
 .sub_menu_container {
   position: absolute;
@@ -642,9 +663,11 @@ input[type="submit"][disabled] {
   margin-bottom: 5px;
 }
 /*###3 MAIN NAV*/
-#access {
+#access,
+.sub_nav {
   border-top: 1px solid #f4ceb4;
-  float: left;
+  /*float: left;*/
+
   margin-bottom: 40px;
   z-index: 3;
   position: relative;
@@ -655,7 +678,11 @@ input[type="submit"][disabled] {
   -ms-box-shadow: 2px 2px 2px #c34e00;
   box-shadow: 2px 2px 2px #c34e00;
 }
-#access .menu {
+#access {
+  margin-bottom: 40px;
+}
+#access .menu,
+.sub_nav .menu {
   padding: 10px;
   margin: 0;
   display: inline-block;
@@ -724,7 +751,7 @@ input[type="submit"][disabled] {
   width: 24%;
   border: 1px solid #959595;
   background: url("../images/subtle_dots.png");
-  padding: 10px 20px;
+  padding: 10px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -743,6 +770,32 @@ input[type="submit"][disabled] {
   border-radius: 5px;
   margin-right: 1%;
 }
+.sidebar_title {
+  margin: 0 0 10px;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: Liberation Mono, Liberation Sans;
+  color: #e48445;
+  -webkit-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #e48445;
+  -moz-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #e48445;
+  -o-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #e48445;
+  -ms-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #e48445;
+  text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #e48445;
+}
+.sidebar_title a {
+  color: #e48445;
+}
 #sidebar input {
   width: auto;
+}
+.sidebar_button {
+  margin: 15px 0;
+  display: block;
+  -webkit-border-box-sizing: border-box;
+  -moz-border-box-sizing: border-box;
+  -o-border-box-sizing: border-box;
+  -ms-border-box-sizing: border-box;
+  border-box-sizing: border-box;
+  text-align: center;
 }

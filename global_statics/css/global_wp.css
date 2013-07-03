@@ -499,19 +499,6 @@ ol.commentlist li.pingback {
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
-.widget-title {
-  margin: 0 0 10px;
-  font-size: 2em;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-family: Liberation Mono, Liberation Sans;
-  color: #e48445;
-  -webkit-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #e48445;
-  -moz-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #e48445;
-  -o-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #e48445;
-  -ms-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #e48445;
-  text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #e48445;
-}
 .widget-area {
   font-size: 0.8em;
 }
