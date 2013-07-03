@@ -30,6 +30,10 @@ function WriteComment($Object, $Sender, $Session, $CurrentOffset) {
 ?>
 <li class="<?php echo $CssClass; ?>" id="<?php echo $Id; ?>">
    <div class="Comment">
+		
+		<div class="opinionBox ">
+			
+			<div class="Message">
 		<div class="identity">
 			
             <?php echo UserPhoto($Author); ?>
@@ -44,10 +48,6 @@ function WriteComment($Object, $Sender, $Session, $CurrentOffset) {
 			<?php $Sender->FireEvent('CommentInfo'); ?>
 			</div>
 		</div>
-		
-		<div class="opinionBox arrow_box">
-			
-			<div class="Message">
 			<?php $Sender->FireEvent('BeforeCommentBody'); ?>
 			<?php 
 			$Object->FormatBody = Gdn_Format::To($Object->Body, $Object->Format);

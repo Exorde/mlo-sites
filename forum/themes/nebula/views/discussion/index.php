@@ -15,32 +15,32 @@ if($this->Pager->FirstPage())
 	$PageClass = 'FirstPage'; 
 	
 ?>
-<div class="Tabs HeadingTabs DiscussionTabs <?php echo $PageClass; ?>">
-   <?php
-   if ($Session->IsValid()) {
-      // Bookmark link
-      echo Anchor(
-         '<span>*</span>',
-         '/vanilla/discussion/bookmark/'.$this->Discussion->DiscussionID.'/'.$Session->TransientKey().'?Target='.urlencode($this->SelfUrl),
-         'Bookmark' . ($this->Discussion->Bookmarked == '1' ? ' Bookmarked' : ''),
-         array('title' => T($this->Discussion->Bookmarked == '1' ? 'Unbookmark' : 'Bookmark') )
-      );
-   }
-   ?>
-
-   <div class="DiscussionHeading"><h1><?php echo $DiscussionName; ?></h1></div>
-   <div class="meta">
-   <?php
+<div class="DataList MessageList Discussion Tabs HeadingTabs DiscussionTabs <?php echo $PageClass; ?>">
+   <div class="SubTab">
+   <h1 id="discussion_name"><?php echo $DiscussionName; ?></h1>
+     <?php
+     if ($Session->IsValid()) {
+        // Bookmark link
+        echo Anchor(
+           '<span>'.T('Bookmark').'</span>',
+           '/vanilla/discussion/bookmark/'.$this->Discussion->DiscussionID.'/'.$Session->TransientKey().'?Target='.urlencode($this->SelfUrl),
+           'Bookmark MenuTitle' . ($this->Discussion->Bookmarked == '1' ? ' Bookmarked' : ''),
+           array('title' => T($this->Discussion->Bookmarked == '1' ? 'Unbookmark' : 'Bookmark'))
+        );
+     }
+     ?>
+   </div>
+   <ul class="breadcrumb">
+      <li class="breadcrumb_li"><?php
          if (C('Vanilla.Categories.Use') == TRUE) {
             echo Anchor($this->Discussion->Category, 'categories/'.$this->Discussion->CategoryUrlCode, 'TabLink');
          } else {
             echo Anchor(T('All Discussions'), 'discussions', 'TabLink');
          }
-      ?>
-	</div>  
-</div>
+      ?></li>
+   </ul>
 <?php $this->FireEvent('BeforeDiscussion'); ?>
-<ul class="DataList MessageList Discussion <?php echo $PageClass; ?>">
+<ul class="comments_list">
    <?php echo $this->FetchView('comments'); ?>
 </ul>
 <?php
@@ -74,8 +74,10 @@ if ($this->Discussion->Closed == '1') {
    ?>
    <div class="Foot">
       <?php
-      echo Anchor(T('Add Your Reply'), SignInUrl($this->SelfUrl.(strpos($this->SelfUrl, '?') ? '&' : '?').'post#Form_Body'), 'TabLink'.(SignInPopup() ? ' SignInPopup' : ''));
+      echo Anchor(T('Add a Comment'), SignInUrl($this->SelfUrl.(strpos($this->SelfUrl, '?') ? '&' : '?').'post#Form_Body'), 'TabLink'.(SignInPopup() ? ' SignInPopup' : ''));
       ?> 
    </div>
-   <?php 
+   <?php
 }
+?>
+</div>

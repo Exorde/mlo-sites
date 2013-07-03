@@ -62,6 +62,9 @@ h1,h2,h3,h4,h5,h6{
 h1, h2{
   color:@main_color_desat;
 }
+nav{ 
+  background: @pattern_menus;
+}
 /*Reseting the list styles when they are a list of links in a navigation element*/
 nav ul{
   padding:0;
@@ -129,11 +132,15 @@ blockquote small:before {
 .lower_button{
   top:10px;
 }
-
+.highlight, .Active, .Highlight{ /*Vanilla classes are camel case which sucks*/
+  border-bottom: 2px solid @main_color;
+  border-right: 2px solid @main_color;
+}
 
 /*###1 SPECIFIC STYLING*/
 /*###2 BUTTONS AND VISUAL ELEMENTS*/ 
-button, .buttonified{/*buttonified exists to make a link looks like a button, when <button> is not semantic*/
+button, .buttonified, .BigButton, input[type="button"],{/*buttonified exists to make a link looks like a button, when <button> is not semantic*/
+
   .rounded;
   font-size: 1.3em;
   padding-right:1px;
@@ -143,6 +150,7 @@ button, .buttonified{/*buttonified exists to make a link looks like a button, wh
   background: @main_color_light;
   color: @main_color_desat;
   margin:0 4px;
+  height:33px;
 }
 .main_menu_more{
   .shadowyBox(@main_color_dark, 0, 2px);
@@ -164,7 +172,7 @@ button, .buttonified{/*buttonified exists to make a link looks like a button, wh
 .menu_container .enlighted{
   .shadowyBox(@main_color, 0, 12px);
 }
-button:hover, .buttonified:hover, .lower_button, .selected_button{
+button:hover, .buttonified:hover, .BigButton:hover, input[type="button"]:hover, .lower_button, .selected_button{
   color:@main_color;
   .shadowyBox(@main_color);
   .shadowyText(@main_color, 0, 2px);
@@ -173,11 +181,15 @@ button:hover, .buttonified:hover, .lower_button, .selected_button{
 #connection_button, .darker_button{
   background:@main_color;
   color:@main_color_dark;
+  font-weight: 500;
+  border:2px solid @main_color_dark;
 }
 #connection_button:hover, .darker_button:hover{
   color:@main_color_light;
   background:@main_color_desat;
-  .shadowyText(@main_color_light, 0, 2px);
+  .shadowyText(@main_color_light, 2px, 2px);
+  .shadowyBox(@main_color, 3px, 5px);
+  border:2px solid @main_color_light;
 }
 /*###2 : LOGO*/
 #branding{
@@ -469,9 +481,6 @@ input[type="submit"][disabled] {
   text-align: right;
 }
 /*###1 GENERIC STYLES (styles applied to several elements) */
-#access{
-  background: @pattern_menus;
-}
 /*###2 : MENUS */
 .sub_menu_container{
   position:absolute;
@@ -577,16 +586,19 @@ input[type="submit"][disabled] {
 }
 
 /*###3 MAIN NAV*/
-#access{
+#access, .sub_nav{
   border-top: 1px solid @main_color_desat_light;
-  float: left;
+  /*float: left;*/
   margin-bottom: 40px;
   z-index: 3;
   position: relative;
   width: 100%;
   .shadowyBox();
 }
-#access .menu{
+#access{
+  margin-bottom: 40px;
+}
+#access .menu, .sub_nav .menu{
   padding: 10px;
   margin: 0;
   display: inline-block;
@@ -657,13 +669,27 @@ input[type="submit"][disabled] {
   width: 24%;
   border: 1px solid @main_color_gray;
   background: @pattern_menus;
-  padding: 10px 20px;
+  padding: 10px;
   .boxSizing;
   .shadowyBox(@main_color_gray);
   border: 1px solid @main_color_dark;
   .rounded(5px);
   margin-right: 1%;
 }
+.sidebar_title {
+  margin: 0 0 10px;
+  font-size: 2em;
+  .titlization(1px, @main_color_desat);
+}
+.sidebar_title a{
+  color: @main_color_desat;
+}
 #sidebar input{
   width: auto;
+}
+.sidebar_button{
+  margin: 15px 0;
+  display:block;
+  .border_box;
+  text-align: center;
 }

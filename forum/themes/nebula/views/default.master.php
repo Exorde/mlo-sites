@@ -21,7 +21,6 @@
             if ($this->Menu) {
               $this->Menu->AddLink('Dashboard', T('Dashboard'), '/dashboard/settings', array('Garden.Settings.Manage'), array('class' =>'menu-item'));
               // $this->Menu->AddLink('Dashboard', T('Users'), '/user/browse', array('Garden.Users.Add', 'Garden.Users.Edit', 'Garden.Users.Delete'));
-              $this->Menu->AddLink('Activity', T('Activity'), '/activity', FALSE, array('class' => 'menu-item'));
               $this->Menu->RemoveLink('Discussions', T('Discussions'));
               $this->Menu->AddLink('Discussions', T('Discussions'), '/discussions', FALSE, array('Standard' => TRUE, 'class' => 'Discussions menu-item'));
               if ($this->Menu && $Session->IsValid()) {
@@ -62,18 +61,16 @@
           </div>
      </nav>	
 	 </header>
-	 <div id="Body">
+	 <main id="main">
 		 
-	  <main id="main">
-      <section id="primary">
-        <?php $this->RenderAsset('Content'); ?>
-      </section>
-      <aside id="sidebar">
-        <?php $this->RenderAsset('Panel'); ?>
-      </aside>
-	  </main>
+	  <section id="primary">
+      <?php $this->RenderAsset('Content'); ?>
+	  </section>
+	  <aside id="sidebar">
+      <?php $this->RenderAsset('Panel'); ?>
+	  </aside>
 	  
-	 </div>
+	 </main>
 	 <div id="Foot">
 			<?php
 				$this->RenderAsset('Foot');
