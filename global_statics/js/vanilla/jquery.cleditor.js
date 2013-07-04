@@ -153,7 +153,6 @@ jQuery(document).ready(function($) {
   MSG_CLASS        = "cleditorMsg",     // message popup div inside body
 
   // Test for ie
-  //That's a bit dirty but efficient
   ie = false;
   ie6 = false;
 
@@ -283,6 +282,12 @@ jQuery(document).ready(function($) {
       .append($area);
 
     // Bind the document click event handler
+      $(document).click(function(e) {
+        // Dismiss all non-prompt popups
+        var $target = $(e.target);
+        if (!$target.add($target.parents()).is("." + PROMPT_CLASS))
+          hidePopups();
+      });
 
     // Bind the window resize event when the width or height is auto or %
     if (/auto|%/.test("" + options.width + options.height))
@@ -907,6 +912,7 @@ jQuery(document).ready(function($) {
   // refreshButtons - enables or disables buttons based on availability
   function refreshButtons(editor) {
 
+    // Webkit requires focus before queryCommandEnabled will return anything but false
 
     // Get the object used for checking queryCommandEnabled
     var queryObj = editor.doc;

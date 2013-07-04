@@ -17,13 +17,13 @@
           </li>
           <li class="global_menu_list">
               <a href="http://musique-libre.org/forum" class="global_menu_link menu_more">Forum</a><button class="menu_more_button button_thick" type="button">+</button>
-              <nav class="sub_menu_container" id="menu_forum">
+              <!--nav class="sub_menu_container" id="menu_forum">
                   <h1>Derniers messages :</h1>
                   <?php
                     require_once('rsslib.php');
                     echo  rss_reader('http://musique-libre.org/forum/index.php?p=/discussions/feed.rss', 5);
                    ?>
-              </nav>
+              </nav-->
           </li>
           <li class="global_menu_list">
                 <a href="https://github.com/MusiqueLibre/Dogmazic" target="_blank" class="global_menu_link">Github <img alt="lien externe" src="../global_statics/images/ex_link.png" /></a>

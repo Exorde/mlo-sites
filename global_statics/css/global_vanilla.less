@@ -398,17 +398,22 @@ div.Search form input.InputBox,.SearchTabs input.InputBox
 
 
 .TextBoxWrapper{
-  margin-left: 10%;
+  padding: 0 20px;
 }
 
-.DataList
-{
+.DataList, #DiscussionForm{
 	background: @pattern_menus;
   .shadowyBox(@main_color_gray);
   border-top: 1px solid @main_color_dark;
   .rounded(5px);
   margin: 0;
   padding: 10px;
+}
+#DiscussionForm li{
+  display: inline;
+}
+#DiscussionForm li:before{
+  content:"";
 }
 .DataList .Item:before{
   content: "";
@@ -1246,7 +1251,7 @@ table.PreferenceGroup tbody td
 
 #discussion_name{
   .titlization(1px);
-  margin: 0 20px;
+  margin: 20px;
   display: inline-block;
   line-height: 1;
 }
@@ -1551,54 +1556,6 @@ body.Discussion .Back
 	padding:10px 0 0 108px;
 }
 
-#DiscussionForm label
-{
-	color:#444;
-	font-size:14px;
-	font-weight:700;
-}
-
-#DiscussionForm h1
-{
-	color:#333;
-	font-size:200%;
-	margin-bottom:15px;
-	text-shadow:none;
-}
-
-#DiscussionForm textarea
-{
-	width:98%;
-}
-
-#DiscussionForm h2
-{
-	border:medium none;
-	color:#02475A;
-	font-size:140%;
-	font-weight:700;
-	margin:0;
-	padding:6px;
-}
-
-#DiscussionForm form
-{
-	background:#ddd;
-	border:none;
-	margin:px 0;
-	padding:0;
-}
-
-#DiscussionForm .Category,#DiscussionForm input.InputBox
-{
-	margin-bottom:10px;
-	width:95%;
-}
-
-#DiscussionForm .Category label
-{
-	padding:0 8px 0 0;
-}
 
 .CommentForm .Buttons
 {
@@ -1621,24 +1578,6 @@ body.Discussion .Back
 	text-shadow:0 3px 15px rgba(0,0,0,0.4);
 }
 
-#DiscussionForm a.Cancel
-{
-	margin-left:18px;
-}
-
-#DiscussionForm .PostOptions li
-{
-	display:inline;
-	padding:0 8px 0 0;
-}
-
-#DiscussionForm .PostOptions label
-{
-	color:#555;
-	display:inline;
-	font-size:95%;
-	font-weight:400;
-}
 textarea.MultiComplete
 {
 	height:20px;
@@ -2341,10 +2280,6 @@ body.Discussion div.AttachFileWrapper
 	margin-left:-135px;
 }
 
-#DiscussionForm .Tabs
-{
-	margin:0 -10px;
-}
 
 
 .Tabs #QnA_Question
@@ -2567,11 +2502,6 @@ body.Discussion .NillaBlog .Meta .ProfilePhotoMedium
 	display:inline;
 	right:-50px;
 	top:22px;
-}
-
-#DiscussionForm
-{
-	margin:10px auto;
 }
 
 .Tabs.CommentTabs

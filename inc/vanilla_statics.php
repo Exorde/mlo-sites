@@ -1,4 +1,5 @@
 <link rel="stylesheet" type="text/css" href="/global_statics/css/global_vanilla.css">
+<link rel="stylesheet" type="text/css" href="/global_statics/css/wysiwyg/jquery.cleditor.css">
 <script  type="text/javascript" src="/global_statics/js/vanilla/jquery.livequery.js"></script>
 <script  type="text/javascript" src="/global_statics/js/vanilla/jquery.form.js"></script>
 <script  type="text/javascript" src="/global_statics/js/vanilla/jquery.popup.js"></script>
