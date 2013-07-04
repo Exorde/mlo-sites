@@ -27,7 +27,7 @@
                  $Inbox = T('Inbox');
                  $CountUnreadConversations = $Session->User->CountUnreadConversations;
                  if (is_numeric($CountUnreadConversations) && $CountUnreadConversations > 0)
-                    $Inbox .= ' <span>'.$CountUnreadConversations.'</span>';
+                    $Inbox .= ' <span class="Count">'.$CountUnreadConversations.'</span>';
                     
                  $this->Menu->RemoveLink('Conversations', $Inbox);
                  $this->Menu->AddLink('Conversations', $Inbox, '/messages/all', FALSE, array('Standard' => TRUE, 'class' => 'Inbox menu-item'));
@@ -37,7 +37,7 @@
                 $Name = $Session->User->Name;
                 $CountNotifications = $Session->User->CountNotifications;
                 if (is_numeric($CountNotifications) && $CountNotifications > 0)
-                  $Name .= ' <span class="Alert">'.$CountNotifications.'</span>';
+                  $Name .= ' <span class="Count">'.$CountNotifications.'</span>';
 
                        if (urlencode($Session->User->Name) == $Session->User->Name)
                           $ProfileSlug = $Session->User->Name;
