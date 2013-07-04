@@ -319,6 +319,9 @@ div.Search form input.InputBox,
   text-indent: 50px;
   width: 44px;
 }
+.TextBoxWrapper {
+  margin-left: 10%;
+}
 .DataList {
   background: url("../images/subtle_dots.png");
   -webkit-box-shadow: 2px 2px 2px #959595;
@@ -808,9 +811,6 @@ table.PreferenceGroup tbody td {
 .Button.CommentButton:active {
   background: #ddd;
 }
-.MessageForm .Tabs li.Active a {
-  background: #eee;
-}
 .Tabs li {
   display: inline;
   margin: 0;
@@ -864,7 +864,6 @@ table.PreferenceGroup tbody td {
 }
 .PanelInfo .Parent {
   background: none repeat scroll 0 0 transparent;
-  color: #999;
   font-weight: 700;
   text-align: left;
   padding: 2px 0;
@@ -899,20 +898,17 @@ table.PreferenceGroup tbody td {
   border-radius: 0 0 2px 2px;
 }
 .Box h4 {
-  color: #333;
   font-weight: 700;
   margin: 0;
   padding: 0 0 1px;
 }
 .Box dl dt {
   font-size: 12px;
-  color: #999999;
 }
 .Box dl dd {
   margin-left: 10px;
 }
 .Box p {
-  color: #222;
   font-size: 100%;
   padding: 0 0 4px;
 }
@@ -923,7 +919,6 @@ table.PreferenceGroup tbody td {
 .PanelActivity li {
   background: none repeat scroll 0 0 #d2d2d2;
   border-bottom: 1px solid #ABDAFB;
-  color: #999;
   font-size: 11px;
   line-height: 1.6;
   padding: 2px 4px;
@@ -937,7 +932,6 @@ table.PreferenceGroup tbody td {
   padding: 0 4px;
 }
 .PanelActivity li em {
-  color: #999;
   font-size: 80%;
   padding-left: 5px;
 }

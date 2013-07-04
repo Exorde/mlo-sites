@@ -8,4 +8,5 @@
 <script  type="text/javascript" src="/global_statics/js/vanilla/jquery.gardenmorepager.js"></script>
 <script  type="text/javascript" src="/global_statics/js/vanilla/global.js"></script>
 <script  type="text/javascript" src="/global_statics/js/vanilla/conversations.js"></script>
+<!--<script  type="text/javascript" src="/global_statics/js/vanilla/discussion.js"></script>-->
 <?php //include the LESS JS processor here ?>
