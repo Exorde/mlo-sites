@@ -24,12 +24,17 @@
               $this->Menu->RemoveLink('Discussions', T('Discussions'));
               $this->Menu->AddLink('Discussions', T('Discussions'), '/discussions', FALSE, array('Standard' => TRUE, 'class' => 'Discussions menu-item'));
               if ($this->Menu && $Session->IsValid()) {
+                 $InboxOld = T('Inbox');
+                 $CountUnreadConversations = $Session->User->CountUnreadConversations;
+                 if (is_numeric($CountUnreadConversations) && $CountUnreadConversations > 0)
+                    $InboxOld .= ' <span>'.$CountUnreadConversations.'</span>';
+                    
+                 $this->Menu->RemoveLink('Conversations', $InboxOld);
                  $Inbox = T('Inbox');
                  $CountUnreadConversations = $Session->User->CountUnreadConversations;
                  if (is_numeric($CountUnreadConversations) && $CountUnreadConversations > 0)
                     $Inbox .= ' <span class="Count">'.$CountUnreadConversations.'</span>';
-                    
-                 $this->Menu->RemoveLink('Conversations', $Inbox);
+
                  $this->Menu->AddLink('Conversations', $Inbox, '/messages/all', FALSE, array('Standard' => TRUE, 'class' => 'Inbox menu-item'));
               }
 
