@@ -260,7 +260,7 @@ div.Search form input.InputBox,
   padding: 10px 0;
 }
 .MenuTitle {
-  color: #555555;
+  color: #333333;
   padding: 5px;
   border: 1px solid #eeb088;
   font-size: 0.8em;
@@ -420,7 +420,7 @@ p.NoResults {
   padding: 11px 0 0;
 }
 .DataList .Meta {
-  color: #999999;
+  color: #555555;
   font-size: 11px;
   padding-right: 25px;
 }
@@ -467,7 +467,7 @@ p.NoResults {
   top: 20px;
 }
 .CommentCount {
-  color: #999999;
+  color: #555555;
   font-size: 20px;
   margin-left: 5px;
 }
@@ -949,7 +949,7 @@ table.PreferenceGroup tbody td {
 }
 .Count {
   border-radius: 2px;
-  color: #999999;
+  color: #555555;
   font-weight: 400;
   padding: 0 5px;
   margin-left: 5px;
@@ -1178,7 +1178,7 @@ div.Popup #Form_User .Warning,
   border-radius: 2px 2px 2px 2px;
   font-size: 12px;
   border: 1px solid #eeb088;
-  color: #555555;
+  color: #333333;
   display: inline-block;
   margin: 10px;
 }

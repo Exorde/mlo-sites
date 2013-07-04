@@ -23,7 +23,7 @@ GENERIC STYLES
 /*###1 : NAKED TAGS*/
 body {
   background-image: url("../images/noise.png");
-  color: #555555;
+  color: #333333;
   background-color: #eeeeee;
   font-weight: 300;
 }
@@ -65,7 +65,7 @@ h5,
 h6 {
   font-family: Liberation Mono;
   font-weight: 200;
-  color: #999999;
+  color: #555555;
 }
 h1,
 h2 {
@@ -340,7 +340,7 @@ legend {
   margin-bottom: 27px;
   font-size: 19.5px;
   line-height: 36px;
-  color: #555555;
+  color: #333333;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -465,7 +465,7 @@ input[type="submit"] {
   margin-bottom: 0;
   font-size: 13px;
   line-height: 18px;
-  color: #555555;
+  color: #333333;
   text-align: center;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   vertical-align: middle;
@@ -504,7 +504,7 @@ input[type="submit"].active {
   background-color: #cccccc \9;
 }
 input[type="submit"]:hover {
-  color: #555555;
+  color: #333333;
   text-decoration: none;
   background-color: #e6e6e6;
   background-position: 0 -15px;
@@ -515,7 +515,7 @@ input[type="submit"]:hover {
   transition: background-position 0.1s linear;
 }
 input[type="submit"]:focus {
-  outline: thin dotted #555555;
+  outline: thin dotted #333333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -578,7 +578,7 @@ input[type="submit"][disabled] {
 }
 .global_sub_menu_container a {
   text-decoration: none;
-  color: #555555;
+  color: #333333;
   padding: 2px 2px 2px 4px;
   margin: 2px;
   font-size: 12px;
@@ -589,11 +589,11 @@ input[type="submit"][disabled] {
   color: #fff;
 }
 .global_menu_title {
-  color: #999999;
+  color: #555555;
   font-size: 16px;
   margin-bottom: 10px;
   padding-bottom: 6px;
-  border-bottom: 1px solid #999999;
+  border-bottom: 1px solid #555555;
 }
 #global_menu .rsstitle {
   font-size: 1.1em;
@@ -607,7 +607,7 @@ input[type="submit"][disabled] {
   margin: 0 0 15px 0;
 }
 #global_menu .rssdate {
-  color: #555555;
+  color: #333333;
   padding: 0 10px;
 }
 #global_menu .rssdesc {
