@@ -46,15 +46,15 @@ $Editing = isset($this->Comment);
       echo '<button type="button" class="PreviewButton TabLink">'.T('Preview');
    if ($NewOrDraft)
       echo '<button type="button" class= "DraftButton TabLink">'.T('Save Draft');
-   $this->FireEvent('AfterFormButtons');
-   $button_text = $Editing ? T('Save Comment') : T('Post Comment');
    */
+   $button_text = $Editing ? T('Save Comment') : T('Post Comment');
    echo '<button class="darker_button">'.$button_text.'</button>';
    echo "</div>\n";
    echo '<br />';
    echo Gdn_Theme::Link('forumroot', $CancelText, NULL, array(
        'class' => $CancelClass
    ));
+   $this->FireEvent('AfterFormButtons');
    echo $this->Form->Close();
    ?>
 </div>
