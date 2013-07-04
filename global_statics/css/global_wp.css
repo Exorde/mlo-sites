@@ -104,7 +104,7 @@ footer.entry-meta {
   border-top: 1px solid #c34e00;
   background: url("../images/subtle_dots.png");
   padding: 10px 34px;
-  color: #aaaaaa;
+  color: #999999;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -o-border-radius: 5px;
@@ -480,8 +480,12 @@ ol.commentlist {
 ol.commentlist li.comment,
 ol.commentlist li.trackback,
 ol.commentlist li.pingback {
-  list-style: none outside none;
   margin: 10px 0;
+}
+ol.commentlist li.comment:before,
+ol.commentlist li.trackback:before,
+ol.commentlist li.pingback:before {
+  content: none;
 }
 .comment-content {
   font-size: 0.9em;
@@ -510,8 +514,9 @@ ol.commentlist li.pingback {
   margin: 2px 0;
   padding: 0;
   list-style-position: outside;
-  list-style-image: none;
-  list-style-type: none;
+}
+.widget-area li:before {
+  content: none;
 }
 .widget-area li a {
   padding: 2px 0;

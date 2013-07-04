@@ -1,2 +1,2 @@
-<link rel="stylesheet/less" type="text/css" href="/global_statics/css/global_wp.less">
-<?php include "less_proccess.php"; ?>
+<link rel="stylesheet" type="text/css" href="/global_statics/css/global_wp.css">
+<?php //include the LESS JS processor here ?>

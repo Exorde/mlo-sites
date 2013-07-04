@@ -24,7 +24,7 @@ GENERIC STYLES
 body {
   background-image: url("../images/noise.png");
   color: #555555;
-  background-color: #f7f8f9;
+  background-color: #eeeeee;
   font-weight: 300;
 }
 p {
@@ -65,10 +65,17 @@ h5,
 h6 {
   font-family: Liberation Mono;
   font-weight: 200;
-  color: #aaaaaa;
+  color: #999999;
 }
 h1,
 h2 {
+  color: #e48445;
+}
+li {
+  list-style: none;
+}
+li:before {
+  content: "\25B9\00A0";
   color: #e48445;
 }
 nav {
@@ -80,9 +87,11 @@ nav ul {
   margin: 0;
 }
 nav li {
-  list-style: none;
   padding: 0;
   margin: 0;
+}
+nav li:before {
+  content: "";
 }
 @font-face {
   font-family: "FontAwesome";
@@ -122,6 +131,19 @@ blockquote small:before {
   content: '\2014 \00A0';
 }
 /*###1 GENERIC CLASSES*/
+.titlization {
+  /*TODO : utiliser cette classe plutôt que dupliquer le style un peu partout*/
+
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: Liberation Mono, Liberation Sans;
+  color: #ff7f2a;
+  -webkit-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
+  -moz-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
+  -o-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
+  -ms-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
+  text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
+}
 /*Hiding a semantic element useful for accessibility*/
 .out_of_the_way {
   position: absolute;
@@ -261,15 +283,22 @@ input[type="button"]:hover,
 #site-title {
   font-size: 120px;
   position: relative;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-family: Liberation Mono, Liberation Sans;
-  color: #ff7f2a;
   -webkit-text-shadow: 3px 3px 0 #ffffff, 6px 6px 0 #ff7f2a;
   -moz-text-shadow: 3px 3px 0 #ffffff, 6px 6px 0 #ff7f2a;
   -o-text-shadow: 3px 3px 0 #ffffff, 6px 6px 0 #ff7f2a;
   -ms-text-shadow: 3px 3px 0 #ffffff, 6px 6px 0 #ff7f2a;
   text-shadow: 3px 3px 0 #ffffff, 6px 6px 0 #ff7f2a;
+  /*TODO : utiliser cette classe plutôt que dupliquer le style un peu partout*/
+
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: Liberation Mono, Liberation Sans;
+  color: #ff7f2a;
+  -webkit-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
+  -moz-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
+  -o-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
+  -ms-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
+  text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
   display: inline-block;
   -webkit-transform: skew(-20deg, 0deg);
   -moz-transform: skew(-20deg, 0deg);
@@ -278,8 +307,8 @@ input[type="button"]:hover,
   transform: skew(-20deg, 0deg);
   margin: 0 20px;
   vertical-align: text-bottom;
-  border-left: 1px solid #f4ceb4;
-  border-right: 1px solid #f4ceb4;
+  border-left: 1px solid #eeb088;
+  border-right: 1px solid #eeb088;
   padding: 0 30px;
 }
 #home_link {
@@ -541,6 +570,7 @@ input[type="submit"][disabled] {
 /*###3 : GLOBAL MENU*/
 #global_menu_container {
   border-bottom: 5px solid #ff7f2a;
+  background: url("../images/subtle_dots.png");
 }
 .global_menu_list.selected {
   background: #ff7f2a;
@@ -559,11 +589,11 @@ input[type="submit"][disabled] {
   color: #fff;
 }
 .global_menu_title {
-  color: #aaaaaa;
+  color: #999999;
   font-size: 16px;
   margin-bottom: 10px;
   padding-bottom: 6px;
-  border-bottom: 1px solid #aaaaaa;
+  border-bottom: 1px solid #999999;
 }
 #global_menu .rsstitle {
   font-size: 1.1em;
@@ -586,7 +616,6 @@ input[type="submit"][disabled] {
 #global_menu {
   position: relative;
   margin: 0;
-  background: #f7f8f9;
   padding: 5px 5px;
 }
 .global_menu_list {
@@ -665,7 +694,7 @@ input[type="submit"][disabled] {
 /*###3 MAIN NAV*/
 #access,
 .sub_nav {
-  border-top: 1px solid #f4ceb4;
+  border-top: 1px solid #eeb088;
   /*float: left;*/
 
   margin-bottom: 40px;
@@ -690,7 +719,7 @@ input[type="submit"][disabled] {
 #access .menu-item {
   display: inline-block;
   padding: 0 10px;
-  border-right: 1px solid #f4ceb4;
+  border-right: 1px solid #eeb088;
 }
 #access .sub-menu {
   position: absolute;
@@ -726,7 +755,7 @@ input[type="submit"][disabled] {
 .bellow_sub_menu {
   position: absolute;
   left: 9999px;
-  border-top: 2px solid #f4ceb4;
+  border-top: 2px solid #eeb088;
   width: 300px;
   border-left: 5px solid #ff7f2a;
   background: #fff;
