@@ -1,0 +1,2098 @@
+/*#1 : LESS GLOBAL VARIABLES*/
+/*a very subtle blue*/
+/*BG*/
+/*Text colors*/
+/*#1 : LESS MIXINS*/
+.Discussions li:before {
+  content: "";
+}
+.opinionBox {
+  margin: 0 20px;
+  min-height: 110px;
+  background: #fff;
+  border: 1px solid #eeb088;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+.MessageForm,
+.Tabs,
+.Headings {
+  border-bottom: none;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.Loading {
+  background: url(images/progress.gif) no-repeat scroll center center transparent;
+  height: 100px;
+  padding: 0 20px;
+}
+.Progress {
+  background: url(images/progress.gif) no-repeat scroll center center transparent;
+  padding: 10px 40px 10px 0;
+}
+.TinyProgress {
+  background: url(images/progress_sm.gif) no-repeat scroll center center transparent;
+  padding: 10px 40px 10px 0;
+}
+.Conversations .Deleted {
+  text-decoration: line-through;
+}
+.Deleted {
+  background: none repeat scroll 0 0 #F5F5F5;
+  border: 1px solid #DDD;
+  border-radius: 3px 3px 3px 3px;
+  margin: 10px 0 0;
+  padding: 6px 10px;
+}
+.Warning {
+  background: none repeat scroll 0 0 #FFC;
+  border: 1px solid #FF9;
+  border-radius: 3px 3px 3px 3px;
+  color: #000;
+  padding: 6px 8px;
+}
+.Alert {
+  background: none repeat scroll 0 0 #D00;
+  border-radius: 2px 2px 2px 2px;
+  color: #FFF;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  padding: 1px 4px;
+}
+.Info {
+  background: none repeat scroll 0 0 #FAFAFA;
+  border: 1px solid #EEE;
+  border-radius: 4px 4px 4px 4px;
+  color: #888;
+  font-size: 13px;
+  margin: 0 0 10px;
+  padding: 6px;
+}
+#PagerLess {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  margin-bottom: 1px;
+  text-align: left;
+}
+.MorePager a.Loading {
+  background: url(images/progress.gif) no-repeat scroll center center transparent !important;
+  border: 0 none!important;
+  padding: 0 20px!important;
+}
+.TabLink {
+  display: inline-block;
+  margin: 0 10px;
+}
+#PagerMore {
+  margin-bottom: 1px;
+}
+.NumberedPager,
+.PrevNextPager {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: right;
+  margin: 1px 0 0;
+}
+#PagerBefore {
+  margin: 1px 0;
+}
+.NumberedPager span,
+.NumberedPager a.Highlight {
+  color: #777;
+}
+.NumberedPager a.Next,
+.NumberedPager span.Next,
+.NumberedPager a.Previous,
+.NumberedPager span.Previous {
+  font-size: 16px;
+  line-height: 10px;
+}
+.NumberedPager a.Next,
+.NumberedPager span.Next {
+  margin-left: 6px;
+}
+.NumberedPager a.Previous,
+.NumberedPager span.Previous {
+  margin-right: 6px;
+}
+a.Small img {
+  background: none repeat scroll 0 0 #DDD;
+  display: inline-block;
+  height: 24px;
+  overflow: hidden;
+  text-indent: -100px;
+  width: 24px;
+}
+@font-face {
+  font-family: icons;
+  src: url(fonts/fico.eot?#iefix) format(embedded-opentype), url(fonts/fico.ttf) format(truetype), url(fonts/fico.svg#Fico) format(svg);
+}
+.icon,
+.icon_generated:before {
+  font-family: icons;
+  font-style: normal!important;
+  font-weight: 400;
+  text-transform: none!important;
+}
+.icon_generated {
+  color: #999;
+}
+.icon_generated:before {
+  content: attr(data-icon);
+  padding-right: 7px;
+}
+.DismissMessage a.Dismiss {
+  color: #999;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  position: absolute;
+  right: 5px;
+  top: 3px;
+}
+.DismissMessage a.Dismiss,
+.DismissMessage a.Dismiss:hover {
+  border-radius: 0 0 0 0;
+  color: #777;
+  display: block;
+  font-weight: 700;
+  height: 14px;
+  right: -1px;
+  top: -1px;
+  width: auto;
+  margin: 0;
+  padding: 1px 3px 2px 4px;
+}
+.DismissMessage {
+  border: medium none;
+  border-radius: 2px 2px 2px 2px;
+  color: #000;
+  position: relative;
+  text-align: left;
+  margin: 0 0 15px;
+  padding: 10px;
+}
+.DismissMessage p {
+  margin: 2px 0;
+}
+.DismissMessage.Info {
+  background: none repeat scroll 0 0 #DDD;
+  border: 1px solid #DDD;
+}
+.DismissMessage.Warning {
+  background: none repeat scroll 0 0 #FFCCC9;
+  border: 1px solid #FFCCC9;
+}
+.DismissMessage.Box {
+  background: none repeat scroll 0 0 #C5BEA4;
+  border: 1px solid #C5BEA4;
+  box-shadow: none;
+}
+#Head {
+  background: 0 repeat scroll 0 0 transparent;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 40px;
+  padding: 0;
+}
+p.NoResults {
+  background: #ddd;
+  margin: 50px 0 0;
+  padding: 5px 10px;
+}
+body #Head h1 {
+  border: 0 none;
+  display: inline-block;
+  float: left;
+  font-weight: 700;
+  margin: 0 0 0 15px;
+  padding: 10px;
+}
+#Head h1 a span {
+  color: #555;
+  font-size: 24px;
+  text-shadow: 1px 1px 0 #FFF;
+}
+#Head form {
+  float: right;
+  width: 250px;
+  padding: 0;
+}
+div.Search {
+  margin-right: 242px;
+  position: relative;
+  width: auto;
+}
+div.Search.guest {
+  margin-right: 13px;
+}
+div.Search form input.InputBox,
+.SearchTabs input.InputBox {
+  background: none repeat scroll 0 0 #F9F9F9;
+  border: 0 none;
+  border-radius: 1px 0 0 1px;
+  color: #888;
+  font-size: 16px;
+  height: 35px;
+  vertical-align: bottom;
+  width: 100%;
+  margin: 0!important;
+  padding: 0 6px;
+}
+#SearchBox {
+  display: inline;
+  float: right;
+  height: 33px;
+  padding-right: 15px;
+  padding-top: 5px;
+}
+.SearchBox #Form_Go {
+  height: 24px;
+  vertical-align: top;
+}
+.header_bottom {
+  background: none repeat scroll 0 0 #E9E9E9;
+  border-bottom: 1px solid #AFAFAF;
+  border-top: 1px solid #FFF;
+  width: 100%;
+  padding: 10px 0;
+}
+.MenuTitle {
+  color: #555555;
+  padding: 5px;
+  border: 1px solid #eeb088;
+  font-size: 0.8em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+.Open .MenuTitle {
+  background: none repeat scroll 0 0 #282828;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  color: #FFF;
+}
+.MenuItems {
+  background: none repeat scroll 0 0 #444;
+  border: 1px solid #282828;
+  border-radius: 1px 0 0 1px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  font-size: 10px;
+  line-height: 100%;
+  min-width: 125px;
+  position: absolute;
+  top: -9999px;
+}
+.ToggleFlyout:hover .MenuItems {
+  top: auto;
+  z-index: 9999;
+}
+.MenuItems li {
+  padding: 6px!important;
+}
+.MenuItems a,
+.MenuItems a:link,
+.MenuItems a:visited,
+.MenuItems a:active {
+  color: #FFF;
+  display: block;
+  text-decoration: none;
+}
+.MenuItems li:hover {
+  background: none repeat scroll 0 0 #282828;
+}
+.Icons a {
+  display: block;
+  float: left;
+  margin: 0 2px 2px 0;
+}
+.Icons img {
+  background: none repeat scroll 0 0 #C4CDE0;
+  color: #C4CDE0;
+  display: block;
+  height: 44px;
+  overflow: hidden;
+  text-indent: 50px;
+  width: 44px;
+}
+.DataList {
+  background: url("../images/subtle_dots.png");
+  -webkit-box-shadow: 2px 2px 2px #959595;
+  -moz-box-shadow: 2px 2px 2px #959595;
+  -o-box-shadow: 2px 2px 2px #959595;
+  -ms-box-shadow: 2px 2px 2px #959595;
+  box-shadow: 2px 2px 2px #959595;
+  border-top: 1px solid #c34e00;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  margin: 0;
+  padding: 10px;
+}
+.DataList .Item:before {
+  content: "";
+}
+.Empty,
+p.NoResults {
+  border-radius: 3px 3px 3px 3px;
+  color: #555;
+  font-size: 200%;
+  font-weight: 700;
+  text-shadow: 0 1px 0 #FFF;
+  padding: 12px;
+}
+.CategoryList {
+  clear: right;
+  margin: 0;
+}
+.Categories.discussions .DataList {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-bottom: 0;
+}
+.DataList .Item,
+.Conversation .Item {
+  background: none repeat scroll 0 0 #FFF;
+  moz-transition: background .1s linear 0;
+  position: relative;
+  margin: 0 6px 0 12px;
+  padding: 10px 0;
+}
+.DataList .Item.Comment {
+  background: #DDD!important;
+  border: none;
+}
+.DataList .Item:first-child {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.DataList .Item:last-child {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.Categories.all .DataList .Item {
+  min-height: 65px;
+}
+.Categories.all .DataList .CategoryHeading {
+  background: 0 repeat scroll 0 0 transparent;
+  border-radius: 1px 1px 1px 1px;
+  box-shadow: 0 8px 8px -8px rgba(0, 0, 0, 0.4);
+  margin-left: -27px;
+  min-height: 0;
+  padding-left: 5px;
+  z-index: 100;
+}
+.Categories.all .DataList .CategoryDescription {
+  color: #555;
+  width: 50%;
+}
+.DataList .Item .Item {
+  border-bottom: medium none;
+}
+.Categories.all .Options {
+  right: 290px;
+  top: 14px;
+  z-index: 200;
+}
+#vanilla_categories_all .DataList .Options {
+  margin: 6px 10px 0 0!important;
+}
+.Categories.all .CategoryHeading .Options {
+  top: 10px;
+}
+.DataList .OptionButton {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.Categories.all .DataList a.Title {
+  font-size: 18px;
+  width: 45%;
+  padding: 11px 0 0;
+}
+.DataList .Meta {
+  color: #999999;
+  font-size: 11px;
+  padding-right: 25px;
+}
+.discussion_topline .Meta {
+  float: right;
+  text-align: right;
+}
+.Discussion .DataList .Meta,
+.Profile.comments .Meta,
+.Conversations .Meta,
+.Categories.all .Meta,
+.SearchResults .Meta {
+  float: none;
+  height: auto;
+}
+.Discussion .Title {
+  font-weight: 700;
+}
+.identity {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+.MessageList .Meta {
+  min-height: 0;
+}
+.Profile.comments .Meta {
+  height: auto;
+  position: relative;
+}
+.Profile.comments .DataList a.Title {
+  padding-bottom: 0;
+  width: auto;
+}
+.Conversations.Messages.all .Meta,
+.Categories.all .Meta {
+  margin-right: 10px;
+  padding-right: 5px;
+  right: 5px;
+  top: 5px;
+}
+.Categories.all .Meta {
+  height: auto;
+  right: 27px;
+  top: 20px;
+}
+.CommentCount {
+  color: #999999;
+  font-size: 20px;
+  margin-left: 5px;
+}
+.Categories.all .Item .RSS {
+  font-size: 16px;
+  position: absolute;
+  right: -20px;
+  top: 0;
+}
+.DataList .Excerpt {
+  font-size: 12px;
+  line-height: 1.4;
+}
+.DataList .Excerpt a {
+  color: #333;
+  display: block;
+}
+.DataList.Discussions .Meta span.ViewsCount {
+  color: #C9C9C9!important;
+  margin-right: 0;
+}
+.newComments {
+  background: none repeat scroll 0 0 #FF0;
+  border-radius: 2px 2px 2px 2px;
+  color: #888;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 1px 4px;
+}
+.DataList a.Delete,
+.DataList a.Delete:hover {
+  border-radius: 0 0 0 0;
+  color: #333;
+  display: block;
+  font-weight: 700;
+  height: 14px;
+  line-height: 1;
+  width: auto;
+  margin: 0;
+  padding: 2px 4px;
+}
+.DataList .Unfollow {
+  background: none repeat scroll 0 0 #EEE;
+}
+.DataList .Unfollow a {
+  color: #888;
+}
+.Item .Inset {
+  border-top: 1px solid #BEC8CC;
+  padding: 5px 0;
+}
+.Condensed,
+.Condensed li {
+  clear: both;
+}
+.Conversations .Item {
+  height: auto;
+  min-height: 60px;
+}
+.Condensed .Excerpt a {
+  display: block;
+  padding: 3px 0;
+}
+.MessageList,
+.MessageList li {
+  margin: 0;
+  padding: 0;
+}
+.MessageList:before,
+.MessageList li:before {
+  content: "";
+}
+.MessageList .Item:last-child {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.Item .Author img {
+  background: none repeat scroll 0 0 #EEE;
+  border: 0 none;
+  float: left;
+  height: 60px;
+  overflow: hidden;
+  width: 60px;
+  margin: 0 10px;
+}
+.Conversation .MetaItem {
+  padding: 5px 10px;
+}
+.Preview {
+  background: none repeat scroll 0 0 #d2d2d2;
+  text-align: left;
+  margin: 4px 0 8px;
+  padding: 1px 8px;
+}
+.Popup .Preview {
+  margin: 0;
+  padding: 8px;
+}
+a.Close:hover {
+  color: #000;
+}
+.SiteTitle {
+  font-size: 275%;
+  float: left;
+  padding: 40px 10px 10px 20px;
+}
+.Preview .Message,
+.MessageList .Message {
+  font-size: 100%;
+  line-height: 140%;
+  word-wrap: break-word;
+}
+.Preview .Message,
+.Preview .Message p,
+.MessageList .Message,
+.MessageList .Message p {
+  margin: 8px 0;
+}
+.Preview .Message blockquote,
+.MessageList .Message blockquote {
+  margin: 4px 0;
+  padding: 4px 16px;
+}
+.MessageList .Message {
+  clear: none;
+  vertical-align: top;
+  min-height: 50px;
+  margin: 0 0 8px;
+  padding: 15px;
+}
+code,
+pre {
+  background: none repeat scroll 0 0 #FF9;
+  border: 1px solid #EEC;
+  border-radius: 2px 2px 2px 2px;
+  font-family: monospace;
+  overflow: auto;
+  white-space: pre;
+  padding: 4px 8px;
+}
+.Preview .Message em,
+.MessageList .Message em {
+  font-style: oblique;
+}
+.Preview .Message ul,
+.Preview .Message ol,
+.MessageList .Message ul,
+.MessageList .Message ol {
+  margin-left: 3em!important;
+}
+.Preview .Message ol li,
+.MessageList .Message ol li {
+  list-style: decimal outside none!important;
+}
+.Preview .Message ul li,
+.MessageList .Message ul li {
+  list-style: disc outside none!important;
+}
+.Message h1,
+.Message h2,
+.Message h3,
+.Message h4,
+.Message h5 {
+  border: medium none;
+  color: #000;
+  font-weight: 700;
+}
+.Message h1 {
+  font-size: 22px;
+}
+.Message h2 {
+  font-size: 20px;
+}
+.Message h3 {
+  font-size: 18px;
+}
+.Message h4 {
+  font-size: 16px;
+}
+.Message .ImageResized {
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.Foot {
+  border-bottom: none;
+  padding: 4px;
+}
+.Foot .Note {
+  font-weight: 700;
+  line-height: 2.6;
+  padding: 10px;
+}
+.DataList .Meta .RSS {
+  margin-right: 0;
+}
+.DataList.Discussions .Meta .RSS {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+}
+.Meta .RSS img {
+  vertical-align: text-bottom;
+}
+.DataList .CategoryHeading .ItemContent {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  padding: 3px 0;
+}
+.User {
+  line-height: 150%;
+  padding: 15px 15px 0;
+}
+.User h1 {
+  border: 0 none;
+  color: #333;
+  font-size: 200%;
+  margin: 0 0 15px;
+  padding: 0 0 8px;
+}
+#Status {
+  background: none repeat scroll 0 0 #f4f4f4;
+  border-radius: 2px;
+  color: #444;
+  width: 99%;
+  margin: 10px 0;
+  padding: 8px;
+}
+#Status p {
+  color: #6C6C6C;
+  display: inline;
+  font-size: 120%;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+#Status a.Change {
+  font-size: 11px;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+.User form {
+  background: none repeat scroll 0 0 #CFECFF;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  padding: 8px 8px 0;
+}
+.User form input.InputBox {
+  margin-right: 2px;
+  width: 618px;
+}
+form.Activity {
+  background: #ddd;
+  border-radius: 3px 3px 0 0;
+  display: block;
+  text-align: right;
+  padding: 10px;
+}
+form.Activity textarea {
+  height: 60px;
+  margin-bottom: 2px;
+  min-height: 60px;
+  width: 98%;
+  padding: 9px;
+}
+#Form_Invitation table {
+  background: none repeat scroll 0 0 #F2FBFF;
+  border: 1px solid #C0E7F5;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 10px 0;
+}
+#Form_Invitation table label {
+  font-size: 12px;
+  padding: 0;
+}
+#Form_Invitation table th,
+#Form_Invitation table td {
+  color: #555;
+  font-weight: 400;
+  padding: 6px;
+}
+#Form_Invitation table thead th,
+#Form_Invitation table thead td {
+  border-bottom: 1px solid #C0E7F5;
+}
+#Form_Invitation table tbody th {
+  color: #000;
+  font-weight: 700;
+}
+#Form_Invitation table tbody th,
+#Form_Invitation table tbody td {
+  border-bottom: 1px solid #C0E7F5;
+  line-height: 150%;
+}
+#Form_Invitation table thead th {
+  color: #000;
+  font-size: 13px;
+  font-weight: 700;
+}
+#Form_Invitation table.AltRows tr.Alt th,
+#Form_Invitation table.AltRows tr.Alt td,
+#Form_Invitation table.AltColumns th.Alt,
+#Form_Invitation table.AltColumns td.Alt {
+  background: none repeat scroll 0 0 #CFECFF;
+}
+.ProfileTabs ul {
+  padding: 10px 11px;
+}
+#Form_Invitation table.AltColumns tr.Alt {
+  background: none repeat scroll 0 0 transparent;
+}
+.Preferences h3 {
+  margin: 0;
+  padding: 10px 0 4px!important;
+}
+table.PreferenceGroup thead td {
+  border-bottom: 1px solid #AAA;
+  border-top: 1px solid #AAA;
+  font-weight: 700;
+  padding: 2px 6px;
+}
+table.PreferenceGroup tbody td {
+  border-bottom: 1px solid #cdcdcd;
+  padding: 2px 6px;
+}
+.SearchTabs {
+  background: none repeat scroll 0 0 transparent;
+  margin-bottom: 15px;
+  margin-right: 77px;
+  padding: 0;
+}
+.ActivityTabs li a {
+  color: #333;
+  font-size: 200%;
+  font-weight: 700;
+}
+.Button.CommentButton:active {
+  background: #ddd;
+}
+.MessageForm .Tabs li.Active a {
+  background: #eee;
+}
+.Tabs li {
+  display: inline;
+  margin: 0;
+}
+.PanelInfo li {
+  padding: 3px 4px;
+}
+.PanelInfo li.Heading {
+  color: #000;
+  font-weight: 700;
+  text-align: left;
+}
+.PanelInfo {
+  background: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #eeb088;
+  padding: 0;
+  margin: 0;
+}
+.Profile .PanelInfo li {
+  border-bottom: 0 none;
+  text-align: left;
+}
+.PanelInfo .Active .PanelActivity .ShowAll,
+.PanelInfo .ShowAll {
+  background: none repeat scroll 0 0 transparent;
+  border: 0 none;
+  font-weight: 700;
+  text-align: right;
+}
+.PanelInfo .Meta span,
+.PanelInfo .Meta strong {
+  margin-right: 8px;
+}
+.PanelInfo .Meta span a {
+  margin-left: 8px;
+}
+.PanelInfo .Meta strong {
+  background: none repeat scroll 0 0 #91CBFA;
+  border-radius: 2px 2px 2px 2px;
+  color: #000;
+  display: inline;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 3px;
+}
+.PanelInfo .Parent {
+  background: none repeat scroll 0 0 transparent;
+  color: #999;
+  font-weight: 700;
+  text-align: left;
+  padding: 2px 0;
+}
+.Button.CommentButton {
+  padding: 8px 12px;
+}
+.PanelProfile ul li.UserPhoto {
+  left: 5px;
+  position: absolute;
+}
+.PanelProfile ul li a,
+.PanelProfile ul li {
+  line-height: 20px;
+}
+.Moderators ul.PanelInfo li a {
+  float: none;
+  font-weight: 700;
+}
+.Moderators ul.PanelInfo li a img {
+  vertical-align: middle;
+}
+.Box {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  margin: 20px 0;
+  padding: 5px 10px;
+}
+.BoxProfile {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.25);
+  border-radius: 0 0 2px 2px;
+}
+.Box h4 {
+  color: #333;
+  font-weight: 700;
+  margin: 0;
+  padding: 0 0 1px;
+}
+.Box dl dt {
+  font-size: 12px;
+  color: #999999;
+}
+.Box dl dd {
+  margin-left: 10px;
+}
+.Box p {
+  color: #222;
+  font-size: 100%;
+  padding: 0 0 4px;
+}
+.PanelActivity {
+  border-bottom: 0 none;
+  border-top: 1px solid #ABDAFB;
+}
+.PanelActivity li {
+  background: none repeat scroll 0 0 #d2d2d2;
+  border-bottom: 1px solid #ABDAFB;
+  color: #999;
+  font-size: 11px;
+  line-height: 1.6;
+  padding: 2px 4px;
+}
+.PanelActivity li a {
+  font-size: 13px;
+}
+.PanelActivity p {
+  display: inline;
+  font-size: 90%;
+  padding: 0 4px;
+}
+.PanelActivity li em {
+  color: #999;
+  font-size: 80%;
+  padding-left: 5px;
+}
+.PanelActivity li .Story {
+  font-size: 85%;
+}
+.PanelProfile ul {
+  background: 0 repeat scroll 0 0 transparent;
+  position: relative;
+  margin: 0 -10px 5px;
+  padding: 5px 5px 5px 50px;
+}
+.Tabs .SubTab {
+  background: #bcbcbc;
+  border-radius: 0;
+  margin: 0 7px 0 13px;
+  padding: 4px 8px;
+}
+.DiscussionsTabs {
+  background: url("../images/subtle_dots.png");
+}
+.Count {
+  border-radius: 2px;
+  color: #999999;
+  font-weight: 400;
+  padding: 0 5px;
+  margin-left: 5px;
+  border: 1px solid #eeb088;
+}
+.MessageMeta {
+  font-size: 11px;
+  text-align: right;
+  padding-right: 20px;
+}
+.MessageMeta a {
+  margin: 5px;
+}
+#discussion_name {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: Liberation Mono, Liberation Sans;
+  color: #ff7f2a;
+  -webkit-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
+  -moz-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
+  -o-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
+  -ms-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
+  text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
+  margin: 0 20px;
+  display: inline-block;
+}
+.breadcrumb,
+.breadcrumb_li {
+  margin: 0;
+  padding: 0;
+}
+.HeadingTabs {
+  padding: 8px 8px 8px 12px;
+}
+.HeadingTabs .SubTab {
+  background: none repeat scroll 0 0 transparent;
+  display: inline;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 2.4;
+  padding: 0;
+}
+.DiscussionTabs,
+.ConversationsTabs {
+  background: url("../images/subtle_dots.png");
+  clear: none;
+  margin-right: 20px;
+  padding: 0 8px 5px 0;
+}
+.Headings {
+  position: relative;
+  text-align: left;
+}
+.Headings div {
+  display: inline-block;
+  padding-right: 10px;
+}
+.Headings .ItemHeading {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2;
+  padding: 0 6px;
+}
+.comments_list,
+.comments_list li {
+  margin: 0;
+  padding: 0;
+}
+.Tabs.CategoryTabs {
+  font-size: 18px;
+  font-weight: 700;
+  padding-left: 14px;
+}
+.Tabs .AdminCheck {
+  bottom: 0;
+  position: absolute;
+  right: 3px;
+  z-index: 201;
+}
+.AdminCheck {
+  display: inline-block;
+  height: 22px;
+  vertical-align: top;
+}
+form.Thumbnail table td {
+  width: 50%;
+  font-weight: 400;
+}
+form.Thumbnail table tr td {
+  vertical-align: top;
+}
+form.Thumbnail table tr th {
+  padding-right: 10px;
+}
+.jcropper-holder {
+  border: 1px solid #000;
+}
+.jcrop-vline,
+.jcrop-hline {
+  background: url(images/jcrop.gif) repeat scroll left top #ffffff;
+  font-size: 0;
+  position: absolute;
+}
+.jcrop-vline {
+  height: 100%;
+  width: 1px!important;
+}
+.jcrop-hline {
+  height: 1px!important;
+  width: 100%;
+}
+.jcrop-handle {
+  background-color: #333;
+  border: 1px solid #EEE;
+  font-size: 1px;
+  height: 7px!important;
+  width: 7px!important;
+}
+.jcrop-tracker {
+  height: 100%;
+  width: 100%;
+}
+.custom .jcrop-vline,
+.custom .jcrop-hline {
+  background: none repeat scroll 0 0 #FF0;
+}
+.custom .jcrop-handle {
+  background-color: #C7BB00;
+  border-radius: 3px 3px 3px 3px;
+  border-color: #000;
+}
+.Popup .Loading {
+  display: block;
+  width: 200px;
+}
+div.Popup .Footer {
+  background: none repeat scroll 0 0 transparent;
+  border: medium none;
+  text-align: center;
+  margin: 0 0 5px;
+  padding: 0;
+}
+div.Popup .Footer input.Button {
+  font-size: 11px;
+  margin-right: 2px;
+}
+div.Popup h3 {
+  font-size: 120%;
+  font-weight: 700;
+  padding: 20px 0 10px;
+}
+div.Popup p {
+  padding: 6px 10px 10px;
+}
+div.Popup .Legal p {
+  padding: 6px 0 10px;
+}
+body.Profile #Form_Invitation ul li label,
+body.Profile #Form_User ul li label,
+div.Popup form ul li label {
+  color: #000;
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 10px 0 0;
+}
+body.Entry form ul li.Gender label.RadioLabel,
+body.Profile #Form_User ul li.Gender label.RadioLabel,
+div.Popup form ul li.Gender label.RadioLabel {
+  display: inline;
+  padding-right: 20px;
+}
+div.Profile #Form_User input.Button,
+div.Popup input.Button {
+  margin: 4px 0 2px;
+}
+div.Popup #Form_User .Warning,
+#dashboard_profile_picture #Form_User .Warning {
+  margin: 6px 0;
+}
+.AjaxError {
+  overflow: auto;
+  white-space: pre;
+  padding: 10px;
+}
+.Legal h3 {
+  font-size: 120%;
+  font-weight: 700;
+  margin: 20px 0 0;
+  padding: 0;
+}
+.Legal ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+  margin: 0 30px 10px;
+}
+.Legal ul {
+  list-style-position: outside;
+  list-style-type: disc;
+  margin: 0 30px 10px;
+}
+.Legal li {
+  padding: 5px 0;
+}
+#Panel ul.Discussions {
+  border: 0 none;
+}
+.PanelDiscussions li {
+  background: transparent;
+  text-align: left;
+}
+.PanelDiscussions li strong {
+  display: block;
+  line-height: 1.5;
+}
+.Tag {
+  background: none repeat scroll 0 0 #999;
+  border-radius: 2px 2px 2px 2px;
+  color: #FFF;
+  font-weight: 700;
+  padding: 1px 4px;
+}
+.DataList .Announcement,
+.DataList .Closed {
+  border-radius: 2px 2px 2px 2px;
+  font-size: 12px;
+  border: 1px solid #eeb088;
+  color: #555555;
+  display: inline-block;
+  margin: 10px;
+}
+body.Discussion .Back {
+  text-align: left;
+  padding: 5px 6px;
+}
+.DataList .ItemContent {
+  margin: 0 0 0 10px;
+  overflow: hidden;
+}
+.Editing {
+  background: none repeat scroll 0 0 #d2d2d2;
+}
+.Share {
+  height: 31px;
+  padding: 10px 0 0 108px;
+}
+#DiscussionForm label {
+  color: #444;
+  font-size: 14px;
+  font-weight: 700;
+}
+#DiscussionForm h1 {
+  color: #333;
+  font-size: 200%;
+  margin-bottom: 15px;
+  text-shadow: none;
+}
+#DiscussionForm textarea {
+  width: 98%;
+}
+#DiscussionForm h2 {
+  border: medium none;
+  color: #02475A;
+  font-size: 140%;
+  font-weight: 700;
+  margin: 0;
+  padding: 6px;
+}
+#DiscussionForm form {
+  background: #ddd;
+  border: none;
+  margin: px 0;
+  padding: 0;
+}
+#DiscussionForm .Category,
+#DiscussionForm input.InputBox {
+  margin-bottom: 10px;
+  width: 95%;
+}
+#DiscussionForm .Category label {
+  padding: 0 8px 0 0;
+}
+.CommentForm .Buttons {
+  margin-bottom: 5px;
+  text-align: right;
+}
+.Comment .CommentForm .Buttons {
+  padding-left: 0;
+}
+.MessageForm .reply,
+#MessageForm .reply {
+  color: #91CBFA;
+  font-size: 42px;
+  moz-transform: matrix(1, 0, 0, -1, 0px, 0px);
+  position: absolute;
+  right: -29px;
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
+}
+#DiscussionForm a.Cancel {
+  margin-left: 18px;
+}
+#DiscussionForm .PostOptions li {
+  display: inline;
+  padding: 0 8px 0 0;
+}
+#DiscussionForm .PostOptions label {
+  color: #555;
+  display: inline;
+  font-size: 95%;
+  font-weight: 400;
+}
+textarea.MultiComplete {
+  height: 20px;
+  text-align: left;
+  width: 100%;
+}
+.ac_results {
+  background-color: #FFF;
+  border-right: 1px solid #BBB;
+  moz-border-bottom-colors: none;
+  moz-border-image: none;
+  moz-border-left-colors: none;
+  moz-border-right-colors: none;
+  moz-border-top-colors: none;
+  overflow: hidden;
+  z-index: 99999;
+  width: 479px!important;
+  border-color: 0 #BBB #BBB;
+  border-style: none solid solid;
+  border-width: 0 1px 1px;
+  padding: 0;
+}
+.ac_results ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.ac_results li {
+  border-bottom: 1px solid #BBB;
+  cursor: default;
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  overflow: hidden;
+  text-align: left;
+  margin: 0;
+  padding: 5px;
+}
+.ac_results li:before {
+  content: none;
+}
+.ac_lastitem {
+  border-bottom: 0 none!important;
+}
+.ac_results strong {
+  background: none repeat scroll 0 0 #DAF4FD;
+  font-weight: 700;
+}
+.ac_over strong {
+  background: #999;
+  font-weight: 700;
+  padding: 2px;
+}
+.ac_over {
+  background: #ddd;
+  color: #FFF;
+}
+#Panel input.InputBox,
+.AddPeople textarea.MultiComplete {
+  border-radius: 2px;
+  margin-bottom: 2px;
+  width: 91%;
+  padding: 9px;
+}
+#MessageForm {
+  background: none repeat scroll 0 0 #ddd;
+  border-radius: 0 0 3px 3px;
+  position: relative;
+  margin: 0;
+  padding: 20px 10px 10px;
+}
+#MessageForm h2 {
+  border: 0 none;
+  color: #2786C2;
+  font-size: 115%;
+  font-weight: 700;
+}
+#MessageForm textarea {
+  height: 100px;
+  margin-bottom: 2px;
+  min-height: 100px;
+  width: 98%;
+  padding: 9px;
+}
+.UploadProgress {
+  background: url(images/upload-progress-back.gif) repeat scroll 0 0 transparent;
+  border: 1px solid #0C3C7E;
+  border-radius: 2px 2px 2px 2px;
+  color: #FFF;
+  text-shadow: 0 1px 1px #333;
+  width: 200px;
+  z-index: 0;
+  margin: 10px 0;
+}
+.UploadProgress div {
+  padding: 2px 0;
+}
+.Popup #ConversationForm textarea.MultiComplete,
+.Popup #ConversationForm .TextBox {
+  width: 96%;
+}
+#ConversationForm h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: Liberation Mono, Liberation Sans;
+  color: #ff7f2a;
+  -webkit-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
+  -moz-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
+  -o-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
+  -ms-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
+  text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
+}
+#popup_contols {
+  margin: 5px 0;
+  text-align: right;
+}
+.Overlay .Popup {
+  position: relative;
+  z-index: 99999;
+  background: url("../images/subtle_dots.png");
+  width: 75%;
+  margin: auto;
+  -webkit-box-shadow: 2px 2px 2px #959595;
+  -moz-box-shadow: 2px 2px 2px #959595;
+  -o-box-shadow: 2px 2px 2px #959595;
+  -ms-box-shadow: 2px 2px 2px #959595;
+  box-shadow: 2px 2px 2px #959595;
+  border: 1px solid #c34e00;
+  padding: 10px;
+}
+.Overlay {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.Popup .Close {
+  float: right;
+}
+.UploadProgress .Background {
+  background: url(images/upload-bg.gif) repeat scroll 0 0 transparent;
+  width: 0;
+  z-index: 1;
+}
+.UploadProgress .Foreground {
+  overflow: visible;
+  text-indent: 6px;
+  white-space: nowrap;
+  z-index: 2;
+}
+ul.Tabs {
+  border-bottom: 1px solid #AAA;
+  padding-left: 4px;
+  text-align: left;
+}
+ul.Tabs li {
+  display: inline-block;
+}
+ul.Tabs li a {
+  background: none repeat scroll 0 0 #EEE;
+  border-radius: 3px 3px 0 0;
+  color: #888;
+  display: inline-block;
+  margin-left: 4px;
+  moz-border-bottom-colors: none;
+  moz-border-image: none;
+  moz-border-left-colors: none;
+  moz-border-right-colors: none;
+  moz-border-top-colors: none;
+  position: relative;
+  top: 1px;
+  border-color: #AAA;
+  border-style: solid;
+  border-width: 1px 1px 0;
+  padding: 2px 8px 1px;
+}
+ul.Tabs li a:hover {
+  background: none repeat scroll 0 0 #F5F5F5;
+  color: #444;
+}
+ul.Tabs li a.Active {
+  background: none repeat scroll 0 0 #FFF;
+  color: #000;
+  padding: 2px 8px;
+}
+body.Entry form ul li label {
+  color: #474747;
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 6px 0 0;
+}
+body.Entry form ul li label.CheckBoxLabel,
+body.Entry form ul li label.RadioLabel {
+  font-size: 12px;
+  font-weight: 400;
+  width: auto;
+}
+body.Entry input.DateBox,
+body.Entry input.InputBox,
+body.Entry textarea {
+  width: 310px;
+}
+span.Incorrect {
+  color: red;
+  display: block;
+}
+.SingleEntryMethod {
+  width: 290px;
+  margin: 0 auto;
+}
+.MultipleEntryMethods {
+  width: 500px;
+  margin: 0 auto;
+}
+body.Entry li.Buttons input.Button,
+.SignInPopup li.Buttons input.Button {
+  margin: 10px 0;
+}
+.signin .Entry {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.25);
+  border-radius: 3px 3px 3px 3px;
+  padding: 15px;
+}
+.Methods {
+  bottom: 0;
+  color: #F9F9F9;
+  line-height: 1;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  top: 33px;
+  width: 170px;
+  padding: 12px 20px 6px;
+}
+body#dashboard_entry_password .Methods,
+body#dashboard_entry_signin .Methods,
+body#dashboard_entry_index .Methods {
+  background: none repeat scroll 0 0 transparent;
+  padding: 10px 6px 6px;
+}
+.Methods .Method {
+  text-align: left;
+  padding: 10px 0 0;
+}
+body#dashboard_entry_handshake ul.NewAccount {
+  border-right: 1px solid #A5D0E7;
+  float: left;
+  margin-right: 44px;
+  width: 315px;
+}
+body#dashboard_entry_handshake ul.LinkAccount {
+  margin-left: 315px;
+}
+ul.LinkAccount h2 {
+  background-position: 45px -296px;
+  padding-left: 84px!important;
+}
+body#dashboard_entry_handshake .Info {
+  background: none repeat scroll 0 0 #D3F0FF;
+  border: 1px solid #A5D0E7;
+  color: #02475A;
+}
+body#dashboard_entry_leave p {
+  margin: 0;
+  padding: 20px 10px;
+}
+body#dashboard_entry_leave p.Leaving {
+  background: url(images/progress.gif) no-repeat scroll left center transparent;
+  margin: 0 0 0 14px;
+  padding: 20px 0 20px 50px;
+}
+.ConnectInfo {
+  position: relative;
+  margin: 10px 0 0;
+}
+.ConnectInfo img {
+  height: 36px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 36px;
+}
+.ConnectInfo span.Name {
+  color: #444;
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  padding-left: 46px;
+}
+.ConnectInfo h3 {
+  border: medium none;
+  color: #333;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.6;
+  padding: 0 0 10px 46px;
+}
+.Connect form ul li#ConnectPassword label,
+.SignInPopup form ul li#ConnectPassword label {
+  padding: 10px 0 0;
+}
+body#dashboard_entry_password input.InputBox,
+body#dashboard_entry_signin input.InputBox,
+body#dashboard_entry_index input.InputBox,
+.Connect input.InputBox,
+.SignInPopup input.InputBox {
+  padding: 3px;
+}
+body#dashboard_entry_signin .SearchBox input.InputBox {
+  padding-top: 0;
+}
+.Connect .ExistingUsername,
+.SignInPopup .ExistingUsername {
+  color: #000;
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+}
+.Errors {
+  left: auto;
+  position: inherit;
+  text-align: left;
+  top: auto;
+  z-index: auto;
+  margin: 0 0 10px!important;
+}
+.Errors ul {
+  background: none repeat scroll 0 0 #D50A0A!important;
+  border: 1px solid #A00!important;
+  border-radius: 2px 2px 2px 2px;
+  box-shadow: none;
+  display: block;
+  padding: 6px 10px;
+}
+.Errors ul li {
+  background: none repeat scroll 0 0 #D50A0A!important;
+  color: #FFF!important;
+  text-align: left;
+}
+div.Popup .Errors ul {
+  border: 1px solid #A00!important;
+  border-radius: 2px 2px 2px 2px;
+  box-shadow: none;
+  display: block;
+}
+div.Popup .Errors {
+  left: auto;
+  position: inherit;
+  text-align: left;
+  top: auto;
+  z-index: auto;
+  margin: 10px 0!important;
+}
+.Errors pre {
+  border-radius: 2px 2px 2px 2px;
+  box-shadow: 0 0 2px #333;
+  display: block;
+  overflow: auto;
+  white-space: pre;
+  margin: 10px 0 5px;
+  padding: 4px 8px;
+}
+body.embed div.Popup h1,
+body.embed div.Popup h2,
+body.embed .Connect h1,
+body.embed .Connect h2 {
+  background: none repeat scroll 0 0 #3B5998;
+  border-bottom: 1px solid #2E4778;
+}
+.Embed a {
+  color: #3B5998!important;
+}
+.Embed a:hover {
+  text-decoration: underline!important;
+}
+.Embed a.Button,
+.Embed a.Button:hover {
+  color: #333!important;
+  font-weight: 700;
+  text-decoration: none!important;
+}
+.Embed h3 {
+  border-bottom: 1px solid #BEC8CC;
+  font-size: 15px;
+  font-weight: 700;
+}
+.Embed .MessageForm {
+  background: none repeat scroll 0 0 #F2F2F2;
+  border-bottom: 1px solid #BEC8CC;
+  border-top: 1px solid #FFF;
+  padding: 7px 8px;
+}
+.Embed .TextBox {
+  border-radius: 0 0 0 0;
+  font-size: 12px;
+  height: 50px;
+  min-height: 50px;
+  width: 100%;
+  padding: 3px;
+}
+.Embed .Author {
+  color: #777;
+  display: inline-block;
+  font-size: 11px;
+  padding: 0 8px 0 0;
+}
+.Embed .Foot {
+  background: none repeat scroll 0 0 transparent;
+  border: medium none;
+  text-align: right;
+}
+.Embed .MorePager a,
+.Embed .MorePager a:link,
+.Embed .MorePager a:hover,
+.Embed .MorePager a:active,
+.Embed .MorePager a:visited {
+  background: none repeat scroll 0 0 transparent;
+  border: medium none;
+  padding: 0;
+}
+.Embed .MorePager a.Loading,
+.Embed .MorePager a.Loading:hover {
+  text-decoration: none!important;
+}
+.Embed .MorePager {
+  background: none repeat scroll 0 0 #F2F2F2;
+  border-bottom: 1px solid #BEC8CC;
+  padding: 2px 8px 4px;
+}
+.RegardingEvent {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.7) !important;
+  border-radius: 4px 4px 4px 4px;
+  color: #FFF!important;
+  position: relative;
+  text-align: left!important;
+  text-shadow: 0 1px 1px #000;
+  padding: 10px 10px 10px 38px;
+}
+.RegardingEvent span.InformSprite {
+  left: 5px;
+  top: 5px;
+}
+.RegardingEvent a.ReportedUser,
+.RegardingEvent a.ReportingUser {
+  color: #CFECFF;
+}
+.RegardingEvent .ReportedReason {
+  font-style: italic;
+  padding: 5px;
+}
+.RegardingEvent .RegardingTime {
+  color: #B1B1B1;
+  font-size: 9px;
+  text-transform: uppercase;
+}
+.RegardingActions {
+  height: 100%;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+  padding: 0 10px;
+}
+.RegardingActions .ActionButton {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.7) !important;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  color: #FFF!important;
+  display: inline-block;
+  margin-right: 4px;
+  text-align: left!important;
+  text-shadow: 0 1px 1px #000;
+  padding: 0 5px 2px;
+}
+.RegardingActions .ActionButton a {
+  color: #CFECFF;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.ProfilePhotoSmall {
+  height: 24px;
+  width: 24px;
+}
+.ProfilePhotoMedium {
+  height: 60px;
+  width: 60px;
+  border: 1px solid #CCC;
+}
+.DiscussionsMeta {
+  display: inline-block;
+  height: 38px;
+  overflow: hidden;
+  position: absolute;
+  right: 30px;
+  text-align: left;
+  top: 15px;
+  width: 120px;
+}
+.DiscussionsMeta a {
+  line-height: 1;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+.DiscussionsMeta .ProfilePhotoMedium {
+  float: left;
+  height: 38px;
+  margin-right: 10px;
+  width: 38px;
+}
+.PhotoGrid {
+  line-height: 1;
+  margin: 2px -2px;
+}
+.PhotoGrid img {
+  height: 32px;
+  vertical-align: text-bottom;
+  width: 32px;
+  margin: 2px;
+}
+.PhotoGridSmall {
+  line-height: 1;
+  margin: 1px -1px;
+}
+.PhotoGridSmall img {
+  height: 24px;
+  vertical-align: text-bottom;
+  width: 24px;
+  margin: 1px;
+}
+.date {
+  color: #999;
+  display: block;
+  position: absolute;
+  right: -44px;
+  top: 0;
+  width: 43px;
+  margin: 0 auto;
+}
+.day {
+  font-size: 24px;
+  top: 20px;
+}
+.month {
+  font-size: 14px;
+  left: 0;
+  top: 0;
+}
+.year {
+  font-size: 16px;
+  moz-transform: rotate(-90deg);
+  right: -9px;
+  top: 12px;
+}
+.time {
+  font-size: 11px;
+  top: 40px;
+}
+body.Discussion div.AttachFileWrapper {
+  margin-left: -135px;
+}
+#DiscussionForm .Tabs {
+  margin: 0 -10px;
+}
+.Tabs #QnA_Question {
+  border-radius: 2px 0 0 2px;
+}
+.Tabs #QnA_Discussion {
+  border-radius: 0 2px 2px 0;
+}
+.QnA-Tag-Question,
+.QnA-Tag-Answered,
+.QnA-Tag-Accepted {
+  background: none repeat scroll 0 0 transparent;
+  font-size: 16px!important;
+  padding: 0;
+}
+.QnA-Tag-Answered {
+  color: #BFBFBF;
+}
+.QnA-Tag-Accepted {
+  color: #72D382;
+}
+.MessageList .Meta .CommentInfo span.QnA-Box span {
+  color: #F9F9F9;
+  margin: 0;
+}
+body ul.token-input-list {
+  border: 1px solid #FFF;
+  border-radius: 0 0 0 0;
+  width: 99.099998%;
+}
+body .StatBox {
+  background: none repeat scroll 0 0 transparent;
+  color: #C9C9C9;
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 400;
+  height: 22px;
+  padding: 7px 0 0;
+}
+body .StatBox a {
+  color: #C9C9C9;
+  display: inline;
+}
+body .AnswersBox {
+  margin-right: 150px;
+}
+body div.AnswerTabs {
+  background: none repeat scroll 0 0 transparent;
+  margin-right: 0;
+  border-color: #CCC;
+}
+body div.AnswerTabs li.Active a {
+  border-color: #CCC;
+  margin: 0 10px;
+}
+body ul.MessageList div.Meta span.Votes {
+  left: auto;
+  right: -78px;
+}
+body span.Votes a {
+  background: none repeat scroll 0 0 #F8F8F8;
+}
+body span.Votes a:hover {
+  background: none repeat scroll 0 0 #333;
+}
+body span.Votes a.VoteUp {
+  border-radius: 0 3px 0 0;
+}
+body span.Votes a.VoteDown {
+  border-radius: 0 0 3px 0;
+}
+body span.Votes span {
+  background: none repeat scroll 0 0 #F8F8F8;
+  color: #333!important;
+  min-width: 20px;
+}
+body .StatBox:after {
+  color: #C9C9C9;
+  font-family: icons;
+  font-size: 22px;
+  font-style: normal!important;
+  font-weight: 400;
+  height: 5px;
+  line-height: 5px;
+  margin-right: 12px;
+  padding-left: 4px;
+  text-transform: none!important;
+}
+body .ViewsBox:after {
+  content: "E";
+}
+body .AnswersBox:after {
+  content: "B";
+}
+body .UserSignature {
+  border-top: 1px solid #C9C9C9;
+  color: #666;
+  padding-left: 5px;
+}
+.DataList .NillaBlog a.Title {
+  font-size: 20px;
+  padding: 12px 0 12px 4px;
+}
+.DataList .NillaBlog a.Title.withplusone {
+  margin-right: 460px;
+}
+.DataList .NillaBlog a.Title span {
+  font-size: 20px!important;
+}
+.NillaBlog .DiscussionsMeta {
+  width: 100px;
+}
+.FirstComment.NillaBlog {
+  margin-bottom: 20px;
+}
+body.Discussion .FirstComment.NillaBlog .Meta .ProfilePhotoMedium {
+  height: 60px;
+  left: -60px;
+  width: 60px;
+}
+body.Discussion .NillaBlog .Meta .ProfilePhotoMedium {
+  height: 40px;
+  left: -40px;
+  width: 40px;
+}
+.Discussions .DataList .Item.NillaBlog {
+  border-radius: 2px 2px 2px 2px;
+  margin: 10px 0;
+}
+.plusone {
+  bottom: 0;
+  margin-right: 0!important;
+  position: absolute;
+  right: 0;
+}
+.Nillaplusone {
+  margin-right: 0!important;
+}
+.ItemContent.Discussion .DataList .Meta {
+  height: auto;
+  width: auto;
+}
+.DataList .Options {
+  display: inline-block;
+}
+.LastDiscussionTitle {
+  display: block;
+  margin: -5px;
+}
+.LastCommentDate {
+  display: inline;
+  right: -50px;
+  top: 22px;
+}
+#DiscussionForm {
+  margin: 10px auto;
+}
+.Tabs.CommentTabs {
+  margin: 0 0 5px;
+}
+#Foot a {
+  color: #DDD;
+}
+#Foot a :hover {
+  color: #78070C!important;
+}
+#footer {
+  color: #ddd;
+  font-size: 13px;
+  width: 960px!important;
+  margin: 0 auto;
+}
+#footer1 {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+#footer1 p {
+  line-height: 1.2;
+  margin-top: 23px;
+  text-align: center;
+  text-shadow: 0 0 1px #000;
+}
+#Foot div {
+  margin: 0 auto;
+  padding: 0;
+}
+#Form_User_SignIn {
+  padding: 10px!important;
+}
+blockquote.Quote,
+div.QuoteText {
+  background: #EEE;
+  border-left: 6px solid #CCC;
+  padding: 10px 10px 10px 15px;
+}
+.Center,
+table.PreferenceGroup tbody td.PrefCheckBox,
+div.Popup .Loading,
+body.Entry {
+  text-align: center;
+}
+.Right,
+.AddPeople form div,
+#MessageForm form div {
+  text-align: right;
+}
+h3,
+.DataList .Title a {
+  font-size: 120%;
+  font-weight: 700;
+}
+h4,
+h5 {
+  color: #6C6C6C;
+  font-size: 120%;
+}
+#Popup textarea.TextBox,
+input.BigInput,
+form.Thumbnail table {
+  width: 100%;
+}
+.Buttons,
+.Popup .Info {
+  margin-top: 10px;
+}
+.Alert a,
+.DataList .Meta .Tag a,
+.Tag a {
+  color: #FFF;
+}
+.Alert a:hover,
+#Status a:hover {
+  text-decoration: underline;
+}
+.Info strong,
+.DismissMessage strong,
+.Preview .Message strong,
+.MessageList .Message strong,
+.Legal strong,
+.UploadProgress div strong {
+  font-weight: 700;
+}
+.NumberedPager a,
+.NumberedPager span,
+.PanelActivity span {
+  padding: 0 4px;
+}
+a.Small:hover,
+.User,
+.User a {
+  text-decoration: none;
+}
+.DismissMessage a.Dismiss:hover,
+.DataList a.Delete:hover {
+  background: none repeat scroll 0 0 #333;
+  border: medium none;
+  color: #FFF;
+  text-decoration: none;
+}
