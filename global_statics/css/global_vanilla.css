@@ -950,9 +950,6 @@ table.PreferenceGroup tbody td {
   margin: 0 -10px 5px;
   padding: 5px 5px 5px 50px;
 }
-.Tabs .SubTab {
-  border-top: 1px solid #eeb088;
-}
 .DiscussionsTabs {
   background: url("../images/subtle_dots.png");
 }
@@ -984,6 +981,7 @@ table.PreferenceGroup tbody td {
   text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
   margin: 0 20px;
   display: inline-block;
+  line-height: 1;
 }
 .breadcrumb,
 .breadcrumb_li {
