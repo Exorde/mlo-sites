@@ -68,8 +68,8 @@ if (!class_exists('HeadModule', FALSE)) {
        * @param array $Options Additional properties to pass to AddTag, e.g. 'ie' => 'lt IE 7';
        */
       public function AddCss($HRef, $Media = '', $AddVersion = TRUE, $Options = NULL) {
-        //if(strstr($_SERVER[REQUEST_URI],'index.php?p=/settings/') || strstr($_SERVER[REQUEST_URI],'index.php?p=/dashboard/' ||
-        //$Options = 'fire_this_js')){
+        if(strstr($_SERVER[REQUEST_URI],'index.php?p=/settings/') || strstr($_SERVER[REQUEST_URI],'index.php?p=/dashboard/')){ 
+        
          $Properties = array(
             'rel' => 'stylesheet',
             'type' => 'text/css',
@@ -84,7 +84,7 @@ if (!class_exists('HeadModule', FALSE)) {
          }
          
          $this->AddTag('link', $Properties);
-       //}
+       }
       }
 
       public function AddRss($HRef, $Title) {
