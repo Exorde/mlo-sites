@@ -23,15 +23,12 @@ Copyright 2007 Chris Wanstrath [ chris@ozmm.org ]
    }
 
    $.fn.popup = function(options) {
-      // IE7 or less gets no popups because they're jerks
-      if ($.browser.msie && parseInt($.browser.version, 10) < 8)
-         return false;
    
       // Merge the two settings arrays into a central data store
       var settings = $.extend({}, $.popup.settings, options);
       var sender = this;
 
-      this.live('click', function() {
+      this.on('click', function() {
          settings.sender = this;
          $.extend(settings, { popupType: $(this).attr('popupType') });
 
@@ -326,10 +323,8 @@ Copyright 2007 Chris Wanstrath [ chris@ozmm.org ]
     <div id="{popup.id}" class="Popup"> \
       <div class="Border"> \
         <div class="Body"> \
+          <button class="Close"><span>×</span></button> \
           <div class="Content"> \
-          </div> \
-          <div class="Footer"> \
-            <a href="#" class="Close"><span>×</span></a> \
           </div> \
         </div> \
       </div> \

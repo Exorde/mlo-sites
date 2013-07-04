@@ -1,7 +1,7 @@
 /*#1 : LESS GLOBAL VARIABLES*/
 @main_color: #FF7F2A;
 @main_color_desat: desaturate(@main_color, 25%);
-@main_color_desat_light: lighten(@main_color_desat, 25%);
+@main_color_desat_light: lighten(@main_color_desat, 15%);
 @main_color_desat_dark: darken(@main_color_desat, 25%);
 @main_color_gray: desaturate(@main_color, 100%);
 @main_color_light: lighten(@main_color, 40%);
@@ -9,16 +9,16 @@
 @complementary: spin(@main_color, 180);
 @complementary_desat: desaturate(@complementary, 40%);
 @complementary_gray: desaturate(@complementary, 80%);
-@complementary_gray_light: lighten(@complementary_gray, 39%);/*a very subtle blue*/
+@complementary_gray_light: lighten(@complementary_gray, 29%);/*a very subtle blue*/
 @icons_24: url('../images/icons_24/icons.png');
 @big_titles_font: Liberation Mono, Liberation Sans;
 @pattern_menus:  url("../images/subtle_dots.png");
 
 /*BG*/
-@main_bg_color: @complementary_gray_light;
+@main_bg_color: #EEE;
 
 /*Text colors*/
-@text_color_light:#aaa;
+@text_color_light:#999;
 @text_color_main:#555;
 @text_color_dark:#333;
 

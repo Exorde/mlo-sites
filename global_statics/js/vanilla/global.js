@@ -1,9 +1,6 @@
 
 // This file contains javascript that is global to the entire Garden application
 jQuery(document).ready(function($) {
-   if ($.browser.msie) {
-      $('body').addClass('MSIE');
-   }
    
    var d = new Date();
    var clientDate = d.getFullYear()+'-'+(d.getMonth() + 1)+'-'+d.getDate()+' '+d.getHours()+':'+d.getMinutes();
@@ -24,7 +21,7 @@ jQuery(document).ready(function($) {
    });
    
    // Hide/Reveal the "forgot your password" form if the ForgotPassword button is clicked.
-   $('a.ForgotPassword').live('click', function() {
+   $('a.ForgotPassword').on('click', function() {
       $('.Methods').toggle();
       $('#Form_User_Password').toggle();
 		$('#Form_User_SignIn').toggle();
@@ -90,7 +87,7 @@ jQuery(document).ready(function($) {
 		$('a.PopConfirm').popup({'confirm' : true, 'followConfirm' : true});
    }
 
-   $(".PopupWindow").live('click', function() {
+   $(".PopupWindow").on('click', function() {
       var $this = $(this);
 
       var width = $this.attr('popupWidth'); width = width ? width : 960;
@@ -121,7 +118,7 @@ jQuery(document).ready(function($) {
       $('a.SignInPopup').popup({containerCssClass:'SignInPopup'});
 
    // Make sure that message dismissalls are ajax'd
-   $('a.Dismiss').live('click', function() {
+   $('a.Dismiss').on('click', function() {
       var anchor = this;
       var container = $(anchor).parent();
       var transientKey = gdn.definition('TransientKey');
@@ -188,7 +185,7 @@ jQuery(document).ready(function($) {
 
    // Make sure that the commentbox & aboutbox do not allow more than 1000 characters
    $.fn.setMaxChars = function(iMaxChars) {
-      $(this).live('keyup', function() {
+      $(this).on('keyup', function() {
          var txt = $(this).val();
          if (txt.length > iMaxChars)
             $(this).val(txt.substr(0, iMaxChars));
@@ -415,7 +412,7 @@ jQuery(document).ready(function($) {
    $('.ToggleFlyout').openToggler();
    
    // Add a spinner onclick of buttons with this class
-   $('input.SpinOnClick').live('click', function() {
+   $('input.SpinOnClick').on('click', function() {
       $(this).before('<span class="AfterButtonLoading">&#160;</span>').removeClass('SpinOnClick');
    });
    
@@ -452,7 +449,7 @@ jQuery(document).ready(function($) {
 	     gdn.stats();
    
    // If a dismissable InformMessage close button is clicked, hide it.
-   $('div.InformWrapper.Dismissable a.Close').live('click', function() {
+   $('div.InformWrapper.Dismissable a.Close').on('click', function() {
       $(this).parents('div.InformWrapper').fadeOut('fast', function() {
          $(this).remove();
       });
@@ -477,7 +474,7 @@ jQuery(document).ready(function($) {
 	});
    
 	// Prevent autodismiss if hovering any inform messages
-	$('div.InformWrapper').live('mouseover mouseout', function(e) {
+	$('div.InformWrapper').on('mouseover mouseout', function(e) {
 		if (e.type == 'mouseover') {
 			var timerId = $('div.InformMessages').attr('autodismisstimerid');
 			if (timerId) {

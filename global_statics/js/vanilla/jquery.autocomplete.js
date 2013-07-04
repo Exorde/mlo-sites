@@ -81,7 +81,7 @@ $.Autocompleter = function(input, options) {
    var blockSubmit;
    
    // prevent form submit in opera when selecting with return key
-   $.browser.opera && $(input.form).bind("submit.autocomplete", function() {
+   $(input.form).bind("submit.autocomplete", function() {
       if (blockSubmit) {
          blockSubmit = false;
          return false;
@@ -89,7 +89,7 @@ $.Autocompleter = function(input, options) {
    });
    
    // only opera doesn't trigger keydown multiple times while pressed, others don't work with keypress at all
-   $input.bind(($.browser.opera ? "keypress" : "keydown") + ".autocomplete", function(event) {
+   $input.bind("keydown" + ".autocomplete", function(event) {
       // track last key pressed
       lastKeyPressCode = event.keyCode;
       switch(event.keyCode) {
@@ -598,9 +598,6 @@ $.Autocompleter.Select = function (options, input, select, config) {
       var element = event.target;
       while(element && element.tagName != "LI")
          element = element.parentNode;
-      // more fun with IE, sometimes event.target is empty, just ignore it then
-      if(!element)
-         return [];
       return element;
    }
 
@@ -715,20 +712,13 @@ $.Autocompleter.Select = function (options, input, select, config) {
                overflow: 'auto'
             });
             
-                if($.browser.msie && typeof document.body.style.maxHeight === "undefined") {
-               var listHeight = 0;
                listItems.each(function() {
                   listHeight += this.offsetHeight;
                });
                var scrollbarsVisible = listHeight > options.scrollHeight;
                     list.css('height', scrollbarsVisible ? options.scrollHeight : listHeight );
-               if (!scrollbarsVisible) {
-                  // IE doesn't recalculate width when scrollbar disappears
-                  listItems.width( list.width() - parseInt(listItems.css("padding-left")) - parseInt(listItems.css("padding-right")) );
-               }
                 }
                 
-            }
       },
       selected: function() {
          var selected = listItems && listItems.filter("." + CLASSES.ACTIVE).removeClass(CLASSES.ACTIVE);

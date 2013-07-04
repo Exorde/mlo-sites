@@ -1,3 +1,0 @@
-<link rel="stylesheet/less" type="text/css" href="/global_statics/css/global_vanilla.less">
-<script  type="text/javascript" src="/global_statics/css/global_vanilla.less"></script>
-<?php include "less_proccess.php"; ?>

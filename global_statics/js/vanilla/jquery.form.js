@@ -126,15 +126,10 @@ $.fn.ajaxSubmit = function(options) {
 
     // options.iframe allows user to force iframe mode
    if (options.iframe || found) { 
-       // hack to fix Safari hang (thanks to Tim Molendijk for this)
-       // see:  http://groups.google.com/group/jquery-dev/browse_thread/thread/36395b7ab510dd5d
-       if ($.browser.safari && options.closeKeepAlive)
-           $.get(options.closeKeepAlive, fileUpload);
-       else
-           fileUpload();
-       }
-   else
+       fileUpload();
+   } else{
        $.ajax(options);
+    }
 
     // fire 'notify' event
     this.trigger('form-submit-notify', [this, options]);
@@ -150,8 +145,6 @@ $.fn.ajaxSubmit = function(options) {
         var $io = $('<iframe id="' + id + '" name="' + id + '" />');
         var io = $io[0];
 
-        if ($.browser.msie || $.browser.opera) 
-            io.src = 'javascript:false;document.write("");';
         $io.css({ position: 'absolute', top: '-1000px', left: '-1000px' });
 
         var xhr = { // mock object
@@ -224,14 +217,7 @@ $.fn.ajaxSubmit = function(options) {
 
                 doc = io.contentWindow ? io.contentWindow.document : io.contentDocument ? io.contentDocument : io.document;
                 
-                if (doc.body == null && !operaHack && $.browser.opera) {
-                    // In Opera 9.2.x the iframe DOM is not always traversable when
-                    // the onload callback fires so we give Opera 100ms to right itself
-                    operaHack = 1;
-                    cbInvoked--;
-                    setTimeout(cb, 100);
-                    return;
-                }
+
                 
                 xhr.responseText = doc.body ? doc.body.innerHTML : null;
                 xhr.responseXML = doc.XMLDocument ? doc.XMLDocument : doc;
@@ -488,8 +474,6 @@ $.fieldValue = function(el, successful) {
         for(var i=(one ? index : 0); i < max; i++) {
             var op = ops[i];
             if (op.selected) {
-                // extra pain for IE...
-                var v = $.browser.msie && !(op.attributes['value'].specified) ? op.text : op.value;
                 if (one) return v;
                 a.push(v);
             }

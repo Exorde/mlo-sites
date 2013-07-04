@@ -62,6 +62,13 @@ h1,h2,h3,h4,h5,h6{
 h1, h2{
   color:@main_color_desat;
 }
+li{
+  list-style: none;
+}
+li:before{
+ content: "\25B9\00A0";
+ color: @main_color_desat;
+}
 nav{ 
   background: @pattern_menus;
 }
@@ -71,9 +78,11 @@ nav ul{
   margin:0;
 }
 nav li{
-  list-style: none;
   padding:0;
   margin:0;
+}
+nav li:before{
+  content: "";
 }
 
 @font-face {
@@ -116,6 +125,9 @@ blockquote small:before {
 }
 
 /*###1 GENERIC CLASSES*/
+.titlization{/*TODO : utiliser cette classe plutôt que dupliquer le style un peu partout*/
+  .titlization(1px);
+}
 /*Hiding a semantic element useful for accessibility*/
 .out_of_the_way{
   position:absolute;
@@ -495,6 +507,7 @@ input[type="submit"][disabled] {
 /*###3 : GLOBAL MENU*/
 #global_menu_container{
   border-bottom:5px solid @main_color;
+  background: @pattern_menus;
 }
 .global_menu_list.selected{
   background:@main_color;
@@ -541,7 +554,6 @@ input[type="submit"][disabled] {
 #global_menu{
   position:relative;
   margin:0;
-  background: @main_bg_color;
   padding: 5px 5px;
 }
 

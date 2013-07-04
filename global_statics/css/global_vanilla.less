@@ -1,6 +1,6 @@
 @import url('less/variables.less');
-.Discussions li{
-  list-style:none;
+.Discussions li:before{
+  content: "";
 }
 .opinionBox
 {
@@ -396,14 +396,6 @@ div.Search form input.InputBox,.SearchTabs input.InputBox
 	width:44px;
 }
 
-.Empty
-{
-	background:#ddd;
-	border-radius:3px 3px 0 0;
-	box-shadow:none;
-	clear:right;
-	padding:10px;
-}
 
 .DataList
 {
@@ -412,10 +404,10 @@ div.Search form input.InputBox,.SearchTabs input.InputBox
   border-top: 1px solid @main_color_dark;
   .rounded(5px);
   margin: 0;
-  padding: 0;
+  padding: 10px;
 }
-.DataList .Item{
-  list-style: none;
+.DataList .Item:before{
+  content: "";
 }
 
 .Empty,p.NoResults
@@ -432,12 +424,6 @@ div.Search form input.InputBox,.SearchTabs input.InputBox
 {
 	clear:right;
 	margin:0;
-}
-
-.DataList.Activities
-{
-	border-top-left-radius:0;
-	border-top-right-radius:0;
 }
 
 .Categories.discussions .DataList
@@ -496,10 +482,6 @@ div.Search form input.InputBox,.SearchTabs input.InputBox
 	width:50%;
 }
 
-.Conversation .Item.Alt,.Profile .DataList .Item:nth-child(2n)
-{
-	background:none repeat scroll 0 0 #F5F5F5;
-}
 
 .DataList .Item .Item
 {
@@ -549,7 +531,7 @@ div.Search form input.InputBox,.SearchTabs input.InputBox
   text-align: right; 
 }
 
-.Discussion .DataList .Meta,.Activities .Meta,.Profile.comments .Meta,.Conversations .Meta,.Categories.all .Meta,.SearchResults .Meta
+.Discussion .DataList .Meta,.Profile.comments .Meta,.Conversations .Meta,.Categories.all .Meta,.SearchResults .Meta
 {
 	float:none;
 	height:auto;
@@ -580,7 +562,7 @@ div.Search form input.InputBox,.SearchTabs input.InputBox
 	width:auto;
 }
 
-.Activities .Meta,.Conversations.Messages.all .Meta,.Categories.all .Meta
+.Conversations.Messages.all .Meta,.Categories.all .Meta
 {
 	margin-right:10px;
 	padding-right:5px;
@@ -685,110 +667,14 @@ div.Search form input.InputBox,.SearchTabs input.InputBox
 	padding:3px 0;
 }
 
-.Activities .Item
-{
-	min-height:60px;
-	padding-left:5px;
-}
-
-.Activities .Excerpt
-{
-	color:#80828C;
-}
-
-.Activities li.Condensed .Excerpt
-{
-	color:#000;
-	font-size:13px;
-}
-
-.Activities .Excerpt a,.Activities .Meta a
-{
-	color:#1E79A7;
-}
-
-.Activities .Excerpt a:hover,.Activities .Meta a:hover
-{
-	color:#FF0084;
-}
-
-.Activities .Excerpt img
-{
-	border:1px solid #999;
-	padding:2px;
-}
-
-.Activities ul.DataList
-{
-	background:none repeat scroll 0 0 transparent;
-	box-shadow:0 0 0 0 transparent;
-	margin-left:75px;
-	margin-right:15px;
-	width:auto;
-	padding:0;
-}
-
-.Activities .ItemContent
-{
-	width:631px;
-}
-
-.Activities .HasPhoto .ItemContent
-{
-	margin-left:43px;
-	width:578px;
-}
-
-.Activities .Item .HasPhoto .ItemContent
-{
-	margin-left:42px;
-	width:auto;
-}
-
-.Activities .DataList li
-{
-	background:#ddd;
-	border:1px solid #BEC8CC;
-	margin-bottom:2px;
-	padding:6px;
-}
-
-.DataList.ActivityComments li
-{
-	border-bottom:1px solid #BEC8CC!important;
-	margin-left:12px;
-	margin-right:6px;
-}
-
-.Activities .DataList a.Title,.Activities .DataList .Title,.Activities .DataList .Title a,.Activities .DataList .Excerpt p
-{
-	font-size:13px;
-	line-height:1;
-}
-
-.Activities .DataList .HasPhoto .Meta
-{
-	line-height:1;
-	padding:2px 0 0;
-}
-
-.Activities .DataList .Photo img
-{
-	height:32px;
-	width:32px;
-}
-
-.Activities .CommentForm textarea.TextBox
-{
-	width:97%;
-	padding:9px;
-}
 
 .MessageList,.MessageList li
 {
-	list-style:none outside none;
 	margin:0;
 	padding:0;
+}
+.MessageList:before,.MessageList li:before{
+  content: "";
 }
 
 .MessageList .Item:last-child
@@ -1104,12 +990,6 @@ form.Activity textarea
 	background:none repeat scroll 0 0 transparent;
 }
 
-body.Profile ul.Notifications
-{
-	border-top:0 none;
-	margin-top:0;
-}
-
 .Preferences h3
 {
 	margin:0;
@@ -1177,10 +1057,11 @@ table.PreferenceGroup tbody td
 
 .PanelInfo
 {
-	background:transparent;
-	border-bottom:0 none;
-	border-radius:4px 4px 4px 4px;
-	border-top:0 none;
+	background:#fff;
+	.rounded;
+	border: 1px solid @main_color_desat_light;
+  padding: 0;
+  margin: 0;
 }
 
 .Profile .PanelInfo li
@@ -1281,19 +1162,13 @@ table.PreferenceGroup tbody td
 
 .Box dl dt
 {
-	color:#555;
-	float:left;
 	font-size:12px;
-	overflow:hidden;
-	white-space:nowrap;
-	width:80px;
+  color: @text_color_light;
 }
 
 .Box dl dd
 {
-	color:#333;
-	font-size:12px;
-	margin-left:80px;
+	margin-left:10px;
 }
 
 .Box p
@@ -1351,15 +1226,6 @@ table.PreferenceGroup tbody td
 	padding:5px 5px 5px 50px;
 }
 
-.ProfileTabs li a span
-{
-	background:none repeat scroll 0 0 transparent;
-	color:#143359;
-	font-size:18px;
-	font-weight:700;
-	position:static;
-	margin:0;
-}
 
 .Tabs .SubTab
 {
@@ -1368,14 +1234,6 @@ table.PreferenceGroup tbody td
 	margin:0 7px 0 13px;
 	padding:4px 8px;
 }
-
-.ProfileTabs
-{
-	background:none repeat scroll 0 0 transparent;
-	margin:5px 0 0;
-	padding:0;
-}
-
 .DiscussionsTabs{
   background: @pattern_menus;
 }
@@ -1553,27 +1411,6 @@ form.Thumbnail table tr th
 	width:200px;
 }
 
-.Overlay
-{
-	height:100%;
-	left:0;
-	position:absolute;
-	top:0;
-	width:100%;
-}
-
-.MSIE .Overlay
-{
-	background:none repeat scroll 0 0 gray;
-}
-
-div.Popup .Legal,div.Popup .Content form
-{
-	background:none repeat scroll 0 0 #E9E9E9;
-	max-height:440px;
-	overflow:auto;
-	padding:0 10px 10px;
-}
 
 div.Popup .Footer
 {
@@ -1843,7 +1680,6 @@ textarea.MultiComplete
 
 .ac_results ul
 {
-	list-style:none outside none;
 	width:100%;
 	margin:0;
 	padding:0;
@@ -1860,6 +1696,9 @@ textarea.MultiComplete
 	text-align:left;
 	margin:0;
 	padding:5px;
+}
+.ac_results li:before{
+  content: none;
 }
 
 .ac_lastitem
@@ -1941,6 +1780,34 @@ textarea.MultiComplete
 {
 	width:96%;
 }
+#ConversationForm h1{
+  .titlization(1px);
+}
+#popup_contols{
+  margin: 5px 0;
+  text-align: right;
+}
+
+.Overlay .Popup{
+  position: relative;
+  z-index: 99999;
+  background: @pattern_menus;
+  width: 75%;
+  margin:auto;
+  .shadowyBox(@main_color_gray);
+  border: 1px solid @main_color_dark;
+  padding: 10px;
+}
+.Overlay{
+	height:100%;
+	left:0;
+	position:absolute;
+	top:0;
+	width:100%;
+}
+.Popup .Close{
+  float: right;
+}
 
 .UploadProgress .Background
 {
@@ -1955,15 +1822,6 @@ textarea.MultiComplete
 	text-indent:6px;
 	white-space:nowrap;
 	z-index:2;
-}
-
-div.Popup h1,div.Popup h2
-{
-	background:url(images/bg.png) repeat scroll 0 0 transparent;
-	color:#333;
-	display:block;
-	font-size:140%;
-	border-bottom:1px solid #888;
 }
 
 ul.Tabs
@@ -2011,13 +1869,6 @@ ul.Tabs li a.Active
 	padding:2px 8px;
 }
 
-ul.Tabs li a.EntryTabFor_password
-{
-	background-image:url(images/icon.png);
-	background-position:3px 4px;
-	background-repeat:no-repeat;
-	padding-left:22px;
-}
 body.Entry form ul li label
 {
 	color:#474747;
@@ -2104,12 +1955,6 @@ body#dashboard_entry_handshake ul.NewAccount
 body#dashboard_entry_handshake ul.LinkAccount
 {
 	margin-left:315px;
-}
-
-ul.NewAccount h2,ul.LinkAccount h2
-{
-	background:url(images/dashboard-sprites.png) no-repeat scroll 0 -542px transparent;
-	padding-left:36px!important;
 }
 
 ul.LinkAccount h2
@@ -2743,15 +2588,6 @@ body.Discussion .NillaBlog .Meta .ProfilePhotoMedium
 	margin:10px auto;
 }
 
-.Activities .Meta
-{
-	height:22px;
-	position:relative;
-	text-align:left;
-	right:0;
-	top:0;
-}
-
 .Tabs.CommentTabs
 {
 	margin:0 0 5px;
@@ -2790,15 +2626,6 @@ body.Discussion .NillaBlog .Meta .ProfilePhotoMedium
 	text-shadow:0 0 1px #000;
 }
 
-#Foot
-{
-	background:url(images/footer.png);
-	width:100%;
-	height:60px;
-	overflow:hidden;
-	padding:0;
-}
-
 #Foot div
 {
 	margin:0 auto;
@@ -2823,7 +2650,7 @@ blockquote.Quote,div.QuoteText
 	text-align:center;
 }
 
-.Right,.Activities .CommentForm form div,.AddPeople form div,#MessageForm form div
+.Right,.AddPeople form div,#MessageForm form div
 {
 	text-align:right;
 }
