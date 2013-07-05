@@ -13,8 +13,8 @@ class copyValues extends CApplicationComponent{
       $connection= $this->database();
 
       //###########  FORUM  ##############
-      $sqlForum="INSERT INTO GDN_User (Name, Password, HashMethod,  Email,Deleted) 
-            VALUES ('$username','$password', 'dogma','$email','1');";
+      $sqlForum="INSERT INTO GDN_User (UserID, Name, Password, HashMethod,  Email,Deleted) 
+            VALUES ($ID, '$username','$password', 'dogma','$email','1');";
       $command=$connection['forum']->createCommand($sqlForum);
       $command->execute();
       //Get the ID of the newly created user
@@ -32,8 +32,8 @@ class copyValues extends CApplicationComponent{
 
       //############  BLOG ##########
       $nice_name = strtolower($username);
-      $sqlBlog="INSERT INTO wp_users (user_login, user_pass, user_email, user_nicename) 
-        VALUES ('$username','$password', '$email', '$nice_name');";
+      $sqlBlog="INSERT INTO wp_users (ID, user_login, user_pass, user_email, user_nicename) 
+        VALUES ($ID, '$username','$password', '$email', '$nice_name');";
       $command=$connection['blog']->createCommand($sqlBlog);
       $command->execute();
     }

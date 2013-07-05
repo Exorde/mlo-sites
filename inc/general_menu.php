@@ -16,8 +16,8 @@
               </nav>
           </li>
           <li class="global_menu_list">
-              <a href="http://musique-libre.org/forum" class="global_menu_link menu_more">Forum</a><button class="menu_more_button button_thick" type="button">+</button>
-              <!--nav class="sub_menu_container" id="menu_forum">
+              <a href="http://musique-libre.org/forum" class="global_menu_link menu_more">Forum</a><!--button class="menu_more_button button_thick" type="button">+</button>
+              <nav class="sub_menu_container" id="menu_forum">
                   <h1>Derniers messages :</h1>
                   <?php
                     require_once('rsslib.php');
