@@ -50,6 +50,9 @@ class MloSsoAuthentPlugin extends Gdn_Plugin {
         if($_COOKIE['sso_authent_mlo']['token'] == $result){
           Gdn::Session()->Start($user_id);
         }
+      }elseif( Gdn::Session()->IsValid() && !$user_id){
+        //logout user without cookie
+        Gdn::Session()->End();
       }
    }
 }
