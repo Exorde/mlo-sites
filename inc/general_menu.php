@@ -20,8 +20,8 @@
               <nav class="sub_menu_container" id="menu_forum">
                   <h1>Derniers messages :</h1>
                   <?php
-                    require_once('rsslib.php');
-                    echo  rss_reader('http://musique-libre.org/forum/index.php?p=/discussions/feed.rss', 5);
+                    //require_once('rsslib.php');
+                    //echo  rss_reader('http://musique-libre.org/forum/index.php?p=/discussions/feed.rss', 5);
                    ?>
               </nav-->
           </li>
