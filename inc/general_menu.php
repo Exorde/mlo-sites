@@ -72,7 +72,7 @@
       if(array_key_exists('sso_authent_mlo',$_COOKIE)){
         echo '<button id="deconnection_button"  >deconnexion</button>';
       }else{
-        echo '<a  href="http://musique-libre.org/user" class="buttonified">inscription</a>
+        echo '<a  href="http://musique-libre.org/user/index.php?r=user/registration" class="buttonified">inscription</a>
          <button id="connection_button" >connexion</button>';
 
       }
