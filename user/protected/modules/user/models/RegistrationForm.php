@@ -32,7 +32,7 @@ class RegistrationForm extends User {
 		$find = User::model()->notsafe()->findByAttributes(array('email'=>$this->email));
     $password = $find->password;
     //Get the data and send it to the SQL copy function
-    Yii::app()->copyvalues->copy($this->username,$password,$this->email,$find->salt);
+    Yii::app()->copyvalues->copy($this->id, $this->username,$password,$this->email,$find->salt);
   }
 	
 }

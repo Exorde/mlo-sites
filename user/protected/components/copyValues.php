@@ -8,32 +8,26 @@ class copyValues extends CApplicationComponent{
     }
 
 
-    public function copy($username,$password,$email){
+    public function copy($id, $username,$password,$email){
       //Insert user data in the forum. I use 'Deleted' because of the activation
       $connection= $this->database();
 
       //###########  FORUM  ##############
       $sqlForum="INSERT INTO GDN_User (UserID, Name, Password, HashMethod,  Email,Deleted) 
-            VALUES ($ID, '$username','$password', 'dogma','$email','1');";
+            VALUES ($id, '$username','$password', 'dogma','$email','1');";
       $command=$connection['forum']->createCommand($sqlForum);
       $command->execute();
-      //Get the ID of the newly created user
-      $getIDSqlForum = "SELECT UserID FROM GDN_User WHERE Name = '$username'";
-      $commandID=$connection['forum']->createCommand($getIDSqlForum);
-      $IDQuery = $commandID->query();
-      $IDQuery = $IDQuery->readAll();
-      $ID = $IDQuery[0]['UserID'];
 
       //add user ID and role in the table
       $sqlForumRole="INSERT INTO GDN_UserRole (UserID, RoleID) 
-                VALUES ('$ID', '4432');";
+                VALUES ('$id', '4432');";
       $commandRole=$connection['forum']->createCommand($sqlForumRole);
       $commandRole->execute();
 
       //############  BLOG ##########
       $nice_name = strtolower($username);
       $sqlBlog="INSERT INTO wp_users (ID, user_login, user_pass, user_email, user_nicename) 
-        VALUES ($ID, '$username','$password', '$email', '$nice_name');";
+        VALUES ($id, '$username','$password', '$email', '$nice_name');";
       $command=$connection['blog']->createCommand($sqlBlog);
       $command->execute();
     }
