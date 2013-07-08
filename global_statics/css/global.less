@@ -144,6 +144,9 @@ blockquote small:before {
 .lower_button{
   top:10px;
 }
+.menu_more_button.lower_button{
+  border:1px solid @main_color_desat;
+}
 .highlight, .Active, .Highlight{ /*Vanilla classes are camel case which sucks*/
   border-bottom: 2px solid @main_color;
   border-right: 2px solid @main_color;
@@ -170,9 +173,6 @@ button, .buttonified, .BigButton, input[type="button"],{/*buttonified exists to 
   font-size:1em;
 
 }
-.main_menu_more:hover{
-  border: 1px solid @main_color_dark;
-}
 .button_thick{
   .shadowyText(@main_color_dark, 1px, 1px);
   color: #fff;
@@ -197,7 +197,6 @@ button:hover, .buttonified:hover, .BigButton:hover, input[type="button"]:hover, 
   background:@main_color;
   color:@main_color_dark;
   font-weight: 500;
-  border:2px solid @main_color_dark;
 }
 #connection_button:hover, .darker_button:hover{
   color:@main_color_light;
