@@ -17,12 +17,6 @@
 		<?php echo CHtml::activeLabelEx($model,$password_text); ?>
 		<?php echo CHtml::activePasswordField($model,$password_text, array('placeholder' => $password_text)) ?>
 	</div>
-	
-	
-	<div class="form_row rememberMe">
-		<?php echo CHtml::activeLabelEx($model,'rememberMe'); ?>
-		<?php echo CHtml::activeCheckBox($model,'rememberMe'); ?>
-	</div>
 
 	<div class="form_row submit">
     <?php echo CHtml::link(UserModule::t("Lost Password?"),Yii::app()->getModule('user')->recoveryUrl); ?>

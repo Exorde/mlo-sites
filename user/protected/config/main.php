@@ -9,6 +9,7 @@ return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Musique Libre !',
         'theme'=>'',
+  'language' => 'fr',
 	// preloading 'log' component
 	'preload'=>array('log'),
 
