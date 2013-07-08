@@ -170,6 +170,9 @@ button, .buttonified, .BigButton, input[type="button"],{/*buttonified exists to 
   font-size:1em;
 
 }
+.main_menu_more:hover{
+  border: 1px solid @main_color_dark;
+}
 .button_thick{
   .shadowyText(@main_color_dark, 1px, 1px);
   color: #fff;
@@ -182,7 +185,7 @@ button, .buttonified, .BigButton, input[type="button"],{/*buttonified exists to 
   padding: 0 1px 0 6px;
 }
 .menu_container .enlighted{
-  .shadowyBox(@main_color, 0, 12px);
+  border-bottom: 2px solid @main_color;
 }
 button:hover, .buttonified:hover, .BigButton:hover, input[type="button"]:hover, .lower_button, .selected_button{
   color:@main_color;
