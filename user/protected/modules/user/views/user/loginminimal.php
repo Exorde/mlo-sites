@@ -7,15 +7,13 @@
 	<?php echo CHtml::errorSummary($model); ?>
 	
 	<div class="form_row">
-    <?php $username_text = UserModule::t('username');?>
-		<?php echo CHtml::activeLabelEx($model,$username_text); ?>
-		<?php echo CHtml::activeTextField($model,$username_text, array('placeholder' => $username_text)) ?>
+		<?php echo CHtml::activeLabelEx($model, 'username'); ?>
+		<?php echo CHtml::activeTextField($model, 'username', array('placeholder' => UserModule::t('username'))) ?>
 	</div>
 	
 	<div class="form_row">
-    <?php $password_text = UserModule::t('password');?>
-		<?php echo CHtml::activeLabelEx($model,$password_text); ?>
-		<?php echo CHtml::activePasswordField($model,$password_text, array('placeholder' => $password_text)) ?>
+		<?php echo CHtml::activeLabelEx($model,'password'); ?>
+		<?php echo CHtml::activePasswordField($model,'password', array('placeholder' => UserModule::t('password'))) ?>
 	</div>
 
 	<div class="form_row submit">
