@@ -283,22 +283,15 @@ input[type="button"]:hover,
 #site-title {
   font-size: 120px;
   position: relative;
-  -webkit-text-shadow: 3px 3px 0 #ffffff, 6px 6px 0 #ff7f2a;
-  -moz-text-shadow: 3px 3px 0 #ffffff, 6px 6px 0 #ff7f2a;
-  -o-text-shadow: 3px 3px 0 #ffffff, 6px 6px 0 #ff7f2a;
-  -ms-text-shadow: 3px 3px 0 #ffffff, 6px 6px 0 #ff7f2a;
-  text-shadow: 3px 3px 0 #ffffff, 6px 6px 0 #ff7f2a;
-  /*TODO : utiliser cette classe plutôt que dupliquer le style un peu partout*/
-
   text-transform: uppercase;
   font-weight: bold;
   font-family: Liberation Mono, Liberation Sans;
   color: #ff7f2a;
-  -webkit-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
-  -moz-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
-  -o-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
-  -ms-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
-  text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
+  -webkit-text-shadow: 5px 5px 0 #ffffff, 10px 10px 0 #ff7f2a;
+  -moz-text-shadow: 5px 5px 0 #ffffff, 10px 10px 0 #ff7f2a;
+  -o-text-shadow: 5px 5px 0 #ffffff, 10px 10px 0 #ff7f2a;
+  -ms-text-shadow: 5px 5px 0 #ffffff, 10px 10px 0 #ff7f2a;
+  text-shadow: 5px 5px 0 #ffffff, 10px 10px 0 #ff7f2a;
   display: inline-block;
   -webkit-transform: skew(-20deg, 0deg);
   -moz-transform: skew(-20deg, 0deg);

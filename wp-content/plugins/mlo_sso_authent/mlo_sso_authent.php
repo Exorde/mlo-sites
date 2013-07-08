@@ -7,7 +7,7 @@ Author: Tumulte
 */
 
 // plugin must run before any other authentication plugins -
-add_action('init', 'logOnIfSso');
+add_action('init', 'logOnIfSso', 1);
 
 function logOnIfSso(){
   //check that that there's a cookie and that the user isn't logged on to prevent
