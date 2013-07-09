@@ -260,7 +260,7 @@ div.Search form input.InputBox,
   padding: 10px 0;
 }
 .MenuTitle {
-  color: #111111;
+  color: #333333;
   padding: 5px;
   border: 1px solid #e09b6e;
   font-size: 0.8em;
@@ -1189,7 +1189,7 @@ div.Popup #Form_User .Warning,
   border-radius: 2px 2px 2px 2px;
   font-size: 12px;
   border: 1px solid #e09b6e;
-  color: #111111;
+  color: #333333;
   display: inline-block;
   margin: 10px;
 }
