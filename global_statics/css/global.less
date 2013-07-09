@@ -162,10 +162,10 @@ button, .buttonified, .BigButton, input[type="button"],{/*buttonified exists to 
   border:2px solid @main_color;
   vertical-align: middle;
   /*.shadowyBox(@main_color_dark);*/
-  background: @main_color_light;
   color: @main_color_desat;
   margin:0 4px;
   height:33px;
+  background: #fff;
 }
 .main_menu_more{
   .shadowyBox(@main_color_dark, 0, 2px);
@@ -193,17 +193,22 @@ button:hover, .buttonified:hover, .BigButton:hover, input[type="button"]:hover, 
   .shadowyText(@main_color, 0, 2px);
   text-decoration: none;
 }
+#connection_button.lower_button{
+  display: none;
+}
+
 #connection_button, .darker_button{
-  background:@main_color;
-  color:@main_color_dark;
+  background:@analog1;
+  color:@main_color_light;
+  border-color: @analog1;
   font-weight: 500;
 }
 #connection_button:hover, .darker_button:hover{
   color:@main_color_light;
-  background:@main_color_desat;
+  background:@main_color;
   .shadowyText(@main_color_light, 2px, 2px);
-  .shadowyBox(@main_color, 3px, 5px);
-  border:2px solid @main_color_light;
+  .shadowyBox(@main_color, 0, 5px);
+  border:2px solid @main_color;
 }
 /*###2 : LOGO*/
 #branding{
@@ -217,7 +222,9 @@ button:hover, .buttonified:hover, .BigButton:hover, input[type="button"]:hover, 
   width: 150px;
   margin-bottom: 20px;
 }
-
+#logo_box_img{
+  background: @main_color;
+}
 
 #site-title{
   font-size:120px;
@@ -485,7 +492,7 @@ input[type="submit"][disabled] {
 
 /* Class for labelling required form items */
 .required {
-  color: #cc0033;
+  color: @analog1;
 }
 .form_row{
   margin: 10px 0;

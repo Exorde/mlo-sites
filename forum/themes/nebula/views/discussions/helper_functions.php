@@ -59,7 +59,7 @@ function WriteDiscussion($Discussion, &$Sender, &$Session, $Alt2) {
          <?php $Sender->FireEvent('BeforeDiscussionMeta'); ?>
          <?php
             if ($Session->IsValid() && $Discussion->CountUnreadComments > 0)
-               echo '<strong>'.Plural($Discussion->CountUnreadComments, '%s New', '%s New Plural').'</strong>';
+               echo '<span class="new_message">'.Plural($Discussion->CountUnreadComments, '%s New', '%s New Plural').'</span>';
 
             $Sender->FireEvent('AfterCountMeta');
 

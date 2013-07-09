@@ -73,10 +73,12 @@
         echo '<button id="deconnection_button"  >deconnexion</button>';
       }else{
         echo '<a  href="http://musique-libre.org/user/index.php?r=user/registration" class="buttonified">inscription</a>
-         <button id="connection_button" >connexion</button>';
+         <button id="connection_button" >se connecter</button>';
 
       }
       ?>
-      <div id="login_container" class="sub_menu_container"></div>
+      <div class="sub_menu_container">
+        <div id="login_container"></div>
+      </div>
   </div>
 </section>

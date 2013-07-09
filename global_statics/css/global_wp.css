@@ -79,13 +79,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
 article.page,
 article.post,
 article.attachment {
-  -webkit-box-shadow: 2px 2px 2px #959595;
-  -moz-box-shadow: 2px 2px 2px #959595;
-  -o-box-shadow: 2px 2px 2px #959595;
-  -ms-box-shadow: 2px 2px 2px #959595;
-  box-shadow: 2px 2px 2px #959595;
+  -webkit-box-shadow: 2px 2px 2px #818181;
+  -moz-box-shadow: 2px 2px 2px #818181;
+  -o-box-shadow: 2px 2px 2px #818181;
+  -ms-box-shadow: 2px 2px 2px #818181;
+  box-shadow: 2px 2px 2px #818181;
   background-color: #fff;
-  border-top: 1px solid #c34e00;
+  border-top: 1px solid #934008;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -o-border-radius: 5px;
@@ -101,7 +101,7 @@ aside {
   text-align: center;
 }
 footer.entry-meta {
-  border-top: 1px solid #c34e00;
+  border-top: 1px solid #934008;
   background: url("../images/subtle_dots.png");
   padding: 10px 34px;
   color: #555555;
@@ -121,16 +121,16 @@ footer.entry-meta {
   text-transform: uppercase;
   font-weight: bold;
   font-family: Liberation Mono, Liberation Sans;
-  color: #ff7f2a;
-  -webkit-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
-  -moz-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
-  -o-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
-  -ms-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
-  text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ff7f2a;
+  color: #f26a0f;
+  -webkit-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #f26a0f;
+  -moz-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #f26a0f;
+  -o-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #f26a0f;
+  -ms-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #f26a0f;
+  text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #f26a0f;
   margin: 15px 0 5px 0;
 }
 .entry-title a {
-  color: #ff7f2a;
+  color: #f26a0f;
 }
 .entry-content,
 .entry-title,
@@ -361,11 +361,11 @@ img.size-thumbnail,
 .wp-caption img,
 .media-attachment img,
 .entry-attachment img {
-  -webkit-box-shadow: 2px 2px 2px #944815;
-  -moz-box-shadow: 2px 2px 2px #944815;
-  -o-box-shadow: 2px 2px 2px #944815;
-  -ms-box-shadow: 2px 2px 2px #944815;
-  box-shadow: 2px 2px 2px #944815;
+  -webkit-box-shadow: 2px 2px 2px #6b3817;
+  -moz-box-shadow: 2px 2px 2px #6b3817;
+  -o-box-shadow: 2px 2px 2px #6b3817;
+  -ms-box-shadow: 2px 2px 2px #6b3817;
+  box-shadow: 2px 2px 2px #6b3817;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   -o-border-radius: 3px;
@@ -392,11 +392,11 @@ img.size-thumbnail,
   vertical-align: middle;
 }
 #page img.avatar {
-  -webkit-box-shadow: 2px 2px 2px #959595;
-  -moz-box-shadow: 2px 2px 2px #959595;
-  -o-box-shadow: 2px 2px 2px #959595;
-  -ms-box-shadow: 2px 2px 2px #959595;
-  box-shadow: 2px 2px 2px #959595;
+  -webkit-box-shadow: 2px 2px 2px #818181;
+  -moz-box-shadow: 2px 2px 2px #818181;
+  -o-box-shadow: 2px 2px 2px #818181;
+  -ms-box-shadow: 2px 2px 2px #818181;
+  box-shadow: 2px 2px 2px #818181;
   -moz-border-radius: 500px;
   -webkit-border-radius: 500px;
   -o-border-radius: 500px;
@@ -408,11 +408,11 @@ img.size-thumbnail,
 -------------------------------------------------------------- */
 article.comment {
   border-top: 1px solid #fff;
-  -webkit-box-shadow: 2px 2px 2px #959595;
-  -moz-box-shadow: 2px 2px 2px #959595;
-  -o-box-shadow: 2px 2px 2px #959595;
-  -ms-box-shadow: 2px 2px 2px #959595;
-  box-shadow: 2px 2px 2px #959595;
+  -webkit-box-shadow: 2px 2px 2px #818181;
+  -moz-box-shadow: 2px 2px 2px #818181;
+  -o-box-shadow: 2px 2px 2px #818181;
+  -ms-box-shadow: 2px 2px 2px #818181;
+  box-shadow: 2px 2px 2px #818181;
   display: block;
   position: relative;
   padding: 25px 0;
