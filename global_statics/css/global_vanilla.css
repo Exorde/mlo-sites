@@ -331,7 +331,7 @@ div.Search form input.InputBox,
   -o-box-shadow: 2px 2px 2px #818181;
   -ms-box-shadow: 2px 2px 2px #818181;
   box-shadow: 2px 2px 2px #818181;
-  border-top: 1px solid #934008;
+  border-top: 1px solid #c3550b;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -o-border-radius: 5px;
@@ -1350,7 +1350,7 @@ textarea.MultiComplete {
   -o-box-shadow: 2px 2px 2px #818181;
   -ms-box-shadow: 2px 2px 2px #818181;
   box-shadow: 2px 2px 2px #818181;
-  border: 1px solid #934008;
+  border: 1px solid #c3550b;
   padding: 10px;
 }
 .Overlay {

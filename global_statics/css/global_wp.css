@@ -85,7 +85,7 @@ article.attachment {
   -ms-box-shadow: 2px 2px 2px #818181;
   box-shadow: 2px 2px 2px #818181;
   background-color: #fff;
-  border-top: 1px solid #934008;
+  border-top: 1px solid #c3550b;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -o-border-radius: 5px;
@@ -101,7 +101,7 @@ aside {
   text-align: center;
 }
 footer.entry-meta {
-  border-top: 1px solid #934008;
+  border-top: 1px solid #c3550b;
   background: url("../images/subtle_dots.png");
   padding: 10px 34px;
   color: #555555;
@@ -161,6 +161,7 @@ footer.entry-meta {
 #nav-above {
   clear: both;
   padding: 20px;
+  background: none;
 }
 #nav-above {
   padding-top: 0;
