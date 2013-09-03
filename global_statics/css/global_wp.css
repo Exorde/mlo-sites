@@ -79,11 +79,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 article.page,
 article.post,
 article.attachment {
-  -webkit-box-shadow: 2px 2px 2px #818181;
-  -moz-box-shadow: 2px 2px 2px #818181;
-  -o-box-shadow: 2px 2px 2px #818181;
-  -ms-box-shadow: 2px 2px 2px #818181;
-  box-shadow: 2px 2px 2px #818181;
+  -webkit-box-shadow: 4px 4px 4px #dddddd;
+  -moz-box-shadow: 4px 4px 4px #dddddd;
+  -o-box-shadow: 4px 4px 4px #dddddd;
+  -ms-box-shadow: 4px 4px 4px #dddddd;
+  box-shadow: 4px 4px 4px #dddddd;
   background-color: #fff;
   border-top: 1px solid #c3550b;
   -webkit-border-radius: 5px;
@@ -362,11 +362,11 @@ img.size-thumbnail,
 .wp-caption img,
 .media-attachment img,
 .entry-attachment img {
-  -webkit-box-shadow: 2px 2px 2px #6b3817;
-  -moz-box-shadow: 2px 2px 2px #6b3817;
-  -o-box-shadow: 2px 2px 2px #6b3817;
-  -ms-box-shadow: 2px 2px 2px #6b3817;
-  box-shadow: 2px 2px 2px #6b3817;
+  -webkit-box-shadow: 4px 4px 4px #6b3817;
+  -moz-box-shadow: 4px 4px 4px #6b3817;
+  -o-box-shadow: 4px 4px 4px #6b3817;
+  -ms-box-shadow: 4px 4px 4px #6b3817;
+  box-shadow: 4px 4px 4px #6b3817;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   -o-border-radius: 3px;
@@ -393,11 +393,11 @@ img.size-thumbnail,
   vertical-align: middle;
 }
 #page img.avatar {
-  -webkit-box-shadow: 2px 2px 2px #818181;
-  -moz-box-shadow: 2px 2px 2px #818181;
-  -o-box-shadow: 2px 2px 2px #818181;
-  -ms-box-shadow: 2px 2px 2px #818181;
-  box-shadow: 2px 2px 2px #818181;
+  -webkit-box-shadow: 4px 4px 4px #dddddd;
+  -moz-box-shadow: 4px 4px 4px #dddddd;
+  -o-box-shadow: 4px 4px 4px #dddddd;
+  -ms-box-shadow: 4px 4px 4px #dddddd;
+  box-shadow: 4px 4px 4px #dddddd;
   -moz-border-radius: 500px;
   -webkit-border-radius: 500px;
   -o-border-radius: 500px;
@@ -409,11 +409,11 @@ img.size-thumbnail,
 -------------------------------------------------------------- */
 article.comment {
   border-top: 1px solid #fff;
-  -webkit-box-shadow: 2px 2px 2px #818181;
-  -moz-box-shadow: 2px 2px 2px #818181;
-  -o-box-shadow: 2px 2px 2px #818181;
-  -ms-box-shadow: 2px 2px 2px #818181;
-  box-shadow: 2px 2px 2px #818181;
+  -webkit-box-shadow: 4px 4px 4px #dddddd;
+  -moz-box-shadow: 4px 4px 4px #dddddd;
+  -o-box-shadow: 4px 4px 4px #dddddd;
+  -ms-box-shadow: 4px 4px 4px #dddddd;
+  box-shadow: 4px 4px 4px #dddddd;
   display: block;
   position: relative;
   padding: 25px 0;

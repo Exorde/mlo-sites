@@ -326,11 +326,11 @@ div.Search form input.InputBox,
 .DataList,
 #DiscussionForm {
   background: url("../images/subtle_dots.png");
-  -webkit-box-shadow: 2px 2px 2px #818181;
-  -moz-box-shadow: 2px 2px 2px #818181;
-  -o-box-shadow: 2px 2px 2px #818181;
-  -ms-box-shadow: 2px 2px 2px #818181;
-  box-shadow: 2px 2px 2px #818181;
+  -webkit-box-shadow: 4px 4px 4px #818181;
+  -moz-box-shadow: 4px 4px 4px #818181;
+  -o-box-shadow: 4px 4px 4px #818181;
+  -ms-box-shadow: 4px 4px 4px #818181;
+  box-shadow: 4px 4px 4px #818181;
   border-top: 1px solid #c3550b;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -1345,11 +1345,11 @@ textarea.MultiComplete {
   background: url("../images/subtle_dots.png");
   width: 75%;
   margin: auto;
-  -webkit-box-shadow: 2px 2px 2px #818181;
-  -moz-box-shadow: 2px 2px 2px #818181;
-  -o-box-shadow: 2px 2px 2px #818181;
-  -ms-box-shadow: 2px 2px 2px #818181;
-  box-shadow: 2px 2px 2px #818181;
+  -webkit-box-shadow: 4px 4px 4px #818181;
+  -moz-box-shadow: 4px 4px 4px #818181;
+  -o-box-shadow: 4px 4px 4px #818181;
+  -ms-box-shadow: 4px 4px 4px #818181;
+  box-shadow: 4px 4px 4px #818181;
   border: 1px solid #c3550b;
   padding: 10px;
 }
