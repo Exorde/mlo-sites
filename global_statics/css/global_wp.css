@@ -29,6 +29,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
   margin-top: 0;
   padding-top: 0;
 }
+#logo_box {
+  margin-bottom: 20px;
+}
 /* =Structure
 -------------------------------------------------------------- */
 #main {
@@ -85,7 +88,7 @@ article.attachment {
   -ms-box-shadow: 4px 4px 4px #dddddd;
   box-shadow: 4px 4px 4px #dddddd;
   background-color: #fff;
-  border-top: 1px solid #c3550b;
+  border-top: 1px solid #e09b6e;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -o-border-radius: 5px;
@@ -118,15 +121,11 @@ footer.entry-meta {
   margin-bottom: 34px;
 }
 .entry-title {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-family: Liberation Mono, Liberation Sans;
-  color: #f26a0f;
-  -webkit-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #f26a0f;
-  -moz-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #f26a0f;
-  -o-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #f26a0f;
-  -ms-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #f26a0f;
-  text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #f26a0f;
+  text-shadow: 2px 2px 0 #ffffff, 2px 3px 3px #f26a0f;
+  -moz-text-shadow: 2px 2px 0 #ffffff, 2px 3px 3px #f26a0f;
+  -o-text-shadow: 2px 2px 0 #ffffff, 2px 3px 3px #f26a0f;
+  -m-text-shadow: 2px 2px 0 #ffffff, 2px 3px 3px #f26a0f;
+  -webkit-text-shadow: 2px 2px 0 #ffffff, 2px 3px 3px #f26a0f;
   margin: 15px 0 5px 0;
 }
 .entry-title a {
@@ -136,7 +135,7 @@ footer.entry-meta {
 .entry-title,
 .entry-meta,
 .entry-summary {
-  padding: 10px 20px;
+  padding: 0px 20px;
 }
 .entry-meta {
   clear: both;
@@ -362,11 +361,11 @@ img.size-thumbnail,
 .wp-caption img,
 .media-attachment img,
 .entry-attachment img {
-  -webkit-box-shadow: 4px 4px 4px #6b3817;
-  -moz-box-shadow: 4px 4px 4px #6b3817;
-  -o-box-shadow: 4px 4px 4px #6b3817;
-  -ms-box-shadow: 4px 4px 4px #6b3817;
-  box-shadow: 4px 4px 4px #6b3817;
+  -webkit-box-shadow: 4px 4px 4px #dddddd;
+  -moz-box-shadow: 4px 4px 4px #dddddd;
+  -o-box-shadow: 4px 4px 4px #dddddd;
+  -ms-box-shadow: 4px 4px 4px #dddddd;
+  box-shadow: 4px 4px 4px #dddddd;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   -o-border-radius: 3px;
@@ -596,7 +595,7 @@ ol.commentlist li.pingback:before {
     position: inherit;
   }
   .entry-title a {
-    font-size: 0.8em;
+    font-size: 0.65em;
   }
 }
 /**

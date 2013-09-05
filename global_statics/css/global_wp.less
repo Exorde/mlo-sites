@@ -28,6 +28,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
   margin-top: 0;
   padding-top: 0;
 }
+#logo_box{
+  margin-bottom:20px;
+}
 
 /* =Structure
 -------------------------------------------------------------- */
@@ -90,7 +93,7 @@ article.post,
 article.attachment {
   .shadowyBox(#ddd);
   background-color: #fff;
-  border-top: 1px solid @main_color_dark;
+  border-top: 1px solid @main_color_desat_light;
   .rounded(5px);
 }
 
@@ -119,7 +122,11 @@ footer.entry-meta {
 }
 
 .entry-title{
-  .titlization(1px, @main_color);
+  text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_color;
+  -moz-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_color;
+  -o-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_color;
+  -m-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_color;
+  -webkit-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_color;
   margin: 15px 0 5px 0;
 }
 .entry-title a{
@@ -129,7 +136,7 @@ footer.entry-meta {
 .entry-title,
 .entry-meta,
 .entry-summary {
-  padding: 10px 20px; 
+  padding: 0px 20px; 
 }
 
 .entry-meta {
@@ -377,7 +384,7 @@ img.size-thumbnail,
 .wp-caption img,
 .media-attachment img,
 .entry-attachment img {
-  .shadowyBox(@main_color_desat_dark);
+  .shadowyBox(#ddd);
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   -o-border-radius: 3px;
@@ -624,7 +631,7 @@ ol.commentlist li.comment:before, ol.commentlist li.trackback:before, ol.comment
 
 
   .entry-title a {
-    font-size: 0.8em;
+    font-size: 0.65em;
   }
 }
 /**

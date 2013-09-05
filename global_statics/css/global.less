@@ -196,10 +196,10 @@ button:hover, .buttonified:hover, .BigButton:hover, input[type="button"]:hover, 
   display: none;
 }
 
-#connection_button, .darker_button{
+#connection_button, .darker_button, .darker_button:visited{
   background:@analog1;
   color:@main_color_light;
-  border-color: @main_color_dark;
+  border-color: @main_color_desat_dark;
   font-weight: 500;
 }
 #connection_button:hover, .darker_button:hover{
@@ -215,13 +215,12 @@ button:hover, .buttonified:hover, .BigButton:hover, input[type="button"]:hover, 
 }
 #logo_box{
   text-align:center;
-  font-size: 1.2em;
+  font-size: 1em;
   color:@main_color;
   display: inline-block;
   width: 150px;
-  margin-bottom: 20px;
 }
-#logo_box_img{
+.logo_box_img, .site_logo{
   background: @main_color;
 }
 
@@ -252,13 +251,11 @@ button:hover, .buttonified:hover, .BigButton:hover, input[type="button"]:hover, 
 form {
   margin: 0 0 18px;
 }
-
 fieldset {
   padding: 0;
   margin: 0;
   border: 0;
 }
-
 legend {
   display: block;
   width: 100%;
@@ -266,16 +263,14 @@ legend {
   margin-bottom: 27px;
   font-size: 19.5px;
   line-height: 36px;
-  color: @text_color_main;
+  color: #333333;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
 }
-
 legend small {
   font-size: 13.5px;
   color: #999;
 }
-
 label,
 input,
 textarea {
@@ -284,15 +279,18 @@ textarea {
   line-height: 25px;
   padding: 4px;
 }
-
-label {
-  padding-right: 10px;
-  display: inline-block;
-  text-align: right;
-  width: 190px;
+select{
+  padding: 4px 0 4px 8px;
 }
-
+progress{
+  font-size: 1em;
+  color: #555;
+  width: 70% ;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
 textarea,
+select,
 input[type="text"],
 input[type="password"],
 input[type="datetime"],
@@ -310,24 +308,7 @@ input[type="color"] {
   display: inline-block;
   font-size: 1em;
   color: #555;
-  width: 300px;
-}
-
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"] {
+  width: 70% ;
   background-color: #fff;
   border: 1px solid #ccc;
   -moz-border-radius: 3px;
@@ -339,14 +320,14 @@ input[type="color"] {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
-  transition: border linear 0.2s, box-shadow linear 0.2s;
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s, width ease-out 0.3s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s, width ease-out 0.3s;
+  -ms-transition: border linear 0.2s, box-shadow linear 0.2s, width ease-out 0.3s;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s, width ease-out 0.3s;
+  transition: border linear 0.2s, box-shadow linear 0.2s, width ease-out 0.3s;
 }
-
 textarea:focus,
+select:focus,
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="datetime"]:focus,
@@ -361,20 +342,30 @@ input[type="url"]:focus,
 input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus {
-  border-color: rgba(82, 168, 236, 0.8);
+  border-color: #fff;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #fff;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #fff;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #fff;
 }
-
+textarea:focus:invalid,
+input:required:focus:invalid{
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px red;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px red;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px red;
+}
+textarea:required:valid,
+input:required:valid{
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #00FF00;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #00FF00;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #00FF00;
+}
 input[type="radio"],
 input[type="checkbox"] {
   margin: 3px 0;
   cursor: pointer;
   vertical-align: top;
 }
-
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
@@ -382,40 +373,34 @@ input[type="radio"],
 input[type="checkbox"] {
   width: auto;
 }
-
 #searchform label {
   display: none;
 }
-
-
 input#searchsubmit {
   display: none;
 }
-
 textarea {
-  width: 80%;
   height: auto;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
 input[type="submit"] {
   display: inline-block;
   padding: 4px 10px 4px;
   margin-bottom: 0;
   font-size: 13px;
   line-height: 18px;
-  color: @text_color_main;
+  color: #333333;
   text-align: center;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   vertical-align: middle;
   cursor: pointer;
   background-color: #f5f5f5;
-  background-image: -moz-linear-gradient(top, white, #e6e6e6);
-  background-image: -ms-linear-gradient(top, white, #e6e6e6);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#e6e6e6));
-  background-image: -webkit-linear-gradient(top, white, #e6e6e6);
-  background-image: -o-linear-gradient(top, white, #e6e6e6);
-  background-image: linear-gradient(top, white, #e6e6e6);
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(top, #ffffff, #e6e6e6);
   background-repeat: repeat-x;
   border-color: #e6e6e6 #e6e6e6 #bfbfbf;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
@@ -431,7 +416,6 @@ input[type="submit"] {
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
-
 input[type="submit"]:hover,
 input[type="submit"]:active,
 input[type="submit"].active,
@@ -439,17 +423,12 @@ input[type="submit"].disabled,
 input[type="submit"][disabled] {
   background-color: #e6e6e6;
 }
-
 input[type="submit"]:active,
 input[type="submit"].active {
   background-color: #cccccc \9;
 }
-
-input[type="submit"]:first-child {
-}
-
 input[type="submit"]:hover {
-  color: @text_color_main;
+  color: #333333;
   text-decoration: none;
   background-color: #e6e6e6;
   background-position: 0 -15px;
@@ -459,13 +438,11 @@ input[type="submit"]:hover {
   -o-transition: background-position 0.1s linear;
   transition: background-position 0.1s linear;
 }
-
 input[type="submit"]:focus {
-  outline: thin dotted @text_color_main;
+  outline: thin dotted #333333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-
 input[type="submit"].active,
 input[type="submit"]:active {
   background-color: #e6e6e6;
@@ -476,7 +453,6 @@ input[type="submit"]:active {
   -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
-
 input[type="submit"].disabled,
 input[type="submit"][disabled] {
   cursor: default;
@@ -488,17 +464,12 @@ input[type="submit"][disabled] {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-
 /* Class for labelling required form items */
 .required {
-  color: @analog1;
+  color: #f20f25;
 }
-.form_row{
+.form_row {
   margin: 10px 0;
-}
-/*###2 SPECIFIC FORMS */
-#login_form{
-  text-align: right;
 }
 /*###1 GENERIC STYLES (styles applied to several elements) */
 /*###2 : MENUS */
@@ -692,7 +663,7 @@ input[type="submit"][disabled] {
   padding: 10px;
   .boxSizing;
   .shadowyBox(@main_color_gray);
-  border: 1px solid @main_color_dark;
+  border: 1px solid @main_color_desat_light;
   .rounded(5px);
   margin-right: 1%;
 }
