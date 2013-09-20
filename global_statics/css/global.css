@@ -600,6 +600,7 @@ textarea {
 .global_menu_list {
   padding-top: 2px;
   display: inline-block;
+  margin: 0 8px;
 }
 .global_menu_list h1 {
   text-transform: uppercase;
@@ -662,13 +663,11 @@ textarea {
   margin-right: 5px;
 }
 #global_nav {
-  width: 75%;
   display: inline-block;
 }
 #connection_menu {
-  width: 24%;
-  display: inline-block;
-  margin-bottom: 5px;
+  float: right;
+  margin: 8px;
 }
 /*###3 MAIN NAV*/
 #main_nav,
@@ -688,6 +687,7 @@ textarea {
   display: inline-block;
   padding: 0 10px;
   border-right: 1px solid #e09b6e;
+  margin: 0 8px;
 }
 #main_nav .sub-menu {
   position: absolute;
