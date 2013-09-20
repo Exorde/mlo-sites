@@ -11,7 +11,7 @@
  * @since SemPress 1.0.0
  */
 ?>
-  <div id="comments">
+  <div id="comments" class="visual_bloc">
   <?php if ( post_password_required() ) : ?>
     <p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'sempress' ); ?></p>
   </div><!-- #comments -->
@@ -35,11 +35,11 @@
     </h2>
 
     <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-    <nav id="comment-nav-above">
+    <section  id="comment-nav-above">
       <h1 class="assistive-text section-heading"><?php _e( 'Comment navigation', 'sempress' ); ?></h1>
       <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'sempress' ) ); ?></div>
       <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'sempress' ) ); ?></div>
-    </nav>
+    </section>
     <?php endif; // check for comment navigation ?>
 
     <ol class="commentlist">
@@ -55,11 +55,11 @@
     </ol>
 
     <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-    <nav id="comment-nav-below">
+    <section class="visual_bloc" id="comment-nav-below">
       <h1 class="assistive-text section-heading"><?php _e( 'Comment navigation', 'sempress' ); ?></h1>
       <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'sempress' ) ); ?></div>
       <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'sempress' ) ); ?></div>
-    </nav>
+    </section>
     <?php endif; // check for comment navigation ?>
 
   <?php endif; // have_comments() ?>

@@ -37,24 +37,24 @@
 <?php include 'inc/general_menu.php'; ?>
 <div id="page" class="hfeed h-feed feed">
 <?php do_action( 'before' ); ?>
-  <header id="branding" role="banner">
-    <hgroup>
+  <header id="main_header" role="banner">
+    <section>
       <?php include 'inc/global_logo.php'; ?>
       <h1 id="site-title" class="p-name"<?php sempress_blog_itemprop("name"); ?>><a id="home_link" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"<?php sempress_blog_itemprop("url"); ?>><?php bloginfo( 'name' ); ?></a></h1>
       <h2 id="site-description" class="e-content"<?php sempress_blog_itemprop("description"); ?>><?php bloginfo( 'description' ); ?></h2>
-    </hgroup>
+    </section>
     
     <?php if (get_header_image()) { ?>
       <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="header image" id="site-image" />
     <?php } ?>
     
-    <nav id="access" class="menu_container" role="navigation">
-      <h1 class="assistive-text section-heading"><a href="#access" title="<?php esc_attr_e( 'Main menu', 'sempress' ); ?>"><?php _e( 'Main menu', 'sempress' ); ?></a></h1>
+    <nav id="main_nav" class="menu_container" role="navigation">
+      <h1 class="assistive-text section-heading"><a href="#main_nav" title="<?php esc_attr_e( 'Main menu', 'sempress' ); ?>"><?php _e( 'Main menu', 'sempress' ); ?></a></h1>
       <div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'sempress' ); ?>"><?php _e( 'Skip to content', 'sempress' ); ?></a></div>
 
       <?php $walker = new improved_main_menu;?>
       <?php wp_nav_menu( array( 'theme_location' => 'primary', 'walker' => $walker ) ); ?>
-    </nav><!-- #access -->
+    </nav><!-- #main_nav -->
   </header><!-- #branding -->
 
-  <div id="main">
+  <main>

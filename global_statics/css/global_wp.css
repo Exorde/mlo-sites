@@ -34,9 +34,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 /* =Structure
 -------------------------------------------------------------- */
-#main {
-  clear: both;
-}
 /* Increase the size of the content area for templates without sidebars */
 .full-width #content,
 .image-attachment #content,
@@ -79,27 +76,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 /* =Content
 -------------------------------------------------------------- */
-article.page,
-article.post,
-article.attachment {
-  -webkit-box-shadow: 4px 4px 4px #dddddd;
-  -moz-box-shadow: 4px 4px 4px #dddddd;
-  -o-box-shadow: 4px 4px 4px #dddddd;
-  -ms-box-shadow: 4px 4px 4px #dddddd;
-  box-shadow: 4px 4px 4px #dddddd;
-  background-color: #fff;
-  border-top: 1px solid #e09b6e;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  border-radius: 5px;
-}
-article,
-aside {
-  display: block;
-  position: relative;
-}
 .post_thumbnail {
   text-align: center;
 }
@@ -114,28 +90,8 @@ footer.entry-meta {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-.entry-content,
-.entry-summary {
-  font-size: 1em;
-  line-height: 27px;
-  margin-bottom: 34px;
-}
-.entry-title {
-  text-shadow: 2px 2px 0 #ffffff, 2px 3px 3px #f26a0f;
-  -moz-text-shadow: 2px 2px 0 #ffffff, 2px 3px 3px #f26a0f;
-  -o-text-shadow: 2px 2px 0 #ffffff, 2px 3px 3px #f26a0f;
-  -m-text-shadow: 2px 2px 0 #ffffff, 2px 3px 3px #f26a0f;
-  -webkit-text-shadow: 2px 2px 0 #ffffff, 2px 3px 3px #f26a0f;
-  margin: 15px 0 5px 0;
-}
 .entry-title a {
   color: #f26a0f;
-}
-.entry-content,
-.entry-title,
-.entry-meta,
-.entry-summary {
-  padding: 0px 20px;
 }
 .entry-meta {
   clear: both;
@@ -179,6 +135,7 @@ footer.entry-meta {
   clear: both;
   display: block;
 }
+/*TODO : Replace by Salvattore*/
 .home article {
   float: left;
   max-width: 48%;
@@ -187,10 +144,6 @@ footer.entry-meta {
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-}
-#content .post,
-#content .page {
-  margin: 0 2% 2% 0;
 }
 .entry-meta,
 .tag-archive-meta,
@@ -355,24 +308,6 @@ img.alignleft {
 img.alignright {
   margin-left: 1em;
 }
-img.aligncenter,
-img.attachment-thumbnail,
-img.size-thumbnail,
-.wp-caption img,
-.media-attachment img,
-.entry-attachment img {
-  -webkit-box-shadow: 4px 4px 4px #dddddd;
-  -moz-box-shadow: 4px 4px 4px #dddddd;
-  -o-box-shadow: 4px 4px 4px #dddddd;
-  -ms-box-shadow: 4px 4px 4px #dddddd;
-  box-shadow: 4px 4px 4px #dddddd;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -o-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -khtml-border-radius: 3px;
-  border-radius: 3px;
-}
 .wp-caption .wp-caption-text,
 .gallery-caption,
 .entry-caption {
@@ -528,7 +463,7 @@ ol.commentlist li.pingback:before {
     width: 650px;
     margin: 0px auto;
   }
-  #main .widget-area {
+  main .widget-area {
     float: left;
     overflow: hidden;
     width: 285px;
@@ -556,7 +491,7 @@ ol.commentlist li.pingback:before {
     width: auto;
     margin: 0 20px;
   }
-  #main .widget-area {
+  main .widget-area {
     width: 100%;
   }
   iframe,

@@ -25,7 +25,7 @@
       closeMenu();
     })
     //adding a "close menu" on the bottom of each menu to avoid the anoyance of scrolling up
-    $('.sub_menu_container').append('<button class="main_menu_more menu_more_button button_thick menu_close" style="float:right">-</button>');
+    $('.sub_menu_container').append('<button class="hollow_button menu_more_button button_thick menu_close" style="float:right">-</button>');
     $('.menu_close').click(function(){
       closeMenu();
     });

@@ -69,7 +69,7 @@ class improved_main_menu extends Walker_Nav_Menu {
     $button_more = '';
     if($args->has_children && $depth == 0){
       $link_class = 'has_sub_link_top';
-      $button_more = '<button type="button" class="main_menu_more menu_more_button button_thick">+</button>';
+      $button_more = '<button type="button" class="hollow_button menu_more_button button_thick">+</button>';
     }elseif($args->has_children && $depth > 0){
       $link_class = 'has_sub_link';
       $class_names .= " has_sub_li";

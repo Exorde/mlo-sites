@@ -35,10 +35,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /* =Structure
 -------------------------------------------------------------- */
 
-#main {
-  clear: both;
-}
-
 
 /* Increase the size of the content area for templates without sidebars */
 .full-width #content,
@@ -88,20 +84,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 /* =Content
 -------------------------------------------------------------- */
-article.page,
-article.post,
-article.attachment {
-  .shadowyBox(#ddd);
-  background-color: #fff;
-  border-top: 1px solid @main_color_desat_light;
-  .rounded(5px);
-}
 
-
-article, aside {
-  display: block;
-  position: relative;
-}
 .post_thumbnail{
   text-align:center;
 }
@@ -114,29 +97,8 @@ footer.entry-meta {
   .rounded(5px);
 }
 
-.entry-content,
-.entry-summary {
-  font-size: 1em;
-  line-height: 27px;
-  margin-bottom: 34px;
-}
-
-.entry-title{
-  text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_color;
-  -moz-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_color;
-  -o-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_color;
-  -m-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_color;
-  -webkit-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_color;
-  margin: 15px 0 5px 0;
-}
 .entry-title a{
   color: @main_color;
-}
-.entry-content,
-.entry-title,
-.entry-meta,
-.entry-summary {
-  padding: 0px 20px; 
 }
 
 .entry-meta {
@@ -188,13 +150,11 @@ footer.entry-meta {
   display: block;
 }
 
+/*TODO : Replace by Salvattore*/
 .home article{
   float:left;
   max-width: 48%;
   .boxSizing;
-}
-#content .post, #content .page {
-  margin: 0 2% 2% 0;
 }
 
 .entry-meta,
@@ -378,21 +338,6 @@ img.alignright {
   margin-left: 1em;
 }
 
-img.aligncenter,
-img.attachment-thumbnail,
-img.size-thumbnail,
-.wp-caption img,
-.media-attachment img,
-.entry-attachment img {
-  .shadowyBox(#ddd);
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -o-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -khtml-border-radius: 3px;
-  border-radius: 3px;
-}
-
 .wp-caption .wp-caption-text, .gallery-caption, .entry-caption {
   padding: .2em;
   text-align: center;
@@ -551,7 +496,7 @@ ol.commentlist li.comment:before, ol.commentlist li.trackback:before, ol.comment
     margin: 0px auto;
   }
 
-  #main .widget-area {
+  main .widget-area {
     float: left;
     overflow: hidden;
     width: 285px;
@@ -585,7 +530,7 @@ ol.commentlist li.comment:before, ol.commentlist li.trackback:before, ol.comment
     margin: 0 20px;
   }
 
-  #main .widget-area {
+  main .widget-area {
     width: 100%;
   }
 

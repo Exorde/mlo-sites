@@ -33,10 +33,10 @@ get_header(); ?>
               <?php edit_post_link( __( 'Edit', 'sempress' ), '<span class="sep">|</span> <span class="edit-link">', '</span>' ); ?>
             </div><!-- .entry-meta -->
 
-            <nav id="image-navigation">
+            <div id="image-navigation">
               <span class="previous-image" rel="prev"><?php previous_image_link( false, __( '&larr; Previous' , 'sempress' ) ); ?></span>
               <span class="next-image" rel="next"><?php next_image_link( false, __( 'Next &rarr;' , 'sempress' ) ); ?></span>
-            </nav><!-- #image-navigation -->
+            </div><!-- #image-navigation -->
           </header><!-- .entry-header -->
 
           <div class="entry-content e-content" itemprop="description">

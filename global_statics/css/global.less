@@ -59,14 +59,16 @@ h1,h2,h3,h4,h5,h6{
   color:@text_color_light;
 }
 h1, h2{
-  color:@main_color_desat;
+  color:@main_color;
 }
 li{
   list-style: none;
+  margin: 5px 0;
 }
 li:before{
  content: "\25B9\00A0";
  color: @main_color_desat;
+ margin-left: -14px;
 }
 nav{ 
   background: @pattern_menus;
@@ -122,10 +124,38 @@ blockquote small {
 blockquote small:before {
   content: '\2014 \00A0';
 }
+summary{
+  color: @main_color_dark;
+  cursor: pointer;
+}
+summary:before{
+  content: '\25BF \00A0';
+}
+.open summary:before{
+  content: '\25B5 \00A0';
+}
+/*dt styling is with generic classes*/
 
 /*###1 GENERIC CLASSES*/
-.titlization{/*TODO : utiliser cette classe plutôt que dupliquer le style un peu partout*/
-  .titlization(1px);
+.bullet_less:before{/*equivalent of a plain "list-style:none" class. The bullet is added with "before", so  it has to be like this*/
+  content:"";
+  margin-left: 0; 
+}
+
+.titlization,/*TODO : utiliser cette classe plutôt que dupliquer le style un peu partout*/
+.entry-title{
+  text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_color;
+  -moz-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_color;
+  -o-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_color;
+  -m-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_color;
+  -webkit-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_color;
+  margin: 15px 0 5px 0;
+}
+.slight_highlight, dt{
+  text-decoration: none;
+  color: @main_color_desat;
+  .shadowyText(@main_color);
+  font-size: 1em; /* usefull if applied to headers*/
 }
 /*Hiding a semantic element useful for accessibility*/
 .out_of_the_way{
@@ -150,14 +180,28 @@ blockquote small:before {
   border-bottom: 2px solid @main_color;
   border-right: 2px solid @main_color;
 }
+.visual_block, /* Standard class to apply this style for blocs to visually pop out*/
+.form_box,/* Mg specific (to avoid overriding all templates)*/
+article.page,/* WP specific (to avoid overriding all templates, but it can be a good idea here)*/
+article.post,
+article.attachment {
+  .shadowyBox(#ddd);
+  background-color: #fff;
+  border-top: 1px solid @main_color_desat_light;
+  .rounded(5px);
+  margin: 0 1% 2% 1%;
+  padding: 0 20px 20px 20px; 
+}
+main img{
+  .shadowyBox(#ddd, 3px, 12px);
+}
 
 /*###1 SPECIFIC STYLING*/
 /*###2 BUTTONS AND VISUAL ELEMENTS*/ 
-button, .buttonified, .BigButton, input[type="button"],{/*buttonified exists to make a link looks like a button, when <button> is not semantic*/
+button, .buttonified, .BigButton, input[type="submit"], input[type="button"],{/*buttonified exists to make a link looks like a button, when <button> is not semantic*/
 
   .rounded;
   font-size: 1.3em;
-  padding-right:1px;
   border:2px solid @main_color;
   vertical-align: middle;
   /*.shadowyBox(@main_color_dark);*/
@@ -166,7 +210,7 @@ button, .buttonified, .BigButton, input[type="button"],{/*buttonified exists to 
   height:33px;
   background: #fff;
 }
-.main_menu_more{
+.hollow_button{
   .shadowyBox(@main_color_dark, 0, 2px);
   border:none;
   font-size:1em;
@@ -186,7 +230,7 @@ button, .buttonified, .BigButton, input[type="button"],{/*buttonified exists to 
 .menu_container .enlighted{
   border-bottom: 2px solid @main_color;
 }
-button:hover, .buttonified:hover, .BigButton:hover, input[type="button"]:hover, .lower_button, .selected_button{
+button:hover, .buttonified:hover, .BigButton:hover, input[type="button"]:hover,input[type="submit"]:hover, .lower_button, .selected_button{
   color:@main_color;
   .shadowyBox(@main_color);
   .shadowyText(@main_color, 0, 2px);
@@ -210,8 +254,10 @@ button:hover, .buttonified:hover, .BigButton:hover, input[type="button"]:hover, 
   border:2px solid @main_color;
 }
 /*###2 : LOGO*/
-#branding{
+#main_header{
   background: #fff;
+  margin-bottom: 40px;
+  .shadowyBox();
 }
 #logo_box{
   text-align:center;
@@ -344,9 +390,9 @@ input[type="tel"]:focus,
 input[type="color"]:focus {
   border-color: #fff;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #fff;
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #fff;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #fff;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px @main_color_desat_light;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px @main_color_desat_light;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px @main_color_desat_light;
 }
 textarea:focus:invalid,
 input:required:focus:invalid{
@@ -383,87 +429,6 @@ textarea {
   height: auto;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-input[type="submit"] {
-  display: inline-block;
-  padding: 4px 10px 4px;
-  margin-bottom: 0;
-  font-size: 13px;
-  line-height: 18px;
-  color: #333333;
-  text-align: center;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-  vertical-align: middle;
-  cursor: pointer;
-  background-color: #f5f5f5;
-  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: linear-gradient(top, #ffffff, #e6e6e6);
-  background-repeat: repeat-x;
-  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  border: 1px solid #cccccc;
-  border-bottom-color: #b3b3b3;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -o-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -khtml-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-input[type="submit"]:hover,
-input[type="submit"]:active,
-input[type="submit"].active,
-input[type="submit"].disabled,
-input[type="submit"][disabled] {
-  background-color: #e6e6e6;
-}
-input[type="submit"]:active,
-input[type="submit"].active {
-  background-color: #cccccc \9;
-}
-input[type="submit"]:hover {
-  color: #333333;
-  text-decoration: none;
-  background-color: #e6e6e6;
-  background-position: 0 -15px;
-  -webkit-transition: background-position 0.1s linear;
-  -moz-transition: background-position 0.1s linear;
-  -ms-transition: background-position 0.1s linear;
-  -o-transition: background-position 0.1s linear;
-  transition: background-position 0.1s linear;
-}
-input[type="submit"]:focus {
-  outline: thin dotted #333333;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-input[type="submit"].active,
-input[type="submit"]:active {
-  background-color: #e6e6e6;
-  background-color: #d9d9d9 \9;
-  background-image: none;
-  outline: 0;
-  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-input[type="submit"].disabled,
-input[type="submit"][disabled] {
-  cursor: default;
-  background-color: #e6e6e6;
-  background-image: none;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
 /* Class for labelling required form items */
 .required {
   color: #f20f25;
@@ -473,6 +438,9 @@ input[type="submit"][disabled] {
 }
 /*###1 GENERIC STYLES (styles applied to several elements) */
 /*###2 : MENUS */
+.enphazied_block{
+  background-image:@pattern_menus;
+}
 .sub_menu_container{
   position:absolute;
   left:0;
@@ -577,33 +545,27 @@ input[type="submit"][disabled] {
 }
 
 /*###3 MAIN NAV*/
-#access, .sub_nav{
+#main_nav, .sub_nav{
   border-top: 1px solid @main_color_desat_light;
-  /*float: left;*/
-  margin-bottom: 40px;
   z-index: 3;
   position: relative;
   width: 100%;
-  .shadowyBox();
 }
-#access{
-  margin-bottom: 40px;
-}
-#access .menu, .sub_nav .menu{
+#main_nav .menu, .sub_nav .menu{
   padding: 10px;
   margin: 0;
   display: inline-block;
 }
-#access .menu-item{
+#main_nav .menu-item{
   display: inline-block;
   padding: 0 10px;
   border-right: 1px solid @main_color_desat_light;
 }
-#access .sub-menu{
+#main_nav .sub-menu{
   position: absolute;
   top: -9999px;
 }
-#access .sub_menu_container{
+#main_nav .sub_menu_container{
   border-top: 1px solid @main_color_gray;
 }
 
@@ -650,7 +612,6 @@ input[type="submit"][disabled] {
 #primary {
   float: left;
   width: 73%;
-  padding: 0 1%;
 }
 #primary.full-width {
   width: 100%;
