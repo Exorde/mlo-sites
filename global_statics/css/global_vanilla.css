@@ -1096,6 +1096,9 @@ body.Discussion .Back {
 .Comment .CommentForm .Buttons {
   padding-left: 0;
 }
+.Comment {
+  overflow: hidden;
+}
 .MessageForm .reply,
 #MessageForm .reply {
   color: #91CBFA;
