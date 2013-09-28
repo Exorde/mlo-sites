@@ -176,7 +176,7 @@ summary:before{
 .menu_more_button.lower_button{
   border:1px solid @main_color_desat;
 }
-.highlight, .Active, .Highlight{ /*Vanilla classes are camel case which sucks*/
+.highlight, .Active, Highlight{ /*Vanilla classes are camel case which sucks*/
   border-bottom: 2px solid @main_color;
   border-right: 2px solid @main_color;
 }
@@ -185,7 +185,7 @@ summary:before{
 article.page,/* WP specific (to avoid overriding all templates, but it can be a good idea here)*/
 article.post,
 article.attachment {
-  .shadowyBox(#ddd);
+  .shadowyBox(#999, 5px, 5px);
   background-color: #fff;
   border-top: 1px solid @main_color_desat_light;
   .rounded(5px);
@@ -210,7 +210,7 @@ button, .buttonified, .BigButton, input[type="submit"], input[type="button"],{/*
   height:33px;
   background: #fff;
 }
-.hollow_button{
+.main_menu_more{
   .shadowyBox(@main_color_dark, 0, 2px);
   border:none;
   font-size:1em;
@@ -252,6 +252,11 @@ button:hover, .buttonified:hover, .BigButton:hover, input[type="button"]:hover,i
   .shadowyText(@main_color_light, 2px, 2px);
   .shadowyBox(@main_color, 0, 5px);
   border:2px solid @main_color;
+}
+.hollow_button{
+  border: none;
+  .shadowyBox(@main_color_dark, 0, 2px);
+  font-size: 1em;
 }
 /*###2 : LOGO*/
 #main_header{
@@ -390,9 +395,9 @@ input[type="tel"]:focus,
 input[type="color"]:focus {
   border-color: #fff;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px @main_color_desat_light;
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px @main_color_desat_light;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px @main_color_desat_light;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #AAA;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #AAA;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #AAA;
 }
 textarea:focus:invalid,
 input:required:focus:invalid{
@@ -539,11 +544,17 @@ textarea {
   display: inline-block;
 }
 #connection_menu{
+  margin: 5px 8px;
   float: right;
-  margin: 8px;
 }
 
 /*###3 MAIN NAV*/
+#login_form{
+  text-align: right;
+}
+#login_form input{
+  width: 50%;
+}
 #main_nav, .sub_nav{
   border-top: 1px solid @main_color_desat_light;
   z-index: 3;
@@ -560,6 +571,7 @@ textarea {
   padding: 0 10px;
   border-right: 1px solid @main_color_desat_light;
   margin: 0 8px;
+  vertical-align: middle;
 }
 #main_nav .sub-menu{
   position: absolute;

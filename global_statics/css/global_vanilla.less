@@ -334,7 +334,6 @@ div.Search form input.InputBox,.SearchTabs input.InputBox
   border: 1px solid @main_color_desat_light;
   font-size: 0.8em;
   .rounded(5px);
-  margin-bottom: 10px;
 }
 
 .Open .MenuTitle
@@ -356,15 +355,19 @@ div.Search form input.InputBox,.SearchTabs input.InputBox
 	min-width:125px;
   position: absolute;
   top:-9999px;
+  padding: 0;
 }
 .ToggleFlyout:hover .MenuItems{
   top:auto;
   z-index:9999;
 }
 
-.MenuItems li
+.MenuItems li{
+  padding: 0;
+}
+.MenuItems a
 {
-	padding:6px!important;
+	padding:6px;
 }
 
 .MenuItems a,.MenuItems a:link,.MenuItems a:visited,.MenuItems a:active
@@ -402,13 +405,12 @@ div.Search form input.InputBox,.SearchTabs input.InputBox
   padding: 0 20px;
 }
 
-.DataList, #DiscussionForm{
-	background: @pattern_menus;
-  .shadowyBox(@main_color_gray);
-  border-top: 1px solid @main_color_dark;
-  .rounded(5px);
-  margin: 0;
-  padding: 10px;
+#context-menu{
+  .rounded();
+  border: 1px solid @main_color_dark;
+  font-size: 0.8em;
+  margin: 5px 0;
+  padding: 3px 10px;
 }
 #DiscussionForm li{
   display: inline;
@@ -535,6 +537,7 @@ div.Search form input.InputBox,.SearchTabs input.InputBox
 	color: @text_color_light;
 	font-size:11px;
 	padding-right:25px;
+  margin: 10px;
 }
 .discussion_topline .Meta{
   float: right;
@@ -553,8 +556,16 @@ div.Search form input.InputBox,.SearchTabs input.InputBox
 .identity{
   float:left;
   margin: 0 20px 20px 0;
+  .rounded();
+  border: 1px solid @main_color_dark;
+  padding: 10px;
 }
 
+.main_button{
+  margin: 10px;
+  display: block;
+  text-align: center;
+}
 .new_message{
   padding: 0 10px 0 0;
   color: @analog1;
@@ -1048,184 +1059,6 @@ table.PreferenceGroup tbody td
 {
 	display:inline;
 	margin:0;
-}
-
-
-.PanelInfo li
-{
-	padding:3px 4px;
-}
-
-.PanelInfo li.Heading
-{
-	color:#000;
-	font-weight:700;
-	text-align:left;
-}
-
-.PanelInfo
-{
-	background:#fff;
-	.rounded;
-	border: 1px solid @main_color_desat_light;
-  padding: 0;
-  margin: 0;
-}
-
-.Profile .PanelInfo li
-{
-	border-bottom:0 none;
-	text-align:left;
-}
-
-.PanelInfo .Active .PanelActivity .ShowAll,.PanelInfo .ShowAll
-{
-	background:none repeat scroll 0 0 transparent;
-	border:0 none;
-	font-weight:700;
-	text-align:right;
-}
-
-.PanelInfo .Meta span,.PanelInfo .Meta strong
-{
-	margin-right:8px;
-}
-
-.PanelInfo .Meta span a
-{
-	margin-left:8px;
-}
-
-.PanelInfo .Meta strong
-{
-	background:none repeat scroll 0 0 #91CBFA;
-	border-radius:2px 2px 2px 2px;
-	color:#000;
-	display:inline;
-	font-size:9px;
-	font-weight:700;
-	line-height:1;
-	padding:3px;
-}
-
-.PanelInfo .Parent
-{
-	background:none repeat scroll 0 0 transparent;
-	font-weight:700;
-	text-align:left;
-	padding:2px 0;
-}
-
-.Button.CommentButton
-{
-	padding:8px 12px;
-}
-
-
-.PanelProfile ul li.UserPhoto
-{
-	left:5px;
-	position:absolute;
-}
-
-.PanelProfile ul li a,.PanelProfile ul li
-{
-	line-height:20px;
-}
-
-.Moderators ul.PanelInfo li a
-{
-	float:none;
-	font-weight:700;
-}
-
-.Moderators ul.PanelInfo li a img
-{
-	vertical-align:middle;
-}
-
-.Box
-{
-	background:transparent;
-	border:none;
-	box-shadow:none;
-	margin:20px 0;
-	padding:5px 10px;
-}
-
-.BoxProfile
-{
-	background:none repeat scroll 0 0 rgba(0,0,0,0.25);
-	border-radius:0 0 2px 2px;
-}
-
-.Box h4
-{
-	font-weight:700;
-	margin:0;
-	padding:0 0 1px;
-}
-
-.Box dl dt
-{
-	font-size:12px;
-}
-
-.Box dl dd
-{
-	margin-left:10px;
-}
-
-.Box p
-{
-	font-size:100%;
-	padding:0 0 4px;
-}
-
-.PanelActivity
-{
-	border-bottom:0 none;
-	border-top:1px solid #ABDAFB;
-}
-
-.PanelActivity li
-{
-	background:none repeat scroll 0 0 #d2d2d2;
-	border-bottom:1px solid #ABDAFB;
-	font-size:11px;
-	line-height:1.6;
-	padding:2px 4px;
-}
-
-.PanelActivity li a
-{
-	font-size:13px;
-}
-
-.PanelActivity p
-{
-	display:inline;
-	font-size:90%;
-	padding:0 4px;
-}
-
-.PanelActivity li em
-{
-	font-size:80%;
-	padding-left:5px;
-}
-
-.PanelActivity li .Story
-{
-	font-size:85%;
-}
-
-.PanelProfile ul
-{
-	background:0 repeat scroll 0 0 transparent;
-	position:relative;
-	margin:0 -10px 5px;
-	padding:5px 5px 5px 50px;
 }
 
 

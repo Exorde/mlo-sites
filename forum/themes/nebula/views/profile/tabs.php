@@ -16,7 +16,7 @@ foreach ($this->_ProfileTabs as $TabCode => $TabInfo) {
       $SortOrder[] = $TabCode;
 }
 ?>
-<nav class="Tabs sub_nav ProfileTabs">
+<nav class="Tabs ProfileTabs">
    <ul class="menu">
    <?php
    // Get sorted tabs

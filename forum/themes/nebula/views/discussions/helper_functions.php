@@ -117,59 +117,46 @@ function WriteFilterTabs(&$Sender) {
       $MyDrafts .= '<span class="Count">'.$CountDrafts.'</span>';
       
    ?>
-<nav class="sub_nav Tabs DiscussionsTabs">
-   <ul class="menu">
-      <?php $Sender->FireEvent('BeforeDiscussionTabs'); ?>
-      <li<?php echo strtolower($Sender->ControllerName) == 'discussionscontroller' && strtolower($Sender->RequestMethod) == 'index' ? ' class="Active"' : ''; ?>><?php echo Anchor(T('All Discussions'), 'discussions', 'TabLink'); ?></li>
-      <?php $Sender->FireEvent('AfterAllDiscussionsTab'); ?>
+<div class=" Tabs DiscussionsTabs">
+   <ul id="context-menu">
 
-      <?php
-      if (C('Vanilla.Categories.ShowTabs')) {
-         $CssClass = '';
-         if (strtolower($Sender->ControllerName) == 'categoriescontroller' && strtolower($Sender->RequestMethod) == 'all') {
-            $CssClass = 'Active';
-         }
-
-         echo "<li class=\"$CssClass\">".Anchor(T('Categories'), '/categories/all', 'TabLink').'</li>';
-      }
-      ?>
       <?php if ($CountBookmarks > 0 || $Sender->RequestMethod == 'bookmarked') { ?>
-      <li<?php echo $Sender->RequestMethod == 'bookmarked' ? ' class="Active"' : ''; ?>><?php echo Anchor($Bookmarked, '/discussions/bookmarked', 'MyBookmarks TabLink'); ?></li>
+      <li class="context-item" "<?php echo $Sender->RequestMethod == 'bookmarked' ? ' class="Active"' : ''; ?>><?php echo Anchor($Bookmarked, '/discussions/bookmarked', 'MyBookmarks TabLink'); ?></li>
       <?php
          $Sender->FireEvent('AfterBookmarksTab');
       }
       if ($CountDiscussions > 0 || $Sender->RequestMethod == 'mine') {
       ?>
-      <li<?php echo $Sender->RequestMethod == 'mine' ? ' class="Active"' : ''; ?>><?php echo Anchor($MyDiscussions, '/discussions/mine', 'MyDiscussions TabLink'); ?></li>
+      <li class="context-item" <?php echo $Sender->RequestMethod == 'mine' ? ' class="Active"' : ''; ?>><?php echo Anchor($MyDiscussions, '/discussions/mine', 'MyDiscussions TabLink'); ?></li>
       <?php
       }
       if ($CountDrafts > 0 || $Sender->ControllerName == 'draftscontroller') {
       ?>
-      <li<?php echo $Sender->ControllerName == 'draftscontroller' ? ' class="Active"' : ''; ?>><?php echo Anchor($MyDrafts, '/drafts', 'MyDrafts TabLink'); ?></li>
+      <li class="contect-item" <?php echo $Sender->ControllerName == 'draftscontroller' ? ' class="Active"' : ''; ?>><?php echo Anchor($MyDrafts, '/drafts', 'MyDrafts TabLink'); ?></li>
       <?php
       }
       $Sender->FireEvent('AfterDiscussionTabs');
+       $Breadcrumbs = Gdn::Controller()->Data('Breadcrumbs');
+       if ($Breadcrumbs) {
+          echo '<li class="SubTab Breadcrumbs">';
+          $First = TRUE;
+          foreach ($Breadcrumbs as $Breadcrumb) {
+             if ($First) {
+                $Class = 'Breadcrumb FirstCrumb';
+                $First = FALSE;
+             } else {
+                $Class = 'Breadcrumb';
+                echo '<span class="Crumb"> &raquo; </span>';
+             }
+             
+             echo '<span class="'.$Class.'">', Anchor(Gdn_Format::Text($Breadcrumb['Name']), $Breadcrumb['Url']), '</span>';
+          }
+          $Sender->FireEvent('AfterBreadcrumbs');
+          echo '</li>';
+       }
       ?>
    </ul>
    <?php
-   $Breadcrumbs = Gdn::Controller()->Data('Breadcrumbs');
-   if ($Breadcrumbs) {
-      echo '<div class="SubTab Breadcrumbs">';
-      $First = TRUE;
-      foreach ($Breadcrumbs as $Breadcrumb) {
-         if ($First) {
-            $Class = 'Breadcrumb FirstCrumb';
-            $First = FALSE;
-         } else {
-            $Class = 'Breadcrumb';
-            echo '<span class="Crumb"> &raquo; </span>';
-         }
-         
-         echo '<span class="'.$Class.'">', Anchor(Gdn_Format::Text($Breadcrumb['Name']), $Breadcrumb['Url']), '</span>';
-      }
-      $Sender->FireEvent('AfterBreadcrumbs');
-      echo '</div>';
-   }
    if (!property_exists($Sender, 'CanEditDiscussions'))
       $Sender->CanEditDiscussions = $Session->CheckPermission('Vanilla.Discussions.Edit', TRUE, 'Category', 'any') && C('Vanilla.AdminCheckboxes.Use');
    
@@ -179,7 +166,7 @@ function WriteFilterTabs(&$Sender) {
       <input type="checkbox" name="Toggle" />
    </span>
    <?php } ?>
-</nav>
+</div>
    <?php
 }
 
@@ -220,12 +207,12 @@ function WriteOptions($Discussion, &$Sender, &$Session) {
       
       if ($Sender->Options != '') {
       ?>
-         <nav class="ToggleFlyout OptionsMenu">
+         <div class="ToggleFlyout OptionsMenu">
             <div class="MenuTitle"><?php echo T('Options'); ?></div>
             <ul class="Flyout MenuItems">
                <?php echo $Sender->Options; ?>
             </ul>
-         </nav>
+         </div>
       <?php
       }
       // Admin check.

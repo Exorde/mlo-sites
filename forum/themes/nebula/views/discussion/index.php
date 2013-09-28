@@ -15,6 +15,15 @@ if($this->Pager->FirstPage())
 	$PageClass = 'FirstPage'; 
 	
 ?>
+ <ul id="context-menu">
+    <li class="bullet_less breadcrumb_li"><?php
+       if (C('Vanilla.Categories.Use') == TRUE) {
+          echo Anchor($this->Discussion->Category, 'categories/'.$this->Discussion->CategoryUrlCode, 'TabLink');
+       } else {
+          echo Anchor(T('All Discussions'), 'discussions', 'TabLink');
+       }
+    ?></li>
+ </ul>
 <div class="DataList MessageList Discussion Tabs HeadingTabs DiscussionTabs <?php echo $PageClass; ?>">
    <div class="SubTab">
    <h1 id="discussion_name"><?php echo $DiscussionName; ?></h1>
@@ -30,15 +39,6 @@ if($this->Pager->FirstPage())
      }
      ?>
    </div>
-   <ul class="breadcrumb">
-      <li class="breadcrumb_li"><?php
-         if (C('Vanilla.Categories.Use') == TRUE) {
-            echo Anchor($this->Discussion->Category, 'categories/'.$this->Discussion->CategoryUrlCode, 'TabLink');
-         } else {
-            echo Anchor(T('All Discussions'), 'discussions', 'TabLink');
-         }
-      ?></li>
-   </ul>
 <?php $this->FireEvent('BeforeDiscussion'); ?>
 <ul class="comments_list">
    <?php echo $this->FetchView('comments'); ?>

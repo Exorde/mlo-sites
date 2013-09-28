@@ -10,7 +10,7 @@
   margin: 0 20px;
   min-height: 110px;
   background: #fff;
-  border: 1px solid #e09b6e;
+  border: 1px solid #d8844d;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -o-border-radius: 5px;
@@ -262,14 +262,13 @@ div.Search form input.InputBox,
 .MenuTitle {
   color: #333333;
   padding: 5px;
-  border: 1px solid #e09b6e;
+  border: 1px solid #d8844d;
   font-size: 0.8em;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -o-border-radius: 5px;
   -ms-border-radius: 5px;
   border-radius: 5px;
-  margin-bottom: 10px;
 }
 .Open .MenuTitle {
   background: none repeat scroll 0 0 #282828;
@@ -287,13 +286,17 @@ div.Search form input.InputBox,
   min-width: 125px;
   position: absolute;
   top: -9999px;
+  padding: 0;
 }
 .ToggleFlyout:hover .MenuItems {
   top: auto;
   z-index: 9999;
 }
 .MenuItems li {
-  padding: 6px!important;
+  padding: 0;
+}
+.MenuItems a {
+  padding: 6px;
 }
 .MenuItems a,
 .MenuItems a:link,
@@ -323,22 +326,16 @@ div.Search form input.InputBox,
 .TextBoxWrapper {
   padding: 0 20px;
 }
-.DataList,
-#DiscussionForm {
-  background: url("../images/subtle_dots.png");
-  -webkit-box-shadow: 4px 4px 4px #818181;
-  -moz-box-shadow: 4px 4px 4px #818181;
-  -o-box-shadow: 4px 4px 4px #818181;
-  -ms-box-shadow: 4px 4px 4px #818181;
-  box-shadow: 4px 4px 4px #818181;
-  border-top: 1px solid #c3550b;
+#context-menu {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -o-border-radius: 5px;
   -ms-border-radius: 5px;
   border-radius: 5px;
-  margin: 0;
-  padding: 10px;
+  border: 1px solid #9c4409;
+  font-size: 0.8em;
+  margin: 5px 0;
+  padding: 3px 10px;
 }
 #DiscussionForm li {
   display: inline;
@@ -431,6 +428,7 @@ p.NoResults {
   color: #555555;
   font-size: 11px;
   padding-right: 25px;
+  margin: 10px;
 }
 .discussion_topline .Meta {
   float: right;
@@ -450,10 +448,22 @@ p.NoResults {
 .identity {
   float: left;
   margin: 0 20px 20px 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #9c4409;
+  padding: 10px;
+}
+.main_button {
+  margin: 10px;
+  display: block;
+  text-align: center;
 }
 .new_message {
   padding: 0 10px 0 0;
-  color: #f20f25;
+  color: #cc0c1f;
 }
 .MessageList .Meta {
   min-height: 0;
@@ -826,135 +836,6 @@ table.PreferenceGroup tbody td {
   display: inline;
   margin: 0;
 }
-.PanelInfo li {
-  padding: 3px 4px;
-}
-.PanelInfo li.Heading {
-  color: #000;
-  font-weight: 700;
-  text-align: left;
-}
-.PanelInfo {
-  background: #fff;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  border-radius: 5px;
-  border: 1px solid #e09b6e;
-  padding: 0;
-  margin: 0;
-}
-.Profile .PanelInfo li {
-  border-bottom: 0 none;
-  text-align: left;
-}
-.PanelInfo .Active .PanelActivity .ShowAll,
-.PanelInfo .ShowAll {
-  background: none repeat scroll 0 0 transparent;
-  border: 0 none;
-  font-weight: 700;
-  text-align: right;
-}
-.PanelInfo .Meta span,
-.PanelInfo .Meta strong {
-  margin-right: 8px;
-}
-.PanelInfo .Meta span a {
-  margin-left: 8px;
-}
-.PanelInfo .Meta strong {
-  background: none repeat scroll 0 0 #91CBFA;
-  border-radius: 2px 2px 2px 2px;
-  color: #000;
-  display: inline;
-  font-size: 9px;
-  font-weight: 700;
-  line-height: 1;
-  padding: 3px;
-}
-.PanelInfo .Parent {
-  background: none repeat scroll 0 0 transparent;
-  font-weight: 700;
-  text-align: left;
-  padding: 2px 0;
-}
-.Button.CommentButton {
-  padding: 8px 12px;
-}
-.PanelProfile ul li.UserPhoto {
-  left: 5px;
-  position: absolute;
-}
-.PanelProfile ul li a,
-.PanelProfile ul li {
-  line-height: 20px;
-}
-.Moderators ul.PanelInfo li a {
-  float: none;
-  font-weight: 700;
-}
-.Moderators ul.PanelInfo li a img {
-  vertical-align: middle;
-}
-.Box {
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  margin: 20px 0;
-  padding: 5px 10px;
-}
-.BoxProfile {
-  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.25);
-  border-radius: 0 0 2px 2px;
-}
-.Box h4 {
-  font-weight: 700;
-  margin: 0;
-  padding: 0 0 1px;
-}
-.Box dl dt {
-  font-size: 12px;
-}
-.Box dl dd {
-  margin-left: 10px;
-}
-.Box p {
-  font-size: 100%;
-  padding: 0 0 4px;
-}
-.PanelActivity {
-  border-bottom: 0 none;
-  border-top: 1px solid #ABDAFB;
-}
-.PanelActivity li {
-  background: none repeat scroll 0 0 #d2d2d2;
-  border-bottom: 1px solid #ABDAFB;
-  font-size: 11px;
-  line-height: 1.6;
-  padding: 2px 4px;
-}
-.PanelActivity li a {
-  font-size: 13px;
-}
-.PanelActivity p {
-  display: inline;
-  font-size: 90%;
-  padding: 0 4px;
-}
-.PanelActivity li em {
-  font-size: 80%;
-  padding-left: 5px;
-}
-.PanelActivity li .Story {
-  font-size: 85%;
-}
-.PanelProfile ul {
-  background: 0 repeat scroll 0 0 transparent;
-  position: relative;
-  margin: 0 -10px 5px;
-  padding: 5px 5px 5px 50px;
-}
 .DiscussionsTabs {
   background: url("../images/subtle_dots.png");
 }
@@ -964,7 +845,7 @@ table.PreferenceGroup tbody td {
   font-weight: 400;
   padding: 0 5px;
   margin-left: 5px;
-  border: 1px solid #e09b6e;
+  border: 1px solid #d8844d;
 }
 .MessageMeta {
   font-size: 11px;
@@ -978,12 +859,12 @@ table.PreferenceGroup tbody td {
   text-transform: uppercase;
   font-weight: bold;
   font-family: Liberation Mono, Liberation Sans;
-  color: #f26a0f;
-  -webkit-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #f26a0f;
-  -moz-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #f26a0f;
-  -o-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #f26a0f;
-  -ms-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #f26a0f;
-  text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #f26a0f;
+  color: #cc590c;
+  -webkit-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #cc590c;
+  -moz-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #cc590c;
+  -o-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #cc590c;
+  -ms-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #cc590c;
+  text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #cc590c;
   margin: 20px;
   display: inline-block;
   line-height: 1;
@@ -1188,7 +1069,7 @@ div.Popup #Form_User .Warning,
 .DataList .Closed {
   border-radius: 2px 2px 2px 2px;
   font-size: 12px;
-  border: 1px solid #e09b6e;
+  border: 1px solid #d8844d;
   color: #333333;
   display: inline-block;
   margin: 10px;
@@ -1328,12 +1209,12 @@ textarea.MultiComplete {
   text-transform: uppercase;
   font-weight: bold;
   font-family: Liberation Mono, Liberation Sans;
-  color: #f26a0f;
-  -webkit-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #f26a0f;
-  -moz-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #f26a0f;
-  -o-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #f26a0f;
-  -ms-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #f26a0f;
-  text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #f26a0f;
+  color: #cc590c;
+  -webkit-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #cc590c;
+  -moz-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #cc590c;
+  -o-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #cc590c;
+  -ms-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #cc590c;
+  text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #cc590c;
 }
 #popup_contols {
   margin: 5px 0;
@@ -1345,12 +1226,12 @@ textarea.MultiComplete {
   background: url("../images/subtle_dots.png");
   width: 75%;
   margin: auto;
-  -webkit-box-shadow: 4px 4px 4px #818181;
-  -moz-box-shadow: 4px 4px 4px #818181;
-  -o-box-shadow: 4px 4px 4px #818181;
-  -ms-box-shadow: 4px 4px 4px #818181;
-  box-shadow: 4px 4px 4px #818181;
-  border: 1px solid #c3550b;
+  -webkit-box-shadow: 4px 4px 4px #6c6c6c;
+  -moz-box-shadow: 4px 4px 4px #6c6c6c;
+  -o-box-shadow: 4px 4px 4px #6c6c6c;
+  -ms-box-shadow: 4px 4px 4px #6c6c6c;
+  box-shadow: 4px 4px 4px #6c6c6c;
+  border: 1px solid #9c4409;
   padding: 10px;
 }
 .Overlay {
