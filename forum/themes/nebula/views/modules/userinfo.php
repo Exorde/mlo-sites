@@ -2,7 +2,7 @@
 $Session = Gdn::Session();
 if (Gdn::Config('Garden.Profile.ShowAbout')) {
 ?>
-<div class="Box About">
+<div class="Box About visual_block">
    <h4><?php echo T('About'); ?></h4>
    <dl>
       <dt class="Name"><?php echo T('Username'); ?></dt>

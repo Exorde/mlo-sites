@@ -1857,6 +1857,13 @@ div.QuoteText {
   border-left: 6px solid #CCC;
   padding: 10px 10px 10px 15px;
 }
+.Group .PanelInfo li:before {
+  margin-left: 0;
+}
+.Group .PanelInfo li {
+  display: inline-block;
+  margin: 10px;
+}
 .Center,
 table.PreferenceGroup tbody td.PrefCheckBox,
 div.Popup .Loading,
