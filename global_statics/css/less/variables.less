@@ -1,9 +1,10 @@
 /*#1 : LESS GLOBAL VARIABLES*/
 @main_color: #cc590c;
 @main_color_desat: desaturate(@main_color, 25%);
-@main_color_desat_light: lighten(@main_color_desat, 15%);
-@main_color_desat_dark: darken(@main_color_desat, 25%);
+@main_color_desat_light: lighten(@main_color_desat, 35%);
+@main_color_desat_dark: darken(@main_color_desat, 15%);
 @main_color_gray: desaturate(@main_color, 100%);
+@main_color_lighter: lighten(@main_color, 14%);
 @main_color_light: lighten(@main_color, 40%);
 @main_color_dark: darken(@main_color, 10%);
 @complementary: spin(@main_color, 180);
@@ -94,4 +95,21 @@
   -o-text-shadow: @space @space 0 #fff, @space*2 @space*2 0 @color;
   -ms-text-shadow: @space @space 0 #fff, @space*2 @space*2 0 @color;
   text-shadow: @space @space 0 #fff, @space*2 @space*2 0 @color;
+}
+.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+  background: @color;
+  background: -webkit-gradient(linear,
+                               left bottom,
+                               left top,
+                               color-stop(0, @start),
+                               color-stop(1, @stop));
+  background: -ms-linear-gradient(bottom,
+                                  @start,
+                                  @stop);
+  background: -moz-linear-gradient(center bottom,
+                                   @start 0%,
+                                   @stop 100%);
+  background: -o-linear-gradient(@stop,
+                                 @start);
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@stop,@start));
 }

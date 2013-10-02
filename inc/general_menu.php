@@ -6,7 +6,7 @@
               <a href="http://dogmazic.net" class="global_menu_link">dogmazic.net</a>
           </li>
           <li class="global_menu_list">
-              <a href="http://musique-libre.org" class="menu_more global_menu_link">Blog</a><button class="menu_more_button button_thick" type="button">+</button>
+              <a href="http://musique-libre.org" class="menu_more global_menu_link">Blog</a><button class="menu_more_button button_thick hollow_button" type="button">+</button>
               <nav class="sub_menu_container">
                   <h1>Derniers articles :</h1>
                   <?php
@@ -16,7 +16,7 @@
               </nav>
           </li>
           <li class="global_menu_list">
-              <a href="http://musique-libre.org/forum" class="global_menu_link menu_more">Forum</a><!--button class="menu_more_button button_thick" type="button">+</button>
+              <a href="http://musique-libre.org/forum" class="global_menu_link menu_more">Forum</a><!--button class="menu_more_button button_thick hollow_button" type="button">+</button>
               <nav class="sub_menu_container" id="menu_forum">
                   <h1>Derniers messages :</h1>
                   <?php
@@ -29,7 +29,7 @@
                 <a href="https://github.com/MusiqueLibre/Dogmazic" target="_blank" class="global_menu_link">Github <img alt="lien externe" src="../global_statics/images/ex_link.png" /></a>
           </li>
           <li class="global_menu_list">
-              <a href="http://musique-libre.org" class="menu_more global_menu_link">Soutenir</a><button class="menu_more_button button_thick" type="button">+</button>
+              <a href="http://musique-libre.org" class="menu_more global_menu_link">Soutenir</a><button class="menu_more_button button_thick hollow_button" type="button">+</button>
 
               <section class="sub_menu_container">
                   <h1>Faire un don</h1>
@@ -54,7 +54,7 @@
               </section>
           </li>
           <li class="global_menu_list">
-            <a href="http://en.irc2go.com/webchat/?net=freenode&room=dogmazic" target="_blank" class="global_menu_link menu_more" id="global_menu_irc">Chat <img alt="lien externe" src="../global_statics/images/ex_link.png" /></a><button class="menu_more_button button_thick" type="button">+</button>
+            <a href="http://en.irc2go.com/webchat/?net=freenode&room=dogmazic" target="_blank" class="global_menu_link menu_more" id="global_menu_irc">Chat <img alt="lien externe" src="../global_statics/images/ex_link.png" /></a><button class="menu_more_button button_thick hollow_button" type="button">+</button>
               <section class="sub_menu_container" id="menu_forum">
                  <h1>Discuter en direct :</h1>
                  IRC, ou Instant Relay Chat, est un outil largement utilisé par la communauté libre. Pour vous iy connecter il vous faut un client IRC (irssi, xchat, smuxi...). Le lien du menu vous permet d'accéder à un client en ligne.

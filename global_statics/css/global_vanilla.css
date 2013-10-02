@@ -10,7 +10,7 @@
   margin: 0 20px;
   min-height: 110px;
   background: #fff;
-  border: 1px solid #d8844d;
+  border: 1px solid #eabea0;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -o-border-radius: 5px;
@@ -263,7 +263,7 @@ div.Search form input.InputBox,
 .MenuTitle {
   color: #333333;
   padding: 5px;
-  border: 1px solid #d8844d;
+  border: 1px solid #eabea0;
   font-size: 0.8em;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -844,7 +844,7 @@ table.PreferenceGroup tbody td {
   font-weight: 400;
   padding: 0 5px;
   margin-left: 5px;
-  border: 1px solid #d8844d;
+  border: 1px solid #eabea0;
 }
 .MessageMeta {
   font-size: 11px;
@@ -1068,7 +1068,7 @@ div.Popup #Form_User .Warning,
 .DataList .Closed {
   border-radius: 2px 2px 2px 2px;
   font-size: 12px;
-  border: 1px solid #d8844d;
+  border: 1px solid #eabea0;
   color: #333333;
   display: inline-block;
   margin: 10px;
