@@ -65,7 +65,7 @@
                   <regexp pattern='\.css"' replace='.less"'/>
                   <regexp pattern='"stylesheet"' replace='"stylesheet/less"'/>
                   <!-- removing the less processer  script -->
-                  <regexp pattern="${main_url}" replace="mlo.loc"/>
+                  <regexp pattern="${prod_url}" replace="${local_url}"/>
                 </replaceregexp>
             </filterchain>
         </reflexive>
@@ -76,7 +76,7 @@
             </fileset>
             <filterchain>
                 <replaceregexp>
-                  <regexp pattern="${main_url}" replace="mlo.loc"/>
+                  <regexp pattern="${prod_url}" replace="${local_url}"/>
                 </replaceregexp>
             </filterchain>
         </reflexive>
@@ -86,7 +86,7 @@
             </fileset>
             <filterchain>
               <replaceregexp>
-                <regexp pattern="${main_url}" replace="mlo.loc"/>
+                <regexp pattern="${prod_url}" replace="${local_url}"/>
               </replaceregexp>
             </filterchain>
         </reflexive>
@@ -115,11 +115,11 @@
                   <regexp pattern='\.less"' replace='.css"'/>
                   <regexp pattern="stylesheet/less" replace="stylesheet"/>
                   <!-- removing the less processer  script -->
-                  <regexp pattern="mlo\.loc" replace="${main_url}"/>
+                  <regexp pattern="${esc_local_url}" replace="${prod_url}"/>
                 </replaceregexp>
             </filterchain>
         </reflexive>
-        <!-- Replacing every occurence of mlo.loc and replacing it with the actual server name-->
+        <!-- Replacing every occurence of the local domaine name and replacing it with the actual server name-->
         <reflexive>
           <fileset dir="./global_statics/js">
                 <!-- all included static files list must end by *statics.php -->
@@ -127,7 +127,7 @@
             </fileset>
             <filterchain>
                 <replaceregexp>
-                  <regexp pattern="mlo\.loc" replace="${main_url}"/>
+                  <regexp pattern="${esc_local_url}" replace="${prod_url}"/>
                 </replaceregexp>
             </filterchain>
         </reflexive>
@@ -137,7 +137,7 @@
             </fileset>
             <filterchain>
               <replaceregexp>
-                <regexp pattern="mlo\.loc" replace="${main_url}"/>
+                <regexp pattern="${esc_local_url}" replace="${prod_url}"/>
               </replaceregexp>
             </filterchain>
         </reflexive>
