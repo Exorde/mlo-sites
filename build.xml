@@ -70,17 +70,6 @@
             </filterchain>
         </reflexive>
         <reflexive>
-          <fileset dir="./global_statics/js">
-                <!-- all included static files list must end by *statics.php -->
-                <include name="*.js" />
-            </fileset>
-            <filterchain>
-                <replaceregexp>
-                  <regexp pattern="${prod_url}" replace="${local_url}"/>
-                </replaceregexp>
-            </filterchain>
-        </reflexive>
-        <reflexive>
           <fileset dir="${yii_folder}/protected/modules/user/controllers/">
                 <include name="*.php" />
             </fileset>
@@ -120,17 +109,6 @@
             </filterchain>
         </reflexive>
         <!-- Replacing every occurence of the local domaine name and replacing it with the actual server name-->
-        <reflexive>
-          <fileset dir="./global_statics/js">
-                <!-- all included static files list must end by *statics.php -->
-                <include name="*.js" />
-            </fileset>
-            <filterchain>
-                <replaceregexp>
-                  <regexp pattern="${esc_local_url}" replace="${prod_url}"/>
-                </replaceregexp>
-            </filterchain>
-        </reflexive>
         <reflexive>
           <fileset dir="${yii_folder}/protected/modules/user/controllers/">
                 <include name="*.php" />
