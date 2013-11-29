@@ -1,7 +1,0 @@
-For any questions, dont hesitate to contact me at http://forum.gtricks.com/
-
-I have designed this theme for personal use and therefore it may not look pixel perfect with your choice of plugins. For example, I use karma plugin and this theme works well with it, but if somebody uses like plugin, then I am not sure how it will look.
-
-Summary: Not all plugins tested with this theme. But it will work fairly with all of them. In case of some problem, feel free to contact me :)
-
-Take help; Give help.
